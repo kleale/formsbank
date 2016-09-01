@@ -1,0 +1,352 @@
+/*
+  Theme
+*/
+
+.red{
+  color: $red;
+}
+.green{
+  color: $green;
+}
+.blue{
+  color: $blue;
+}
+/*
+* Bootstrap Theme
+*/
+
+.container {
+  @media (max-width: $M){
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @media (min-width: 1200px){
+    width: 1230px;
+  }
+}
+/*
+* dropdown
+*/
+.dropdown.open{
+  > a{
+    background: $bg-dropdown;
+    color: $link-light-blue-active;
+    box-shadow: 0 6px 12px rgba(0,0,0,.2);
+  }
+}
+
+.dropdown-menu {
+  background: $bg-dropdown;
+  box-shadow: 7px 7px 10px rgba(0,0,0,.4);
+  padding: 0;
+  margin: -1px 0;
+  border: 0;
+  border-radius: 0 0 $br $br;
+  width: 100%;
+  
+  li{
+    
+    &.active a{
+      background: $button-blue;
+      color: $button-blue-text;
+    }
+    
+    a{
+      color: $link-gray;
+      padding: 10px 15px;
+      
+      &:active,
+      &:focus,
+      &:hover{
+        text-decoration: none;
+        color: $link-gray-active;
+        background: $button-blue;
+      }
+    }
+  }
+}
+
+/*
+* Buttons
+*/
+.btn{
+  border-radius: $br;
+  box-shadow: $bsh;
+  text-transform: uppercase;
+  border: 0;
+  line-height: 1.5;
+  cursor: pointer;
+}
+/*
+{
+  padding: 4px 12px 3px;
+  border: 0;
+  line-height: 1.5;
+}
+*/
+.btn-success {
+  color: #fff;
+  background-color: $green;
+  border-color: transparent;
+}
+.btn-xs{
+  padding: 4px 8px 3px;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  
+  &.btn-default{
+  color: #acacac;
+  }
+} 
+.btn-sm{
+  
+}
+.btn-default{
+  background: $button-gray;
+  color: #b5b5b5;
+  
+  &:active,
+  &:focus,
+  &:hover{
+    background: $button-blue;
+    color: $button-blue-text;
+  } 
+}
+.btn-default.active, .btn-default:active{
+    color: $link-gray;
+    background-color: $bg-dropdown;
+}
+.open>.dropdown-toggle.btn{
+  background-color: $bg-dropdown;
+  color: $link-gray;
+  border-radius: $br $br 0 0;
+  position: relative;
+  /*z-index: 1002;*/
+}
+body .open>.dropdown-toggle.btn-default:focus{
+  background-color: $bg-dropdown;
+  color: $link-gray;
+}
+.btn-border{
+  background: transparent;
+  border: 1px solid;
+  box-shadow: none;
+  &:active,
+  &:focus,
+  &:hover{
+    background: $button-blue;
+    border-color: $button-blue;
+    color: $button-blue-text;
+  }
+  
+  &.btn-primary{
+    color: $link-blue;
+    &.active{
+      color: #fff;
+    }
+    &:active,
+    &:focus,
+    &:hover{
+      color: #fff;
+    }
+  }
+  &.btn-success{
+    color: $green;
+  }
+}
+/*
+* Popover
+*/
+.popover {
+    background-color: $bg-dropdown;
+    color: $link-light-blue;
+    border: 0;
+    border-radius: $br;
+    box-shadow: $bsh2;
+    font-size: 12px;
+    font-family:inherit;
+}
+.popover-title {
+    background-color: $bg-dropdown;
+    border-bottom: 1px solid color($bg-dropdown l(40%));
+    border-radius: $br $br 0 0;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 15px;
+}
+.popover.bottom > .arrow:after {
+    border-bottom-color: $bg-dropdown;
+}
+
+/*
+* Forms
+*/
+.form-control{
+  border-radius: $br;
+  background: $bg-form;
+  border: 0;
+  color: $text-main;
+  
+  &:active,
+  &:focus,
+  &:hover{
+    box-shadow: inset 0 0 0px 1px rgb(29, 123, 197);
+  }
+}
+.input-sm {
+    height: 28px;
+}
+
+
+
+.breadcrumb{
+  background-color: transparent;
+  border-radius: 0;
+}
+
+
+::-webkit-input-placeholder {
+  opacity: 1 !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  opacity: 1 !important;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  opacity: 1 !important;
+}
+:-ms-input-placeholder {  
+  opacity: 1 !important;
+}
+
+
+
+/* bootstrap hack: fix content width inside hidden tabs */
+.tab-content > .tab-pane:not(.active),
+.pill-content > .pill-pane:not(.active) {
+    display: block;
+    height: 0;
+    opacity: 0; 
+    overflow-y: hidden;
+} 
+/* bootstrap hack end */
+
+
+/*
+Choosen
+*/
+
+.chosen-container-multi{
+  
+  .chosen-choices{
+    background-color: color($button-blue l(25%));
+    border-color: transparent;
+    position: relative;
+    
+    &:after{
+      content: "";
+      display: inline-block;
+      position: absolute 15px 10px * *;
+      width: 0;
+      height: 0;
+      vertical-align: middle;
+      border-top: 5px solid color($button-blue l(60%));
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+    }
+    
+    .search-choice{
+      background-color: $button-blue;
+      border: 0;
+      border-radius: $br;
+      color: #fff;
+      background-image:none;
+      line-height: 19px;
+      margin: 3px 0 3px 3px;
+      
+      .search-choice-close{
+        font-family: 'gticons';
+        top: 3px;
+        font-size: 16px;
+        color: #fff;
+        background: transparent;
+        
+        &:active,
+        &:focus,
+        &:hover{
+          text-decoration: none;
+          color: $link-light-blue;
+        }
+      }
+      .search-choice-close:before {
+        content: "\f00d";
+      }
+      
+    }
+    .search-field input[type="text"]{
+      color: $link-light-blue;
+    }
+  }
+}
+.chosen-container {
+  .chosen-drop {
+    background: color($button-blue l(30%));
+    border-color: color($button-blue l(60%));
+    border-bottom-right-radius: $br;
+    border-bottom-left-radius: $br;
+  }
+  .chosen-results li.active-result{
+    color: $link-light-blue;
+  }
+}
+.chosen-container-active.chosen-with-drop .chosen-choices{
+  
+}
+.chosen-container-active .chosen-choices{
+  box-shadow: none;
+  border-color: color($button-blue l(60%));
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $br;
+  
+  .search-field input[type="text"] {
+    color: $link-light-blue !important;
+  }
+}
+
+/*
+Choosen end
+*/
+
+/*
+Modal
+*/
+
+.modal-content {
+  background: color($bg-dropdown l(30%));
+  border-radius: $br;
+  border-width: 0;
+  
+  .modal-header{
+    border-color:color($bg-dropdown l(40%));
+    position: relative;
+    .close{
+      position: absolute 5px 5px * *;
+    }
+  }
+  .modal-footer{
+    border-color:color($bg-dropdown l(40%));
+  }
+}
+
+
+/*
+Modal end
+*/
+
+.label{
+  font-weight: 400;
+}
+.label-dash{
+  background: transparent;
+  border: 1px dashed;
+}

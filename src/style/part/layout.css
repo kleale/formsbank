@@ -1,0 +1,114 @@
+/*
+  Layout
+*/
+
+body{
+  @media (max-width: $XM) {
+    padding-left: 50px;
+  }
+}
+
+/*
+  Breadcrums Bar
+*/
+.bread{
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  ol{
+    display: block;
+    overflow: hidden;
+    color: #fff;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 15px 30px;
+    
+    li {
+      display: inline-block;
+    
+      a {
+        font-size: 12px;
+        color: $link-light-blue;
+        text-decoration: none;
+        
+        &:active,
+        &:focus,
+        &:hover{
+          text-decoration: none;
+          color: $link-light-blue-active;
+        }
+      }
+    }
+  }
+}
+
+/*
+  Left Bar
+*/
+.bar{
+  transition: $tease;
+  position: fixed 0 * 0 0;
+  /*background: rgba(44, 44, 44, 0.9);*/
+  background-color: #191E21;
+  /*background-image: inline(../img/tile.png);*/
+  background-repeat: repeat;
+  background-position: center;
+  width:200px;
+  z-index: 100;
+  
+  @media (max-width: 1585px) {
+    margin-left: 0px;
+  }
+  .barc{
+    position: absolute 0 0 0 0;
+    overflow-x: auto;
+  }
+  .opener{
+    color: color($link-blue b(30%));
+    position: absolute 0 -50px * *;
+    padding: 12px 3px 0 0;
+    font-size: 26px;
+    line-height: 1;
+    text-decoration: none;
+    z-index: 10;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      color: $link-light-blue-active;
+      text-decoration: none;
+    }
+  }
+  
+  .dropdown-menu{
+    @media (max-height: $MH) {
+      position:absolute auto 0 100% 0;
+    }
+    a{
+      padding: 5px 10px;
+    }
+  }
+  
+  .gt-logo {
+    display: block;
+    padding: 0;
+    text-align: center;
+    color:#999;
+    
+    img{
+      width:80px;
+    }
+    
+    @media (max-height: $MH) {
+      display:none;
+    }
+  }
+}
+

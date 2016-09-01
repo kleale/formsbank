@@ -1,0 +1,30 @@
+/*
+* Third Party
+*/
+@import "../../bower_components/normalize.css/normalize.css";
+@import "../assets/css/bootstrap-chosen.css";
+@import "../assets/css/perfect-scrollbar.min.css";
+@import "../assets/css/bootstrap-switch.css";
+@import "../assets/css/owl.carousel.css";
+@import "../assets/css/owl.theme.css";
+
+/*
+* Base css 
+*/
+@import "part/base.css";
+@import "part/layout.css";
+@import "part/module.css";
+@import "part/theme.css";
+@import "font-awesome.css";
+
+/*
+* Pages custom styles
+*/
+
+/*some-page*/
+/*
+@import "part/page-match-list.css";
+*/
+
+/*states*/
+@import "part/state.css";

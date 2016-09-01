@@ -1,0 +1,84 @@
+/*
+  Module
+*/
+
+.close {
+  color: #99fffd;
+  font-size: 31px;
+  margin-right: 10px;
+  opacity: 0.6;
+  text-shadow: 0 1px 0 #000000;
+}
+
+.tse-sc{
+  max-height: 450px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  padding-right: 15px;
+}
+
+.nav-pager{
+  text-align: center;
+  /*background-image: inline(../img/match-tr-bg-line.png);*/
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  
+  .pagination{
+    margin-top: 26px;
+    
+    li{
+      &.active{
+        a{
+          background: #3E7694;
+          border-color: #3E7694;
+        }
+      }
+      a{
+        background: #2C4A58;
+        color:$link-light-blue;
+        border-radius: 50px;
+        margin: 0 4px;
+        border: 1px solid rgba(3, 105, 153, 0.1);
+        padding: 8px 0 0;
+        width: 30px;
+        height: 30px;
+        line-height: 1;
+        
+        &:active,
+        &:hover,
+        &:focus{
+          background: #3E7694;
+          border-color: #3E7694;
+        }
+      }
+      span{
+        background: transparent;
+        color:$link-light-blue;
+        border-radius: 50px;
+      }
+      &.prr{
+        a{
+          padding: 4px 0;
+          width: 24px;
+          margin: 4px 2px;
+          display: inline-block;
+          height: 24px;
+        }
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
