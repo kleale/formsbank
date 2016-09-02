@@ -4,17 +4,17 @@
 body{
   color:$text-main;
   font-family: 'Roboto', Arial, sans-serif;
-  background: $body-bg;
+  background: $body-color;
   position: relative;
 }
 a{
-  transition: $tease;
-  color: $link-blue;
+  transition: $transition;
+  color: $links-color;
   
   &:active,
   &:focus,
   &:hover{
-    color: $link-blue-active;
+    color: $link-color-active;
     text-decoration: underline;
   } 
 }

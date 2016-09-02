@@ -30,7 +30,7 @@
 .dropdown.open{
   > a{
     background: $bg-dropdown;
-    color: $link-light-blue-active;
+    color: $link-color-active;
     box-shadow: 0 6px 12px rgba(0,0,0,.2);
   }
 }
@@ -337,7 +337,13 @@ Modal
     border-color:color($bg-dropdown l(40%));
   }
 }
-
+.close {
+  color: #99fffd;
+  font-size: 31px;
+  margin-right: 10px;
+  opacity: 0.6;
+  text-shadow: 0 1px 0 #000000;
+}
 
 /*
 Modal end

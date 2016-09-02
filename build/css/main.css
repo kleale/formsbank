@@ -1125,26 +1125,11 @@ a:active,
 /*
   Module
 */
-.close {
-  color: #99fffd;
-  font-size: 31px;
-  margin-right: 10px;
-  opacity: 0.6;
-  text-shadow: 0 1px 0 #000000;
-}
-.tse-sc{
-  max-height: 450px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: relative;
-  padding-right: 15px;
-}
 .nav-pager{
   text-align: center;
   /*background-image: inline(../img/match-tr-bg-line.png);*/
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  
 }
 .nav-pager .pagination{
   margin-top: 26px;
@@ -1181,6 +1166,21 @@ a:active,
   margin: 4px 2px;
   display: inline-block;
   height: 24px;
+}
+.header{
+  position: fixed;
+  width: 100%;
+}
+.main-slider ul{
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+.main-slider ul li{
+  float: left;
+}
+.main-slider ul li img{
+  width:100%;
 }
 /*
   Theme
@@ -1483,6 +1483,13 @@ Modal
 }
 .modal-content .modal-footer{
   border-color: rgb(57, 109, 147);
+}
+.close {
+  color: #99fffd;
+  font-size: 31px;
+  margin-right: 10px;
+  opacity: 0.6;
+  text-shadow: 0 1px 0 #000000;
 }
 /*
 Modal end
