@@ -20,10 +20,12 @@
 /*
 * Pages custom styles
 */
+@import "part/page-doc.css";
+@import "part/page-cat.css";
 
 /*some-page*/
 /*
-@import "part/page-match-list.css";
+@import "url here";
 */
 
 /*states*/

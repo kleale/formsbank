@@ -6,199 +6,127 @@
 
   $(document).ready(function () {
     
-    // bar toggle on mobile
-    $("#menu-toggle").click(function() {
-      $("body").toggleClass("menu-open");
-      $(this).toggleClass("active");
-      $(".bar").toggleClass("hiddenbar");
-	});
+    // affix header
+    $('.header').affix({
+      /*
+      offset: {
+        top: 0,
+        bottom: function () {
+          return (this.bottom = $('.footer').outerHeight(true))
+        }
+      }
+      */
+    })
     
-    //$('#pop').popover();
+    //  aftocomplete in search form example
+    $('#typehead').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1,
+        autoSelect: true,
+        source: [{ id: 1, name: 'Toronto' }, { id: 2, name: 'Montreal' }, { id: 3, name: 'New York' }, { id: 4, name: 'qwertyuiopasdfghjklzxcvbnm' }]
+    });
     
     $(function () {
       $('[data-toggle="popover"]').popover();
     });
     
-    // tabs on mobile
-    function setScale(){
-      if ($(window).width()  < 768) {
-        $('.mtb').each(function(i, elm) {
-          $(elm).text($(elm).next('ul').find('li.active a').text());
-        });
-        $('.mtb').on('click', function(e) {
-            e.preventDefault();
-            $(e.target).toggleClass('open').next('ul').slideToggle();
-        });
-        $('.stm_nav_block a[data-toggle="tab"]').on('click', function(e) {
-            e.preventDefault();
-            $(e.target).closest('ul').hide().prev('a').removeClass('open').text($(this).text());
-        });
-      }
-      else{
-        $('.stm_nav_block').css( "display", "table");
-      }
-    } //window
-    setScale();
-    $(window).on("resize", setScale);
-    
-    //piks popover
-    
-    $('.hpop').popover({
-        'html': true,
-        'trigger': 'hover',
-        'placement': 'auto bottom',
-        'container': 'body',
-        'template':'<div class="popover htip"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>',
-        'content': function(){
-            var txt = '<figure><img src="../img/heroh.jpg"></figure>';
-            txt += '<h2>Beastmaster</h2>';
-            txt += '<u><b class="gren">81й</b> в рейтинге</u>';
-            txt += '<u><b class="red">21.5%</b> побед</u>';
-            txt += '<em>Melee, Disabler, Durable, Iniciator, Nuker</em>';
-            return txt;
-        }
-    });
-    
-    //icon-pop
-    $('.icon-pop').popover({
-        'html': true,
-        'trigger': 'hover',
-        'placement': 'auto bottom',
-        'container': 'body',
-        'template':'<div class="popover htip i-pop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
-    });
-    
-    //tour-name-pop
-    $('.tour-pop').popover({
-        'html': true,
-        'trigger': 'hover',
-        'placement': 'auto bottom',
-        'container': 'body',
-        'template':'<div class="popover htip t-pop"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"></div></div></div>'
-    });
-    
-    // scrolls in tabs and blocks
-    $('.tse-sc').perfectScrollbar(); 
-    
-    // bar toggle on mobile
-    $(".stage em").click(function() {
-      $(".stage").toggleClass("stage-open");
-	});
-    
     //tip
     $('.tip').tooltip();
     
-    // Match list links on tr
-    /*
-    $('.m-item').click(function(e) {
-        e.preventDefault(); e.stopPropagation();
-        window.location.href = $(e.currentTarget).data().href;
-    });http://shahinalborz.se/2014/04/solution-make-an-entire-table-row-clickable/
-    */
-    // на локале не срабатывает, но должен.
-    // вот еще пример http://shahinalborz.se/2014/04/solution-make-an-entire-table-row-clickable/
-    $('.m-item').on('click', 'tr', function (e) {
-            var $this = $(e.currentTarget);
+    //form slider at index
+    $('.f-slider ul').owlCarousel({
+      loop:true,
+      navigation: true,
+      navigationText: ["",""],
+      responsiveClass:true,
+      items : 8, 
+      itemsDesktop : [1000,6], 
+      itemsDesktopSmall : [900,5], 
+      itemsTablet: [600,3],
+      itemsMobile : [400,1]
+    });
+    
+    //page slider at doc page
+    $('.doc-pages ul').owlCarousel({
+      loop:false,
+      navigation: true,
+      navigationText: ["",""],
+      responsiveClass:true,
+      items : 7, 
+      itemsDesktop : [1000,5], 
+      itemsDesktopSmall : [900,4], 
+      itemsTablet: [600,3],
+      itemsMobile : [400,3]
+    });
+    
+    //category chosen
+    $(function() {
+      $('.chosen-select').chosen();
+      $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
+    });
+    
+    // scale pdf on css3
+    var maxWidth  = $('div.pdf').width();
+    var maxHeight = $('div.pdf').height();
 
-            if ($this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-                if (e.ctrlKey == true) {
-                    window.open($this.attr('data-href'));
-                } else {
-                    window.location.href = $this.attr('data-href');
-                }
-            }
-        }).on('mousedown', 'tr', function (e) {
-            var $this = $(e.currentTarget);
+    var windowWidth = $(window).width();
+    //var windowHeight = $(window).height();
 
-            if (e.which === 2 && $this[0].nodeName.toLowerCase() != 'a' && $this.attr('data-href')) {
-                window.open($this.attr('data-href'));
-            }
-        });
-    
-    // checkbox to switch
-    $("[name='switch']").bootstrapSwitch();
-    
-    
-    // countdown on top match list
-    $('[data-countdown]').each(function() {
-      var $this = $(this), finalDate = $(this).data('countdown');
-      $this.countdown(finalDate, function(event) {
-        $this.html(event.strftime('До начала %H:%M:%S'));
-      });
-    });
-    
-    // news read more slider
-    
-    $('.ns1 ul').owlCarousel({
-      loop:true,
-      navigation: true,
-      navigationText: ["назад","вперед"],
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-              nav:true
-          },
-          600:{
-              items:3,
-              nav:false
-          },
-          1000:{
-              items:5,
-              nav:true,
-              loop:false
-          }
-      },
-      afterInit : function(){
-        //el.find(".owl-item").eq(0).addClass("synced");
-        $(".mlh").width($('.owl-item').width());
-        $(".mlh").height($('.owl-item').height());
+    $(function() {
+      var $window = $(window);
+      var width = $window.width();
+      //var height = $window.height();
+      var scale;
+      // early exit
+      if(width >= maxWidth ) {
+          $('div.pdf').css({'transform': ''});
+          $('div.pdf').css({'-ms-transform': ''});
+          $('div.pdf').css({'-webkit-transform': ''});
+          $('div.pdf').css({'-o-transform': ''});
+          $('.page-doc').css({ width: '', height: '' });
+          return;
       }
+
+      scale = Math.min(width/maxWidth);
+      //var rscale = scale.toFixed(2);
+      //scale = Math.min(width/windowWidth, height/windowHeight);
+      $('div.pdf').css({'transform': 'scale(' + scale + ')'});
+      $('div.pdf').css({'-ms-transform': 'scale(' + scale + ')'});
+      $('div.pdf').css({'-webkit-transform': 'scale(' + scale + ')'});
+      $('div.pdf').css({'-o-transform': 'scale(' + scale + ')'});
+
+      $('div.page-doc').css({ width: maxWidth * scale, height: maxHeight * scale });
     });
-    
-    $('.ns2 ul').owlCarousel({
-      loop:true,
-      navigation: true,
-      navigationText: ["назад","вперед"],
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-              nav:true
-          },
-          600:{
-              items:3,
-              nav:false
-          },
-          1000:{
-              items:5,
-              nav:true,
-              loop:false
-          }
+
+    $(window).resize(function(evt) {
+      var $window = $(window);
+      var width = $window.width();
+      //var height = $window.height();
+      var scale;
+
+      // early exit
+      if(width >= maxWidth ) {
+          $('div.pdf').css({'transform': ''});
+          $('div.pdf').css({'-ms-transform': ''});
+          $('div.pdf').css({'-webkit-transform': ''});
+          $('div.pdf').css({'-o-transform': ''});
+          $('.page-doc').css({ width: '', height: '' });
+          return;
       }
+
+      scale = Math.min(width/maxWidth);
+      //scale = Math.min(width/windowWidth, height/windowHeight);
+
+      $('div.pdf').css({'transform': 'scale(' + scale + ')'});
+      $('div.pdf').css({'-ms-transform': 'scale(' + scale + ')'});
+      $('div.pdf').css({'-webkit-transform': 'scale(' + scale + ')'});
+      $('div.pdf').css({'-o-transform': 'scale(' + scale + ')'});
+
+      $('div.page-doc').css({ width: maxWidth * scale, height: maxHeight * scale });
     });
+    // end scale pdf on css3
     
-    $('.ns3 ul').owlCarousel({
-      loop:true,
-      navigation: true,
-      navigationText: ["назад","вперед"],
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-              nav:true
-          },
-          600:{
-              items:3,
-              nav:false
-          },
-          1000:{
-              items:5,
-              nav:true,
-              loop:false
-          }
-      }
-    });
     
   }); //end ready
 

@@ -17,8 +17,6 @@
 
 .container {
   @media (max-width: $M){
-    padding-right: 0;
-    padding-left: 0;
   }
   @media (min-width: 1200px){
     width: 1230px;
@@ -31,18 +29,19 @@
   > a{
     background: $bg-dropdown;
     color: $link-color-active;
-    box-shadow: 0 6px 12px rgba(0,0,0,.2);
+    box-shadow: $bsh;
   }
 }
 
 .dropdown-menu {
   background: $bg-dropdown;
-  box-shadow: 7px 7px 10px rgba(0,0,0,.4);
+  box-shadow: $bsh;
   padding: 0;
   margin: -1px 0;
   border: 0;
   border-radius: 0 0 $br $br;
   width: 100%;
+  border: 1px solid #fff;
   
   li{
     
@@ -72,8 +71,8 @@
 .btn{
   border-radius: $br;
   box-shadow: $bsh;
-  text-transform: uppercase;
   border: 0;
+  font-size: 14px;
   line-height: 1.5;
   cursor: pointer;
 }
@@ -89,6 +88,7 @@
   background-color: $green;
   border-color: transparent;
 }
+
 .btn-xs{
   padding: 4px 8px 3px;
   font-size: 11px;
@@ -99,12 +99,20 @@
   color: #acacac;
   }
 } 
+
 .btn-sm{
-  
+  font-size: 13px;
+  font-weight: 200px;
+  padding: 3px 7px;
+}
+.btn-xl{
+  font-size: 24px;
+  font-weight: 300;
+  padding: 10px 25px;
 }
 .btn-default{
-  background: $button-gray;
-  color: #b5b5b5;
+  background: $button-blue;
+  color: $button-blue-text;
   
   &:active,
   &:focus,
@@ -113,10 +121,25 @@
     color: $button-blue-text;
   } 
 }
+
 .btn-default.active, .btn-default:active{
-    color: $link-gray;
-    background-color: $bg-dropdown;
+  color: $link-gray;
+  background-color: $bg-dropdown;
 }
+
+.btn-primary{
+  background: $subcolor;
+  color: $subcolortext;
+  
+  &:active,
+  &:focus,
+  &:hover,
+  &:active:hover{
+    background: color($subcolor b(10%));
+    color: $subcolortext;
+  }
+}
+
 .open>.dropdown-toggle.btn{
   background-color: $bg-dropdown;
   color: $link-gray;
@@ -124,24 +147,27 @@
   position: relative;
   /*z-index: 1002;*/
 }
+
 body .open>.dropdown-toggle.btn-default:focus{
   background-color: $bg-dropdown;
   color: $link-gray;
 }
+
 .btn-border{
   background: transparent;
-  border: 1px solid;
+  border: 1px solid #000;
+  color:#000;
   box-shadow: none;
   &:active,
   &:focus,
   &:hover{
-    background: $button-blue;
-    border-color: $button-blue;
-    color: $button-blue-text;
+    background: $subcolor;
+    border-color: $subcolortext;
+    color: $subcolortext;
   }
   
   &.btn-primary{
-    color: $link-blue;
+    color: $link-color;
     &.active{
       color: #fff;
     }
@@ -149,6 +175,17 @@ body .open>.dropdown-toggle.btn-default:focus{
     &:focus,
     &:hover{
       color: #fff;
+    }
+    
+  }
+  &.btn-white{
+    border-color: #fff;
+    color:#fff;
+    &:active,
+    &:focus,
+    &:hover{
+      color: $subcolortext;
+      background: $subcolor;
     }
   }
   &.btn-success{
@@ -160,7 +197,7 @@ body .open>.dropdown-toggle.btn-default:focus{
 */
 .popover {
     background-color: $bg-dropdown;
-    color: $link-light-blue;
+    color: $link-color;
     border: 0;
     border-radius: $br;
     box-shadow: $bsh2;
@@ -239,8 +276,8 @@ Choosen
 .chosen-container-multi{
   
   .chosen-choices{
-    background-color: color($button-blue l(25%));
-    border-color: transparent;
+    background-color: transparent;
+    border-color: #000;
     position: relative;
     
     &:after{
@@ -250,7 +287,7 @@ Choosen
       width: 0;
       height: 0;
       vertical-align: middle;
-      border-top: 5px solid color($button-blue l(60%));
+      border-top: 5px solid #000;
       border-right: 5px solid transparent;
       border-left: 5px solid transparent;
     }
@@ -265,7 +302,7 @@ Choosen
       margin: 3px 0 3px 3px;
       
       .search-choice-close{
-        font-family: 'gticons';
+        font-family: 'FontAwesome';
         top: 3px;
         font-size: 16px;
         color: #fff;
@@ -275,7 +312,7 @@ Choosen
         &:focus,
         &:hover{
           text-decoration: none;
-          color: $link-light-blue;
+          color: $link-color;
         }
       }
       .search-choice-close:before {
@@ -284,19 +321,20 @@ Choosen
       
     }
     .search-field input[type="text"]{
-      color: $link-light-blue;
+      color: #000;
+      padding-left: 10px;
     }
   }
 }
 .chosen-container {
   .chosen-drop {
-    background: color($button-blue l(30%));
-    border-color: color($button-blue l(60%));
+    background: #fff;
+    border-color: #fff;
     border-bottom-right-radius: $br;
     border-bottom-left-radius: $br;
   }
   .chosen-results li.active-result{
-    color: $link-light-blue;
+    color: $link-color;
   }
 }
 .chosen-container-active.chosen-with-drop .chosen-choices{
@@ -309,7 +347,7 @@ Choosen
   border-bottom-left-radius: $br;
   
   .search-field input[type="text"] {
-    color: $link-light-blue !important;
+    color: $link-color !important;
   }
 }
 
@@ -322,23 +360,26 @@ Modal
 */
 
 .modal-content {
-  background: color($bg-dropdown l(30%));
+  background: #fff;
   border-radius: $br;
   border-width: 0;
+  color: #333;
   
   .modal-header{
-    border-color:color($bg-dropdown l(40%));
+    border-color: #eee;
     position: relative;
+    text-align: center;
+    
     .close{
       position: absolute 5px 5px * *;
     }
   }
   .modal-footer{
-    border-color:color($bg-dropdown l(40%));
+    border-color:#eee;
   }
 }
 .close {
-  color: #99fffd;
+  color: $link-color;
   font-size: 31px;
   margin-right: 10px;
   opacity: 0.6;
@@ -346,13 +387,148 @@ Modal
 }
 
 /*
+Register
+*/
+.card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+
+    .btn {
+        font-weight: 700;
+        height: 36px;
+        user-select: none;
+        cursor: default;
+    }
+
+    /*
+     * Card component
+     */
+    .card {
+        background-color: #F7F7F7;
+        padding: 20px 25px 30px;
+        margin: 0 auto 25px;
+        margin-top: 50px;
+        border-radius: 2px;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-img-card {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 10px;
+        display: block;
+        border-radius: 50%;
+    }
+
+    /*
+     * Form styles
+     */
+    .profile-name-card {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin: 10px 0 0;
+        min-height: 1em;
+    }
+
+    .reauth-email {
+        display: block;
+        color: #404040;
+        line-height: 2;
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    .form-signin #inputEmail,
+    .form-signin #inputPassword {
+        direction: ltr;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .form-signin input[type=email],
+    .form-signin input[type=password],
+    .form-signin input[type=text],
+    .form-signin button {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        z-index: 1;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .form-signin .form-control:focus {
+        border-color: rgb(104, 145, 162);
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    }
+
+    .btn.btn-signin {
+        background-color: &subcolor;
+        border: none;
+        transition: all 0.218s;
+    }
+
+    .btn.btn-signin:hover,
+    .btn.btn-signin:active,
+    .btn.btn-signin:focus {
+        background-color: rgb(12, 97, 33);
+    }
+
+    .forgot-password {
+        color: rgb(104, 145, 162);
+    }
+
+    .forgot-password:hover,
+    .forgot-password:active,
+    .forgot-password:focus{
+        color: rgb(12, 97, 33);
+    }
+}
+
+
+/*
 Modal end
 */
 
 .label{
-  font-weight: 400;
+  font-weight: 300;
+  border-radius: 0;
+  font-size: 100%;
+  padding: .2em .6em .2em;
 }
 .label-dash{
   background: transparent;
   border: 1px dashed;
+}
+.label-primary{
+  background: $subcolor;
+  color: $subcolortext;
+}
+.label-border{
+  background: transparent;
+  border: 1px solid;
+}
+
+.tooltip{
+  .tooltip-inner {
+    background-color: $subcolor;
+    color: $subcolortext;
+  }
+  &.top .tooltip-arrow {
+    border-top-color: $subcolor;
+  }
+}
+
+
+.navbar-header {
+  @media (max-width: $M){
+    float: left;
+  }
 }

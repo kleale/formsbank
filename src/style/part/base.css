@@ -9,7 +9,7 @@ body{
 }
 a{
   transition: $transition;
-  color: $links-color;
+  color: $link-color;
   
   &:active,
   &:focus,

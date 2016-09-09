@@ -12,7 +12,8 @@ var gulp         = require('gulp'),
     rename       = require('gulp-rename'),
     autoprefixer = require('autoprefixer'),
     watch        = require('gulp-watch'),
-    //rigger       = require('gulp-rigger'),               // html и css вставки
+    //rigger       = require('gulp-rigger'),               // html, js и css вставки
+    include      = require("gulp-include"),
     twig         = require('gulp-twig'), 
     //sourcemaps   = require('gulp-sourcemaps'),
     //uncss        = require('gulp-uncss'),              // удаление неиспользуемых стилей
@@ -28,7 +29,7 @@ var gulp         = require('gulp'),
     }),
     postcssColor = require('postcss-color-function'),
     postcssAssets = require('postcss-assets'),
-    
+    postcssInlineSvg  = require('postcss-inline-svg'),
     cssnano      = require('cssnano'),                   // mincss + postcss
     
     uglify       = require('gulp-uglify'),               // minify for js
@@ -98,8 +99,8 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js) //Найдем наш main файл
-        //.pipe(rigger()) //Прогоним через rigger
-        .pipe(twig())
+        .pipe(include()) //Прогоним через rigger
+        //.pipe(twig())
         //.pipe(sourcemaps.init()) //Инициализируем sourcemap
         //.pipe(uglify()) //Сожмем наш js
         //.pipe(sourcemaps.write()) //Пропишем карты
@@ -118,6 +119,7 @@ gulp.task('style:build', function () {
       postcssVars,
       postcssColor,
       postcssAssets,
+      postcssInlineSvg,
       autoprefixer({browsers: ['last 2 version']}),
       //cssnano(),
     ];

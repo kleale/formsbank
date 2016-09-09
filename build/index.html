@@ -7,25 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Match Stream Page</title>  
-  <!-- Import fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <title>Index Page</title>
   
-   <!-- Import bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- head.html -->
+<!-- Import fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:700,400,300,100&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+ <!-- Import bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Import main styles -->
+<link rel="stylesheet" href="/css/main.css" id="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  <!--[if lt IE 10]>
+<link rel="stylesheet" href="assets/css/ie.css">
+<![endif]-->
+
   
-  <!-- Import main styles -->
-  <link rel="stylesheet" href="/css/main.css">
-  
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-    <!--[if lt IE 10]>
-  <link rel="stylesheet" href="assets/css/ie.css">
-  <![endif]-->
 </head>
 <body class="index">
   <div class="wrapper">
@@ -44,13 +48,16 @@
         </a>
         -->
       </div>
+      <div class="conts">
+        <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
+      </div>
       <div class="collapse navbar-collapse" id="urmenu">
         <ul class="nav navbar-nav">
           <li class="w_sub">
-            <a href="">Business</a>
+            <a href="">Business <i class="fa fa-angle-down"></i></a>
             <ul class="sub">
-              <li><a href="">Page</a>
-                <ul class="sub">
+              <li class="w_sub-sub"><a href="">Page</a>
+                <ul>
                   <li><a href="">Page</a></li>
                   <li><a href="">Page</a></li>
                   <li><a href="">Page</a></li>
@@ -68,9 +75,6 @@
           <li><a href="#">Miscellaneous</a></li>
           <li><a href="#">Letters</a></li>
         </ul>
-        <div class="conts">
-          <a class="btn btn-primary" href="">Sign up</a>
-        </div>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -78,79 +82,487 @@
 </header>
       
       <section class="main-slider">
-        
         <ul>
-          <li><a href=""><img src="img/slide1.jpg" alt=""></a></li>
+          <li class="slide" style="background-image:url(img/slide1.jpg)" alt=""></li>
         </ul>
         
+        <div class="sl-content">
+            <div class="sl-logo"></div>
+            <h2>All professional Templates & Forms online</h2>
+            <div class="mainsearch">
+              <input type="text" placeholder="Search manual" class="form-control" id="typehead">
+              <a class="searcher" href="#"><span class="fa fa-search"></span></a>
+            </div>
+          <div class="bycountry">
+            <a href="#"><i class="globe"></i><span>Get your form by country or state</span></a>
+          </div>
+          <a href="#" class="mouse"><i></i></a>
+        </div>
       </section>
       
-      <section class="">
-        <div class="row">
-          <div class="col-md-7">
-
-          </div>
-          <div class="col-md-5">
-
+      <section class="nums">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="icnms">
+                <i class="ic1"></i>
+                <b>Documents</b>
+                <em>219081</em>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="icnms">
+                <i class="ic2"></i>
+                <b>Categories</b>
+                <em>532</em>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="icnms">
+                <i class="ic3"></i>
+                <b>Disc Space</b>
+                <em>45<sup>Tb</sup></em>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
+      
+      <section class="cats">
+        <h3 class="lined"><span>Popular Categories</span></h3>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="citem">
+                <i class="i1"></i>
+                <h3><a href="">Business forms</a></h3>
+                <ul>
+                  <li><a href="">Basic Resume Template Timeless </a></li>
+                  <li><a href="">Design Functional Resume Template</a></li>
+                  <li><a href="">CV Template</a></li>
+                </ul>
+                <a href="" class="btn btn-sm btn-border">View templates</a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="citem">
+                <i class="i2"></i>
+                <h3><a href="">Legal forms</a></h3>
+                <ul>
+                  <li><a href="">General power of attorney form </a></li>
+                  <li><a href="">Power of attorney form ohio</a></li>
+                  <li><a href="">Business resolution</a></li>
+                </ul>
+                <a href="" class="btn btn-sm btn-border">View templates</a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="citem">
+                <i class="i3"></i>
+                <h3><a href="">Financial forms</a></h3>
+                <ul>
+                  <li><a href="">Basic Resume Template Timeless </a></li>
+                  <li><a href="">Design Functional Resume Template</a></li>
+                  <li><a href="">CV Template</a></li>
+                </ul>
+                <a href="" class="btn btn-sm btn-border">View templates</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="citem">
+                <i class="i4"></i>
+                <h3><a href="">Misc subcategory</a></h3>
+                <ul>
+                  <li><a href="">Basic Resume Template Timeless </a></li>
+                  <li><a href="">Design Functional Resume Template</a></li>
+                  <li><a href="">CV Template</a></li>
+                </ul>
+                <a href="" class="btn btn-sm btn-border">View templates</a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="citem">
+                <i class="i5"></i>
+                <h3><a href="">Education forms</a></h3>
+                <ul>
+                  <li><a href="">Basic Resume Template Timeless </a></li>
+                  <li><a href="">Design Functional Resume Template</a></li>
+                  <li><a href="">CV Template</a></li>
+                </ul>
+                <a href="" class="btn btn-sm btn-border">View templates</a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="citem">
+                <i class="i6"></i>
+                <h3><a href="">Medical forms</a></h3>
+                <ul>
+                  <li><a href="">Basic Resume Template Timeless </a></li>
+                  <li><a href="">Design Functional Resume Template</a></li>
+                  <li><a href="">CV Template</a></li>
+                </ul>
+                <a href="" class="btn btn-sm btn-border">View templates</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="hotforms">
+        <h3 class="lined2"><span>HOT forms</span></h3>
+        <div class="f-slider">
+          <ul class="f-slider">
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            
+          </ul>
+        </div>
+        <div class="btn-footer">
+          <div class="container">
+            <a href="" class="btn btn-xl btn-border">Find out more forms</a>
+          </div>
+        </div>
+      </section>
+      
       <!-- footer.html -->
 <footer class="footer">
-  <div class="f-coppy">
-    <copy>© 2015 GT</copy> &bull; 
-    <ul>
-      <li><a href="">О проекте</a></li>
-      <li><a href="">Правила</a></li>
-      <li><a href="">Реклама</a></li>
-      <li><a href="">Партнеры</a></li>
+  <div class="container">
+    <ul class="fmenu">
+      <li><a href="">About</a></li>
+      <li><a href="">Forms</a></li>
+      <li><a href="">FAQ</a></li>
+      <li><a href="">Help</a></li>
+      <li><a href="">Contact us</a></li>
+    </ul>
+
+    <div class="f-social">
+      <a href=""><i class="fa fa-facebook"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+      <a href=""><i class="fa fa-pinterest"></i></a>
+      <a href=""><i class="fa fa-google-plus"></i></a>
+    </div>
+
+    <ul class="fmenu">
+      <li>FormsBank. all rights reserved. 2016 ©</li>
+      <li><a href="">Terms of service.</a></li>
+      <li><a href="">Accessibility</a></li>
+      <li><a href="">Privacy</a></li>
+      <li>Site Language: <u>English</u></li>
     </ul>
   </div>
-  <div class="f-soc">
-    Мы в соцсетях
-    <a href=""><i class="gti-vk"></i></a>
-    <a href=""><i class="gti-facebook"></i></a>
-    <a href=""><i class="gti-twitter"></i></a>
-  </div>
 </footer>
+
   </div>
   
-  <!-- Modal STAVKA -->
-  <div class="modal prwms st-wms fade" id="stavka" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
 
-          <div class="prwms_ico"><b class="gti-dice"></b></div>
-          <h4>
-            Окно
-          </h4>
+  <!-- modal.html -->
+<div class="modal modal-sign fade" id="modal-sign" tabindex="-1" role="dialog">
+  <div class="sign-up">
+    <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-box">
+          <div class="form-top">
+              <div class="form-top-left">
+                  <h3>Login to our site</h3>
+                  <p>Enter username and password to log on:</p>
+              </div>
+              <div class="form-top-right">
+                  <i class="fa fa-key"></i>
+              </div>
+          </div>
+          <div class="form-bottom">
+              <form role="form" action="" method="post" class="login-form">
+                  <div class="form-group">
+                      <label class="sr-only" for="form-username">Username</label>
+                      <input name="form-username" placeholder="Username..." class="form-username form-control" id="form-username" type="text">
+                  </div>
+                  <div class="form-group">
+                      <label class="sr-only" for="form-password">Password</label>
+                      <input name="form-password" placeholder="Password..." class="form-password form-control" id="form-password" type="password">
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block btn-lg">Sign in!</button>
+              </form>
+          </div>
         </div>
-        <div class="modal-body">
-
-          Текст
-
+        <div class="social-login">
+          <h3>...or login with:</h3>
+          <div class="social-login-buttons">
+              <a class="btn btn-link-1 btn-link-1-facebook" href="#">
+                  <i class="fa fa-facebook"></i> Facebook
+              </a>
+              <a class="btn btn-link-1 btn-link-1-twitter" href="#">
+                  <i class="fa fa-twitter"></i> Twitter
+              </a>
+              <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
+                  <i class="fa fa-google-plus"></i> Google Plus
+              </a>
+          </div>
         </div>
-        <div class="modal-footer">
-          <i class="gti-info-circle"></i> Текстик
+      </div>
+      <div class="col-sm-1 middle-border"></div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5">
+        <div class="form-box">
+          <div class="form-top">
+            <div class="form-top-left">
+                <h3>Sign up now</h3>
+                <p>Fill in the form below to get instant access:</p>
+            </div>
+            <div class="form-top-right">
+                <i class="fa fa-pencil"></i>
+            </div>
+          </div>
+          <div class="form-bottom">
+            <form role="form" action="" method="post" class="registration-form">
+                <div class="form-group">
+                    <label class="sr-only" for="form-first-name">First name</label>
+                    <input name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="form-last-name">Last name</label>
+                    <input name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="form-email">Email</label>
+                    <input name="form-email" placeholder="Email..." class="form-email form-control" id="form-email" type="text">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="form-about-yourself">About yourself</label>
+                    <textarea name="form-about-yourself" placeholder="About yourself..." class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Sign me up!</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-    
+</div>
   
-  <!--Import jQuery-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- jQuery for older IE -->
-  <!--
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  -->
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- Site Sripts -->
-  <script src="/js/main.js"></script>
+  <!-- scripts.html -->
+
+<!--Import jQuery-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- jQuery for older IE -->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Site Sripts -->
+<script src="/js/main.js"></script>
+
+
+<!--PAGES-->
+<div style="position: fixed;
+    z-index: 10;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    border-radius: 5px;">
+  <div class="btn-group" role="group" id="hpages">
+    <a href="/index.html" class="m1 btn btn-sm btn-warning">Index</a>
+    <a href="/doc.html" class="m2 btn btn-sm btn-warning">form</a>
+    <a href="/category.html" class="m2 btn btn-sm btn-warning">category</a>
+    <a href="/templates.html" class="m2 btn btn-sm btn-warning">templates</a>
+    <a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat-temp</a>
+    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat-temp 2</a>
+    <a href="/search.html" class="m2 btn btn-sm btn-warning">search</a>
+  </div>
+</div>
+
+<!--STYLE CHANGE-->
+<div style="position: fixed;
+    z-index: 10;
+    bottom: 55px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    border-radius: 5px;">
+  <div class="btn-group" role="group">
+    <a class="m1 btn btn-sm btn-default active">Style 1</a>
+    <a class="m2 btn btn-sm btn-default">Style 2</a>
+    <a class="m3 btn btn-sm btn-default">Style 3</a>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+(function ($) {
+  'use strict';
+
+  $(document).ready(function () {
+    
+    $(function () {
+        setNavigation();
+    });
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $("#hpages a").each(function () {
+            var href = $(this).attr('href');
+            if (path.substring(0, href.length) === href) {
+                $(this).addClass('active');
+            }
+        });
+    }
+  
+    $('.m1').click(function (){
+      $('#stylesheet').attr('href','/css/main.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.m2').click(function (){
+      $('#stylesheet').attr('href','/css/main1.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.m3').click(function (){
+      $('#stylesheet').attr('href','/css/main2.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    
+  }); //end ready
+
+}(jQuery));
+</script>
 
 </body>
 </html>

@@ -1,0 +1,91 @@
+<!-- scripts.html -->
+
+<!--Import jQuery-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- jQuery for older IE -->
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- Site Sripts -->
+<script src="/js/main.js"></script>
+
+
+<!--PAGES-->
+<div style="position: fixed;
+    z-index: 10;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    border-radius: 5px;">
+  <div class="btn-group" role="group" id="hpages">
+    <a href="/index.html" class="m1 btn btn-sm btn-warning">Index</a>
+    <a href="/doc.html" class="m2 btn btn-sm btn-warning">form</a>
+    <a href="/category.html" class="m2 btn btn-sm btn-warning">category</a>
+    <a href="/templates.html" class="m2 btn btn-sm btn-warning">templates</a>
+    <a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat-temp</a>
+    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat-temp 2</a>
+    <a href="/search.html" class="m2 btn btn-sm btn-warning">search</a>
+  </div>
+</div>
+
+<!--STYLE CHANGE-->
+<div style="position: fixed;
+    z-index: 10;
+    bottom: 55px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    border-radius: 5px;">
+  <div class="btn-group" role="group">
+    <a class="m1 btn btn-sm btn-default active">Style 1</a>
+    <a class="m2 btn btn-sm btn-default">Style 2</a>
+    <a class="m3 btn btn-sm btn-default">Style 3</a>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+(function ($) {
+  'use strict';
+
+  $(document).ready(function () {
+    
+    $(function () {
+        setNavigation();
+    });
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $("#hpages a").each(function () {
+            var href = $(this).attr('href');
+            if (path.substring(0, href.length) === href) {
+                $(this).addClass('active');
+            }
+        });
+    }
+  
+    $('.m1').click(function (){
+      $('#stylesheet').attr('href','/css/main.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.m2').click(function (){
+      $('#stylesheet').attr('href','/css/main1.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.m3').click(function (){
+      $('#stylesheet').attr('href','/css/main2.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    
+  }); //end ready
+
+}(jQuery));
+</script>

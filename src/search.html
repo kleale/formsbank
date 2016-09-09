@@ -1,0 +1,136 @@
+{% set title = "Search Page" %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ title }}</title>
+  
+  {% include "template/head.html" %}
+  
+</head>
+<body class="page-cat">
+  <div class="wrapper">
+    {% include "template/header_cat.html" %}
+    
+    <section class="cat-header">
+      <div class="container search-results">
+        {% include "template/breadcrumbs.html" %}
+        <div class="row">
+          <div class="col-sm-12">
+            <h1> Search results</h1>
+              <div class="mainsearch">
+                <input type="text" placeholder="Search manual" class="form-control" id="typehead">
+                <a class="searcher" href="#"><span class="fa fa-search"></span></a>
+              </div>
+            <div class="total">Total 743 templates</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cat-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="cat_h2">              
+              <div class="btn-group">
+                  <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort by popularity <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Sort by name</a></li>
+                    <li><a href="#">Sort by size</a></li>
+                  </ul>
+              </div>
+              <select style="width:200px;" data-placeholder="Filter by country or State..." class="chosen-select pull-right" multiple tabindex="4">
+                <option value=""></option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+              </select>
+            </div>
+           
+            <div class="tem_list">
+              {% for i in 0..5 %}
+                <div class="tem_item">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="f-item">
+                        <a href="" class="f-pic">
+                          <img src="img/form.png" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                      <div class="tem-descr">
+                        <h4><a href="">Certificate of Completion Template</a></h4>
+                        <div class="tem-info">
+                          <span class="stars">
+                            <i class="fa fa-star active"></i>
+                            <i class="fa fa-star active"></i>
+                            <i class="fa fa-star active"></i>
+                            <i class="fa fa-star half-o active"></i>
+                            <i class="fa fa-star-o"></i>
+                          </span>
+                          <span class="types">
+                            <b class="label label-border">PDF</b>
+                            <b class="label label-border">TXT</b>
+                            <b class="label label-border">DOC</b>
+                            <b class="label label-border">ONLINE</b>
+                          </span>
+                          <div class="specs">
+                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
+                          </div>
+                        </div>
+                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
+                        </p>
+                        <a href="" class="btn btn-default">View Form</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            
+            {% include "template/pager.html" %}
+            
+          </div>
+          <div class="col-md-4">
+            <div class="block">
+              <h3>Popular Categories</h3>
+              <ul>
+                <li><a href="">Agreement Template</a></li>
+                <li><a href="">Bill of Sale Form</a></li>
+                <li><a href="">Business Template</a></li>
+                <li><a href="">Business Proposal Template</a></li>
+                <li><a href="">Certificate Template</a></li>
+                <li><a href="">Education Template</a></li>
+                <li><a href="">Finance Template</a></li>
+                <li><a href="">Home & Famliy Template</a></li>
+                <li><a href="">Invoice Template</a></li>
+                <li><a href="">Legal Template</a></li>
+                <li><a href="">Letter Template</a></li>
+                <li><a href="">List & Chart Template</a></li>
+              </ul>
+              <a href="" class="btn btn-border btn-block">More Related Categories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {% include "template/footer.html" %}
+  </div>
+  
+
+  {% include "template/modals.html" %}
+  {% include "template/scripts.html" %}
+
+</body>
+</html>

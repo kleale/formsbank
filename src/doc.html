@@ -1,0 +1,217 @@
+{% set title = "Doc Page" %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ title }}</title>
+  
+  {% include "template/head.html" %}
+  
+</head>
+<body class="page-doc">
+  <div class="wrapper">
+    {% include "template/header_doc.html" %}
+    {% include "template/breadcrumbs.html" %}
+      <section class="doc-header">
+        <h1 class="lined">
+          <span>Basic Resume Template</span>
+        </h1>
+        <div>
+          <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. This file teaches you how to stand out among various interviewees. </p><p>It can decide whether you have the chance to attend the interview. Making a well-contented and well-structured resume will give you a bright future.</p>
+        </div>
+      </section>
+      <div class="doc-pages">
+        <ul>
+          <li class="active">
+            <a href=""><img src="img/form.png" alt=""></a>
+          </li>
+          {% for i in 0..10 %}
+            <li>
+              <a href=""><img src="img/form.png" alt=""></a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <section class="doc-container">
+        <div class="page-doc-top-a">
+          <a href=""><img src="img/b2.jpg" alt=""></a>
+        </div>
+        <div class="page-wrap">
+          <div class="page-doc">
+            <style>
+            div.pdf {
+              position: relative;
+              width:  950px;
+              height: 1284px;
+              background: url(http://data.manualslib.com//pdf/33/3241/324027-sunbeam/images/5833_1_bg.jpg);
+              overflow: hidden;
+            }
+
+            div.pdf * {
+              display:  inline;
+              position: absolute;
+              margin:   0;
+              padding:  0;
+              color: #000000;
+              font-family: Arial, sans-serif;
+              white-space: nowrap;
+            }
+            </style>
+            <div class="pdf"><div style="left:177px;top:195px;font-size:33px;">User Manual &amp;</div>
+            <div style="left:177px;top:238px;font-size:33px;">Bread Recipes</div>
+            <div style="left:542px;top:424px;font-size:20px;">2 lb. EXPRESSBAKE&trade;</div>
+            <div style="left:542px;top:455px;font-size:20px;">Breadmaker</div></div>
+            <div class="clear"></div>
+          </div>
+        
+          <ul class="share-doc">
+            <li>
+              <a href=""><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-pinterest"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+            </li>
+          </ul>
+          <div class="page-doc-right-a">
+            <a href=""><img src="img/b1.png" alt=""></a>
+          </div>
+        </div>
+        <div class="page-doc-bot-a">
+          <a href=""><img src="img/b2.jpg" alt=""></a>
+        </div>
+        
+        {% include "template/pager.html" %}
+        
+      </section>
+      
+      <section class="doc-action clearfix">
+        <div class="doc-btns">
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <button type="button" class="btn btn-1 btn-border tip" title="Size: 123Kb"><i class="i1"></i><span>Download</span> PDF</button>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <button type="button" class="btn btn-2 btn-border tip" title="Size: 
+              123Kb"><i class="i2"></i><span>Download</span> TXT</button>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <button type="button" class="btn btn-3 btn-border tip" title="Size: 123Kb"><i class="i2"></i><span>Download</span> DOC</button>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <button type="button" class="btn btn-4 btn-border tip" title="Size: 123Kb"><i class="i2"></i>Fill in <span>this form</span></button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="clearfix">
+          <div class="mr">
+            <span id="rates" class="m-rate">
+              <span class="fa fa-star" rel="5" onclick="rate(5)"></span>
+              <span class="fa fa-star-o" rel="4" onclick="rate(4)"></span>
+              <span class="fa fa-star-half-o starred-half" rel="3" onclick="rate(3)"></span>
+              <span class="fa fa-star starred" rel="2" onclick="rate(2)"></span>
+              <span class="fa fa-star starred" rel="1" onclick="rate(1)"></span>
+            </span>
+            <span class="rgg" id="r_my" itemtype="http://schema.org/AggregateRating" itemscope="" itemprop="aggregateRating">
+              <span itemprop="ratingValue">123</span>
+              <meta content="184" itemprop="reviewCount">
+              <meta content="5" itemprop="bestRating">
+              <meta content="184" itemprop="ratingCount">
+              votes
+            </span>
+          </div>
+
+          <ul class="share-doc-bottom">
+            <li>
+              <a href=""><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-pinterest"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="hotforms">
+        <h3 class="lined2"><span>Related forms</span></h3>
+        <div class="f-slider">
+          <ul class="f-slider">
+            {% for i in 0..10 %}
+              <li>
+                <div class="f-item">
+                  <a href="" class="f-pic">
+                    <img src="img/form.png" alt="">
+                  </a>
+                  <a href="" class="f-link">
+                    <span>Principles of Drug Testing Technology</span>
+                  </a>
+                  <a href="" class="f-cat label label-primary">Business</a>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="btn-footer">
+          <div class="container">
+            <a href="" class="btn btn-xl btn-border">Find out more forms</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="rel-cats">
+        <div class="clearfix">
+          <h3><span>Related Categories</span></h3>
+          <div class="parcat">Parent category:   <a href="">Basic Resume</a></div>
+        </div>
+        
+        <div class="more-cats clearfix">
+          <div class="row">
+            <div class="col-sm-6">
+              <ul>
+                <li><a href="">Basic Resume Template Timeless </a></li>
+                <li><a href="">Design Functional Resume Template</a></li>
+                <li><a href="">CV Template</a></li>
+                <li><a href="">Schedule Template</a></li>
+                <li><a href="">Event Management Template</a></li>
+                <li><a href="">Design Functional Resume Template</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul>
+                
+                <li><a href="">Design Functional Resume Template</a></li>
+                <li><a href="">CV Template</a></li>
+                <li><a href="">Schedule Template</a></li>
+                <li><a href="">Event Management Template</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cats-search clearfix">
+          <a href="">Search by <i class="fa fa-search"></i> keywords</a>
+        </div>
+      </section>
+      
+    {% include "template/footer.html" %}
+  </div>
+  
+  {% include "template/modals.html" %}
+  {% include "template/scripts.html" %}
+</body>
+</html>

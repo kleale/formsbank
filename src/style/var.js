@@ -12,13 +12,13 @@ module.exports = {
     "$XL": "1328px",
   
     // Colors
-    "$text-main": "#fff",
+    "$text-main": "#222",
     "$text-gray-1": "#5c5f62",
     "$text-gray-2": "#6c6c6c",
     "$text-gray-3": "#8f8f8f",
 
-    "$link-color": "#2faee7",
-    "$link-color-active": "#2faee7",
+    "$link-color": "#3cbcd4",
+    "$link-color-active": "#3cbcd4",
     "$link-white": "#fff",
     "$link-white-active": "#a6c6cb",
     "$link-gray": "#b7b7b7",
@@ -27,27 +27,29 @@ module.exports = {
     "$body-color": "#fff",
     "$bg-sub-section": "#252a2c",
   
-    "$button-blue": "#037db5",
+    "$button-blue": "#31a4ba",
     "$button-blue-text": "#fff",
     "$button-gray": "#444950",
     "$button-gray-text": "#8f8f8f",  
     
-    "$bg-dropdown": "#305c7b",
-    "$bg-form": "#444950",
-  
+    "$bg-dropdown": "#fff",
+    "$bg-form": "#f1f1f1",
+    
+    "$subcolor": "#ffee36",
+    "$subcolortext": "#000",
     "$green": "#82ac4e",
     "$red": "#ea6465",
     "$subgreen": "#e8f39a",
-    "$blue": "#037db5",
+    "$blue": "#31a4ba",
   
     //transitions
     "$transition": "all .2s ease",
   
     //border-radius
-    "$br": "2px",
+    "$br": "3px",
   
     //box-shadow
-    "$bsh": "1px 1px 2px rgba(0, 0, 0, 0.3)",
-    "$bsh2": "4px 4px 10px rgba(0, 0, 0, 0.4)"
+    "$bsh": "1px 1px 8px rgba(0, 0, 0, 0.15)",
+    "$bsh2": "1px 1px 30px rgba(0, 0, 0, 0.2)"
   
 };
