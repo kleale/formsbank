@@ -3,17 +3,29 @@
   <nav class="navbar">
     <div class="">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
-          <i class="fa fa-bars"></i>
-        </button>
         <a class="navbar-brand" href="#">
           <img src="img/logo_white.svg">
         </a>
       </div>
-      <div class="conts">
-        <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
-      </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
+          <i class="fa fa-bars"></i>
+      </button>
       <div class="collapse navbar-collapse" id="urmenu">
+        <div class="conts">
+          <a href="#" class="searcher1 searcher_js btn">
+            <i class="fa fa-search"></i>
+          </a>
+          <div class="searchbar">
+            <div class="doc-srch">
+                <input type="text" placeholder="Search documents" class="form-control">
+                <a href="" class="searcher">Go</a>
+              <a href="#" class="searcher-close searcher_js btn">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
+        </div>
         <ul class="nav navbar-nav">
           <li class="w_sub">
             <a href="">Business <i class="fa fa-angle-down"></i></a>

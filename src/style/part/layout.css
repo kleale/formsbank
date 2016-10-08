@@ -10,6 +10,10 @@
   z-index: 5;
   transition: $transition;
   
+  @media (max-width: $MH){
+    padding: 5px;
+  }
+  
   &.affix{
     background: #fff;
     top: 0;
@@ -20,6 +24,13 @@
   }
   .conts{
     float: right;
+    position: relative;
+    
+    @media (max-width: $XM){
+      float: none;
+      border-bottom:1px solid #fff;
+      margin-bottom: 10px;
+    }
   }
   
   ul.nav{
@@ -46,7 +57,7 @@
         
         @media (max-width: $L){
           font-size: 14px;
-          padding: 12px 8px;
+          padding: 13px 7px;
         }
         
         &:hover{
@@ -151,32 +162,128 @@
     }/*li*/
   }
   .navbar-brand{
-    display: none;
+    width: 200px;
+    margin: -19px -10px;
+    
+    @media (max-width: $XM){
+      width: 160px;
+      margin: -10px -10px;
+    }
+    
+    img{
+      width: 100%;
+    }
   }
   .btn-sign{
     border:1px solid #fff;
     padding-left: 30px;
     padding-right: 30px;
+    @media (max-width: $L){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media (max-width: $XM){
+      display: block;
+      margin-bottom: 15px;
+      
+    }
+  }
+  .searcher1{
+    border-color:transparent;
+    background: transparent;
+    font-size: 20px;
+    color:#fff;
+    box-shadow: none;
+    &:hover{
+      color: $subcolor;
+    }
+    @media (max-width: $XM){
+      display: none;
+    }
+  }
+  .searchbar{
+    overflow: hidden;
+    width: 0;
+    opacity: 0;
+    transition: $transition;
+    
+    background: #3cbcd4;
+    color: #fff;
+    position: absolute;
+    top: -15px;
+    right: 100%;
+    padding: 17px 50px 17px 17px;
+    z-index: 2;
+    margin-right: -38px;
+    
+    &.active{
+      display: block;
+      width: 250px;
+      box-shadow: -10px 0px 20px -5px rgba(0, 0, 0, 0.24);
+      opacity: 1;
+    }
+    .searcher-close{
+      top: -3px;
+      right: -44px;
+      position: absolute;
+      color: #fff;
+      box-shadow: none;
+      font-size: 21px;
+      &:hover{
+        color: $subcolor;
+      }
+      @media (max-width: $XM){
+        display: none;
+      }
+    }
+    @media (max-width: $XM){
+      position: relative;
+      margin-right: auto;
+      right: auto;
+      top: auto;
+      width: auto!important;
+      padding: 0;
+      margin: 0 0 15px 0;
+      box-shadow: none!important;
+      opacity: 1;
+      .doc-srch{
+        float: none;
+      }
+    }
   }
   .navbar-toggle{
-    color: $link-color;
+    /*color: $link-color;*/
     font-size: 30px;
     margin: 0;
     padding: 4px 10px;
     line-height: 1;
+    float: right;
+    position: relative;
+    top:1px;
+    transition: $transition;
+    transform: rotate(90deg);
     
+    i.fa-bars:before {
+      content: "\f00d";
+    }
+    
+    &.collapsed{
+      transform: rotate(0deg);
+      i.fa-bars:before {
+        content: "\f0c9";
+      }
+    }
     @media (max-width: $XM){
       display: block;
     }
   }
 }
 
-.navbar-collapse{
+.header .navbar-collapse{
   @media (max-width: $XM){
     margin: 0 110px;
     position: fixed;
     left: 0;
-    top: 73px;
     width: 230px;
     bottom: 0;
     background: #33a6bb;
@@ -186,12 +293,21 @@
     display: block!important;
     padding: 15px 20px;
     transition: $transition;
+    transform: translateZ(0);
     opacity: 0;
-
-    li{
-      float: none;
-      .sub, &:hover .sub{
-        display: none!important;
+    
+    ul{
+      float:none;
+      margin: 0;
+      
+      li{
+        float: none;
+        .sub, &:hover .sub{
+          display: none!important;
+        }
+        a{
+          color:#fff;
+        }
       }
     }
     &.collapse{
@@ -203,6 +319,8 @@
         opacity: 1;
       }
     }
+  }
+  @media (max-width: $MH){
   }
 }
 
@@ -243,14 +361,13 @@
     .navbar-brand{
       display: block;
       padding: 0;
-      margin: -14px 0;
+      margin: -13px 0;
       img{
         width: 100%;
       }
-      
       @media (max-width: $L){
+        margin: 0px 0 -10px 10px;
         width: 140px;
-        margin: -2px 0 -10px 10px;
       }
     }
   }
@@ -266,7 +383,9 @@
   background: #31a4ba;
   padding: 10px 15px;
   margin: 15px -15px -15px;
-  
+  @media (max-width: $MH){
+    margin: 5px -10px -15px;
+  }
   .doc-btns{
     float:left;
     .btn-group{
@@ -274,12 +393,17 @@
     }
     .btn{
       font-weight: 300;
-      font-size: 16px;
+      height: 38px;
+      font-size: 15px;
+      line-height: 1.8;
       
       @media (max-width: $M){
+        font-size: 14px;
+        height: 38px;
         span{
           display: none;
         }
+        
       }
       i{
         display: block;
@@ -293,6 +417,8 @@
         margin-right: 10px;
         @media (max-width: $M){
           margin-right: 0px;
+          width: 15px;
+          height: 20px;
         }
         
         &.i1{
@@ -310,10 +436,35 @@
       }
     }
   }
+  .doc-pgr-select{
+    display: none;
+    padding: 0 5px;
+    select{
+      display: inline-block;
+      width: 100px;
+      background: #7cc2d0;
+      border: 1px solid transparent;
+      text-align: left;
+      color: #fff;
+      height: 38px;
+      border-radius: 2px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    }
+    @media (max-width: $XM){
+      display: block;
+      float: left;
+    }
+  }
   .doc-pgr{
     margin: 0 auto;
     text-align: center;
     width: 250px;
+    @media (max-width: $XM){
+      display: none;
+    }
+    @media (max-width: 1100px){
+      float: left;
+    }
     
     input{
       display: inline-block;
@@ -334,54 +485,60 @@
     }
   }
   .doc-srch{
-    float: right;
-    position: relative;
-    max-width:230px;
-    
-    .swr{
-      @media (max-width: $M){
-        display: none;
-      }
-      &.active{
-        @media (max-width: $M){
-          display: block;
-          position: absolute 0 30px * *;
-        }
-      }
-    }
-    
     .fa-search{
+      padding: 8px;
+    }
+  }
+}
+
+.doc-srch{
+  float: right;
+  position: relative;
+  max-width:230px;
+
+  .swr{
+    @media (max-width: $M){
       display: none;
+    }
+    &.active{
       @media (max-width: $M){
         display: block;
-        font-size: 22px;
+        position: absolute 0 30px * *;
       }
     }
-    
-    input{
-      background: #7cc2d0;
-      border: 1px solid transparent;
+  }
+
+  .fa-search{
+    display: none;
+    @media (max-width: $M){
+      display: block;
+      font-size: 22px;
+    }
+  }
+
+  input{
+    background: #7cc2d0;
+    border: 1px solid transparent;
+    color: #fff;
+    height: 38px;
+
+    &::-webkit-input-placeholder {
       color: #fff;
-      height: 38px;
-      
-      &::-webkit-input-placeholder {
-        color: #fff;
-      }
-      &::-moz-placeholder {
-        color: #fff;
-      }
-      &:-ms-input-placeholder {
-        color: #fff;
-      }
-      &:-moz-placeholder { 
-        color: #fff;
-      }
     }
-    .searcher{
-      position: absolute 9px 10px * *;
-      color:#fff;
-      font-size: 16px;
+    &::-moz-placeholder {
+      color: #fff;
     }
+    &:-ms-input-placeholder {
+      color: #fff;
+    }
+    &:-moz-placeholder { 
+      color: #fff;
+    }
+  }
+  .searcher{
+    position: absolute 9px 10px * *;
+    color:#fff;
+    font-size: 16px;
   }
 }
 

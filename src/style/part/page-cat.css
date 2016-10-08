@@ -8,7 +8,7 @@
   }
 }
 .cat-header {
-  padding: 130px 50px 40px 50px;
+  padding: 90px 20px 20px 20px;
   background-position: center;
   background-size: cover;
   background-image: url(/img/cat-header.jpg);
@@ -47,12 +47,21 @@
   
   h1{
     font-weight: 200;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 14px;
-    margin-bottom: 30px;
+    margin: 3px 0 20px 0;
   }
   .ic{
-    margin-right: 15px;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  .chosen-select{
+    height: 34px;
+    color: #000;
+    background: #ececec;
+    border-radius: 2px;
+    border: 0;
   }
   .chosen-container-multi .chosen-choices{
     box-shadow: none;
@@ -96,13 +105,17 @@
   
   @media (max-width: $toM){
     text-align: center;
+    padding: 75px 15px 15px 15px;
     
     .ic{
       float: none;
-      display: inline-block;
+      /*display: inline-block;*/
+      margin-right: 0;
+      display: none;
     }
     .total{
-      margin-bottom: 10px;
+      margin-bottom: 0;
+      
     }
     .cat-text{
       display: none;
@@ -110,6 +123,19 @@
   }/*@media*/
 }/*.cat-header*/
 
+.cat_h2 {
+  .chosen-select{
+    height: 34px;
+    color: #888;
+    background: #ececec;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%!important;
+    float: none!important;
+    margin: 10px 0;
+  }
+}
 .ic {
   display: block;
   margin-bottom: 15px;
@@ -143,7 +169,7 @@
 
 .cat-text{
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
   padding: 0 30px;
@@ -155,15 +181,24 @@
 
 .cat-content{
   padding: 50px 0;
+  @media (max-width: $toM){
+    padding: 20px 0;
+  }
 }
 .cat_h2{
   margin-bottom: 40px;
-  
+  @media (max-width: $toM){
+    margin-bottom: 15px;
+  }
   h2{
     position: relative;
     font-size: 30px;
     font-weight: 300;
-    margin-top: 0;
+    margin-top: 3px;
+    @media (max-width: $toM){
+      font-size: 20px;
+      text-align: center;
+    }
     span{
       background: #f2f2f2;
       padding-right: 10px;
@@ -206,16 +241,22 @@
     @media (max-width: $toM){
       width: auto;
       float: none;
+      margin-bottom: 15px;
     }
   }
 }
 
 .cat_list{
   
+  @media (max-width: $M){
+    margin:0 -15px;
+  }
+  
   .cat_item{
-    padding: 30px;
-    border: 1px solid #dedede;
+    padding: 15px;
+    /*border: 1px solid #dedede;*/
     margin: -1px 0 0 0;
+    overflow: hidden;
     
     &:nth-child(2n){
       background: #ededed;
@@ -230,6 +271,12 @@
     h4{
       margin: 10px 0 20px 10px;
       font-size: 22px;
+      line-height: 1.5;
+      
+      @media (max-width: $toM){
+        text-align: center;
+        font-size: 18px;
+      }
       
       a{
         text-decoration: underline;
@@ -240,23 +287,21 @@
           text-decoration: none;
         }
       }
-      @media (max-width: $toM){
-        text-align: center;
-      }
     }
     .istat{
-      float: right;
       margin: 0 0 0 10px;
       
       b{
         background: $subcolor;
         color: $subcolortext;
-        padding: 4px 10px;
+        padding: 1px 0px;
         border-radius: 3px;
         display: block;
         font-size: 21px;
         float: left;
         font-weight: 300;
+        min-width: 40px;
+        text-align: center;
       }
       span{
         font-size: 12px;
@@ -264,6 +309,7 @@
         display: block;
         float: left;
         padding: 6px 10px;
+        color: #888;
       }
       @media (max-width: $toM){
         width: auto;
@@ -280,6 +326,7 @@
     .idocs{
       overflow: hidden;
       position: relative;
+      margin: 0 -5px;
       
       &:after{
         content: '';
@@ -302,7 +349,7 @@
           width: 190px;
           
           @media (max-width: $toM){
-            width: 150px;
+            width: 130px;
           }
         }
       }
@@ -327,17 +374,13 @@
         }
       }
     }
-    .f-pic{
-      
-    }
     .tem-descr{
       
       h4{
-        margin: 10px 0 10px 0px;
+        margin: 10px 0 15px 0px;
         font-size: 20px;
 
         a{
-          text-decoration: underline;
           color: $link-color;
 
           &:active,
@@ -364,6 +407,10 @@
         }
         .types{
           margin-right: 20px;
+          @media (max-width: $MH){
+            display:block;
+            margin-top:10px;
+          }
           .label{
             color: #000;
             border-radius: 3px;
@@ -380,7 +427,10 @@
         }
       }
       .btn{
-        
+        @media (max-width: $M){
+          display: block;
+          font-size: 18px;
+        }
       }
     }
   }
@@ -401,8 +451,12 @@
         }
       }
     }
+
     .cat_list .cat_item .idocs:after{
       background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgb(255, 255, 255) 50%);
+    }
+    .cat_list .cat_item:nth-child(2n) .idocs:after {
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgb(237, 237, 237) 50%);
     }
   }
 }
@@ -417,19 +471,34 @@
   }
 }
 
-.loaded-list{
+.list-opener{
   position: relative;
-  border-width: 1px; 
-  border-style: solid; 
-  border-image: linear-gradient(to top, #ddd, rgba(0, 0, 0, 0)) 1 100%;
+  overflow: hidden;
+  max-height: 720px;
+  position: relative;
+  transition: $transition;
   
+  &.active{
+    max-height: 3000px;
+    padding-bottom: 70px;
+  }
   
-  .list-lader{
-    position: relative;
+  .cat_h2 h2{
     text-align: center;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#f2f2f2 70%);
-    padding: 10px 0 10px;
-    margin-bottom: -38px;
+    font-size: 24px;
+    span{
+      padding: 0 15px;
+    }
+  }
+  
+  .list-loader{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#f2f2f2 40%);
+    padding: 40px 0 0 0;
     
     &:after{
       content: '';
@@ -437,7 +506,7 @@
       height: 1px;
       width: 100%;
       background: #ddd;
-      top: 50%;
+      top: 60px;
       position: absolute;
     }
     a{
@@ -448,7 +517,38 @@
   }
 }
 
+.cat_list_sm.cat_list{
+  background: #fbfafa;
+  margin-top: 45px;
+  
+  .cat_item {
+    padding: 15px;
+    border: 0;
+    .istat{
+      float:right;
+      margin: -8px -8px -8px 0;
+      
+      b{
+        background: transparent;
+        border: 1px solid #e0e0e0;
+        color: #888;
+      }
+    }
+    a.cat-link{
+      font-size: 16px;
+    }
+  }
+}
 
+.docs-holder{
+  padding: 0;
+  list-style: none;
+  
+  .f-item{
+  padding: 5px 5px 30px 5px;
+  
+  }
+}
 
 
 

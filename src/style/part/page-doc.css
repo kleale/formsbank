@@ -16,23 +16,36 @@
 .doc-header {
   max-width: 940px;
   margin: 30px auto 0;
-  padding: 10px 70px 100px 50px;
+  padding: 10px 50px 100px 50px;
   border: 1px solid $subcolor;
+  @media (max-width: $toM){
+    border: 0;
+    margin: 0;
+    padding: 10px 15px 100px 15px;
+  }
   
   .lined{
     font-size: 34px;
     text-align: center;
-    margin-top: 20px;
     line-height: 1;
     font-weight: 300;
     margin: -35px 0 30px 0;
-
+    @media (max-width: $toM){
+      font-size: 24px;
+      font-size: 24px;
+      margin: -30px 0 10px 0;
+    }
+    
     span{
       display: inline-block;
       position: relative;
       background: $subcolor;
       color: $subcolortext;
       padding: 5px 20px;
+      @media (max-width: $toM){
+        background: transparent;
+        color: #000;
+      }
 
       &:after{
         content: '';
@@ -42,6 +55,9 @@
         background: $subcolor;
         transform: skewX(-20deg);
         position: absolute 0 -20px * *;
+        @media (max-width: $toM){
+          display: none;
+        }
       }
       &:before{
         content: '';
@@ -51,12 +67,18 @@
         background: $subcolor;
         transform: skewX(-20deg);
         position: absolute 0 * * -20px;
+        @media (max-width: $toM){
+          display: none;
+        }
       }
     }
   }
   div{
     font-size: 18px;
     color: #5c5c5c;
+    @media (max-width: $toM){
+      font-size: 15px;
+    }
   }
 }
 .doc-pages{
@@ -88,7 +110,7 @@
         }
       }
       &.active a{
-        box-shadow: $bsh2 , 0 0 0 2px $subcolor;
+        box-shadow: $bsh , 0 0 0 2px $subcolor;
         transform: scale(1.1);
       }
     }
@@ -130,7 +152,7 @@
   position: relative;
   
   @media (max-width: $XM){
-    padding: 0 15px;
+    padding: 0;
   }
   
   .page-doc-top-a{
@@ -154,7 +176,9 @@
     position: absolute 0 * * 100%;
     margin-left: 20px;
   }
-  
+  .nav-pager{
+    padding: 0 15px;
+  }
   .page-wrap{
     position: relative;
     
@@ -164,6 +188,19 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      
+      @media (max-width: 1060px){
+        position: relative auto auto * *;
+        display: table;
+        table-layout:fixed;
+        width: 100%;
+        li{
+          display: table-cell;
+          a{
+            width: auto!important;
+          }
+        }
+      }
 
       li{
         a{
@@ -184,6 +221,15 @@
             background: $button-blue;
           }
         }
+        &.sh-fb{
+          a{
+            background: #3b5998;
+            color:#fff;
+          }
+        }
+        &.sh-tw{a{background: #00aced;color:#fff;}}
+        &.sh-pi{a{background: #bb0000;color:#fff;}}
+        &.sh-go{a{background: #dd4b39;color:#fff;}}
       }
     }
   }/*page-wrap*/
@@ -192,7 +238,7 @@
 .doc-action{
   background: #fff;
   box-shadow: $bsh;
-  padding: 40px 30px 30px 40px;
+  padding: 30px 30px 30px 30px;
   max-width: 940px;
   margin: 0 auto 40px;
   
@@ -232,7 +278,9 @@
 
 .mr{
   float: left;
-  
+  @media (max-width: $MH){
+    float:none;
+  }
   .m-rate{
     overflow: hidden;
     display: inline-block;
@@ -242,7 +290,7 @@
     vertical-align: middle;
     margin-right: 15px;
     @media (max-width: $M){
-      font-size: 16px;
+      font-size: 21px;
     }
     
     span {
@@ -278,6 +326,9 @@
     font-size: 14px;
     font-weight: 300;
     vertical-align: text-top;
+    @media (max-width: $MH){
+        float: right;
+    }
   }
 }
 
@@ -286,7 +337,11 @@
   margin: 0;
   float: right;
   list-style: none;
-  
+  @media (max-width: $MH){
+    float: none;
+    text-align: center;
+    margin-top: 20px;
+  }
   li{
     display: inline-block;
     

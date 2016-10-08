@@ -3,17 +3,22 @@
   <nav class="navbar">
     <div class="">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
-          <i class="fa fa-bars"></i>
-        </button>
         <a class="navbar-brand" href="#">
           <img src="img/logo_white.svg">
         </a>
       </div>
-      <div class="conts">
-        <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
-      </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
+          <i class="fa fa-bars"></i>
+      </button>
       <div class="collapse navbar-collapse" id="urmenu">
+        <div class="conts">
+          <!--
+          <a href="" class="searcher btn">
+            <i class="fa fa-search"></i>
+          </a>
+          -->
+          <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
+        </div>
         <ul class="nav navbar-nav">
           <li class="w_sub">
             <a href="">Business <i class="fa fa-angle-down"></i></a>
@@ -69,6 +74,15 @@
       <input type="text" value="150" class="form-control">
       <span>Page of 150</span>
       <button type="button" class="btn btn-1 btn-border btn-white">Go</button>
+    </div>
+    <div class="doc-pgr-select">
+      <select>
+        <option value="1">page 1</option>
+        <option value="1">page 2</option>
+        <option value="1">page 3</option>
+        <option value="1">page 4</option>
+        <option value="1">page 5</option>
+      </select>
     </div>
   </div>
 </header>

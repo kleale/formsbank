@@ -1,5 +1,11 @@
 module.exports = {
   
+  //#31a4ba
+  //#ffee36
+    "$subcolor": "#31a4ba",
+    "$subcolortext": "#fff",
+  
+  
     // Breakpoints
     "$S": "300px", 
     "$SSM": "380px",
@@ -17,7 +23,7 @@ module.exports = {
     "$text-gray-2": "#6c6c6c",
     "$text-gray-3": "#8f8f8f",
 
-    "$link-color": "#3cbcd4",
+    "$link-color": "#16a5bf",
     "$link-color-active": "#3cbcd4",
     "$link-white": "#fff",
     "$link-white-active": "#a6c6cb",
@@ -35,8 +41,6 @@ module.exports = {
     "$bg-dropdown": "#fff",
     "$bg-form": "#f1f1f1",
     
-    "$subcolor": "#ffee36",
-    "$subcolortext": "#000",
     "$green": "#82ac4e",
     "$red": "#ea6465",
     "$subgreen": "#e8f39a",

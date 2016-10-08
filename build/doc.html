@@ -38,17 +38,22 @@
   <nav class="navbar">
     <div class="">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
-          <i class="fa fa-bars"></i>
-        </button>
         <a class="navbar-brand" href="#">
           <img src="img/logo_white.svg">
         </a>
       </div>
-      <div class="conts">
-        <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
-      </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
+          <i class="fa fa-bars"></i>
+      </button>
       <div class="collapse navbar-collapse" id="urmenu">
+        <div class="conts">
+          <!--
+          <a href="" class="searcher btn">
+            <i class="fa fa-search"></i>
+          </a>
+          -->
+          <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
+        </div>
         <ul class="nav navbar-nav">
           <li class="w_sub">
             <a href="">Business <i class="fa fa-angle-down"></i></a>
@@ -104,6 +109,15 @@
       <input type="text" value="150" class="form-control">
       <span>Page of 150</span>
       <button type="button" class="btn btn-1 btn-border btn-white">Go</button>
+    </div>
+    <div class="doc-pgr-select">
+      <select>
+        <option value="1">page 1</option>
+        <option value="1">page 2</option>
+        <option value="1">page 3</option>
+        <option value="1">page 4</option>
+        <option value="1">page 5</option>
+      </select>
     </div>
   </div>
 </header>
@@ -220,16 +234,16 @@
           </div>
         
           <ul class="share-doc">
-            <li>
+            <li class="sh-fb">
               <a href=""><i class="fa fa-facebook"></i></a>
             </li>
-            <li>
+            <li class="sh-tw">
               <a href=""><i class="fa fa-twitter"></i></a>
             </li>
-            <li>
+            <li class="sh-pi">
               <a href=""><i class="fa fa-pinterest"></i></a>
             </li>
-            <li>
+            <li class="sh-go">
               <a href=""><i class="fa fa-google-plus"></i></a>
             </li>
           </ul>
@@ -636,30 +650,19 @@
     padding: 10px;
     border-radius: 5px;">
   <div class="btn-group" role="group" id="hpages">
-    <a href="/index.html" class="m1 btn btn-sm btn-warning">Index</a>
-    <a href="/doc.html" class="m2 btn btn-sm btn-warning">form</a>
-    <a href="/category.html" class="m2 btn btn-sm btn-warning">category</a>
-    <a href="/templates.html" class="m2 btn btn-sm btn-warning">templates</a>
-    <a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat-temp</a>
-    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat-temp 2</a>
+    <a href="/index.html" class="m1 btn btn-sm btn-warning">home</a>
+    <a href="/doc.html" class="m2 btn btn-sm btn-warning">doc</a>
+    <a href="/category.html" class="m2 btn btn-sm btn-warning">cat</a>
+    <a href="/templates.html" class="m2 btn btn-sm btn-warning">temp</a>
+    <a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat+t</a>
+    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat+t2</a>
     <a href="/search.html" class="m2 btn btn-sm btn-warning">search</a>
   </div>
 </div>
 
+
 <!--STYLE CHANGE-->
-<div style="position: fixed;
-    z-index: 10;
-    bottom: 55px;
-    right: 5px;
-    background: rgba(0, 0, 0, 0.22);
-    padding: 10px;
-    border-radius: 5px;">
-  <div class="btn-group" role="group">
-    <a class="m1 btn btn-sm btn-default active">Style 1</a>
-    <a class="m2 btn btn-sm btn-default">Style 2</a>
-    <a class="m3 btn btn-sm btn-default">Style 3</a>
-  </div>
-</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script>
 (function ($) {

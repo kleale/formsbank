@@ -34,6 +34,11 @@
     height: 130px;
     width: 230px;
     margin: 0 auto;
+    
+    @media (max-width: $MH){
+      height: 90px;
+      width: 170px;
+    }
   }
   h2{
     color: #000;
@@ -41,6 +46,9 @@
     font-weight: 200;
     text-align: center;
     margin-bottom: 30px;
+    @media (max-width: $MH){
+      font-size: 24px;
+    }
   }
 
   .typeahead {
@@ -117,6 +125,8 @@
     border: medium none;
     font-size: 21px;
     height: 60px;
+    padding-right:50px;
+    padding-left:50px;
     color:$link-color;
     box-shadow: $bsh2;
     text-align: center;
@@ -133,12 +143,19 @@
     &:-ms-input-placeholder{
       color:$link-color;
     }  
-
+    @media (max-width: $MH){
+      font-size: 18px;
+      height: 50px;
+    }
   }
   .searcher{
     position: absolute 10px 15px * *;
     font-size: 30px;
     color:$link-color;
+    @media (max-width: $MH){
+      top:8px;
+      font-size: 24px;
+    }
   }
   .dropdown-item{
     font-size: 18px;
@@ -169,6 +186,9 @@
   margin-top: -50px;
   color:#fff;
   border-top: 4px solid #ffee36;
+  @media (max-width: $M){
+    padding: 20px 0 20px;
+  }
   
   &:before{
     content: '';
@@ -185,6 +205,10 @@
     width: 320px;
     height: 200px;
     position: absolute 0 0 * *;
+    
+    @media (max-width: $L){
+      display:none;
+    }
   }
   .icnms{
     text-align: center;
@@ -192,7 +216,9 @@
     overflow: hidden;
     z-index: 2;
     margin-bottom: 60px;
-    
+    @media (max-width: $M){
+      margin-bottom: 20px;
+    }
     b{
       font-weight: 200;
       font-size: 18px;
@@ -259,6 +285,9 @@
   line-height: 1;
   font-weight: 200;
   text-transform: uppercase;
+  @media (max-width: $M){
+    font-size: 26px;
+  }
   
   span{
     display: inline-block;
@@ -336,10 +365,15 @@
 
 .cats{
   padding: 70px 0;
-  
+  @media (max-width: $M){
+    padding: 30px 0;
+  }
   .lined{
     margin-top: -100px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    @media (max-width: $M){
+      margin-top: -60px;
+    }
   }
   
   .citem{
@@ -490,7 +524,9 @@ body .owl-theme .owl-controls .owl-page.active span{
     overflow: hidden;
     display: block;
     box-shadow: $bsh2;
-    margin-bottom: 10px;
+    max-width: 200px;
+    margin: 0 auto 10px;
+    
     &:active,
     &:hover,
     &:focus{
@@ -568,6 +604,13 @@ body .owl-theme .owl-controls .owl-page.active span{
         font-size: 18px;
         font-weight: 300;
         
+        @media (max-width: $MH){
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 16px;
+        }
+        
         &:active,
         &:hover,
         &:focus{
@@ -597,7 +640,7 @@ body .owl-theme .owl-controls .owl-page.active span{
       }
       &.ppr, &.ppn{
         a{
-          border: 1px solid #333;
+          border: 1px solid #888;
           width: 140px;
           font-size: 14px;
           span{
@@ -606,7 +649,7 @@ body .owl-theme .owl-controls .owl-page.active span{
           i{
             font-size: 24px;
             vertical-align: sub;
-            color: #333;
+            color: #888;
           }
       }
       }
@@ -617,18 +660,21 @@ body .owl-theme .owl-controls .owl-page.active span{
     .pagination{
       
       li{
-
         a{
           span{
             display: none;
           }
         }
-        
         &.ppr a, &.ppn a {
-          width: 42px;
+          width: 30px;
           font-size: 13px;
         }
-        
+        &.ppn i{
+          margin: 2px 9px 0 0;
+        }
+        &.ppr i{
+          margin: 2px 0 0 9px;
+        }
       }
     }
   }
@@ -636,10 +682,11 @@ body .owl-theme .owl-controls .owl-page.active span{
 
 .block{
   padding: 30px 40px;
-  background: #fff;
-  border-radius: $br;
-  box-shadow: $bsh;
+  /*background: #fff;*/
+  /*border-radius: $br;*/
+  /*box-shadow: $bsh;*/
   margin-bottom: 30px;
+  border: 1px solid #dedede;
   
   h3{
     text-align: center;
@@ -731,6 +778,19 @@ body .owl-theme .owl-controls .owl-page.active span{
 .sorter{
   margin: -20px 0 15px 0;
   text-align: right;
+  
+  @media (max-width: $M){
+    margin: 15px 0;
+    .btn-group{
+      display: block;
+      
+      .btn{
+        display: block;
+        width: 100%;
+        float: none;
+      }
+    }
+  }
 }
 
 

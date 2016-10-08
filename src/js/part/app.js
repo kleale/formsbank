@@ -16,7 +16,19 @@
         }
       }
       */
-    })
+    });
+    
+    // search in header
+    $('.searcher_js').click(function() {
+      $(this).toggleClass('active');
+      $('.searchbar').toggleClass('active');  
+    });
+    
+    // expander block
+    $('.list-loader a').click(function() {
+      $(this).toggleClass('active').html($(this).text() == 'Hide' ? 'Expand' : 'Hide');
+      $('.list-opener').toggleClass('active');
+    });
     
     //  aftocomplete in search form example
     $('#typehead').typeahead({
@@ -57,7 +69,7 @@
       itemsDesktop : [1000,5], 
       itemsDesktopSmall : [900,4], 
       itemsTablet: [600,3],
-      itemsMobile : [400,3]
+      itemsMobile : [400,2]
     });
     
     //category chosen

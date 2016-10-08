@@ -72,8 +72,6 @@
   border-radius: $br;
   box-shadow: $bsh;
   border: 0;
-  font-size: 14px;
-  line-height: 1.5;
   cursor: pointer;
 }
 /*
@@ -109,6 +107,10 @@
   font-size: 24px;
   font-weight: 300;
   padding: 10px 25px;
+  
+  @media (max-width: $MH){
+    font-size: 18px;
+  }
 }
 .btn-default{
   background: $button-blue;
@@ -155,14 +157,14 @@ body .open>.dropdown-toggle.btn-default:focus{
 
 .btn-border{
   background: transparent;
-  border: 1px solid #000;
-  color:#000;
+  border: 1px solid #888;
+  color:#888;
   box-shadow: none;
   &:active,
   &:focus,
   &:hover{
     background: $subcolor;
-    border-color: $subcolortext;
+    border-color: $subcolor;
     color: $subcolortext;
   }
   
