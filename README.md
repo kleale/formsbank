@@ -1,2 +1,2 @@
 # formsbank
-frontend gulp\sass]twig
+frontend gulp\sass\twig
