@@ -48,7 +48,10 @@
       </button>
       <div class="collapse navbar-collapse" id="urmenu">
         <div class="conts">
+          <!--
           <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
+          -->
+          <a data-toggle="modal" data-target="#modal-local" href="#" class="btn-primary btn-sign btn-local" title="Choose you country or state to get forms only available for you location"><i class="fa fa-globe"></i><span>Your country or state</span></a>
         </div>
         <ul class="nav navbar-nav">
           <li class="w_sub">
@@ -91,9 +94,11 @@
               <input type="text" placeholder="Search manual" class="form-control" id="typehead">
               <a class="searcher" href="#"><span class="fa fa-search"></span></a>
             </div>
+          <!--
           <div class="bycountry">
             <a href="#"><i class="globe"></i><span>Get your form by country or state</span></a>
           </div>
+          -->
           <a href="#" class="mouse"><i></i></a>
         </div>
       </section>
@@ -349,7 +354,7 @@
         </div>
         <div class="btn-footer">
           <div class="container">
-            <a href="" class="btn btn-xl btn-border">Find out more forms</a>
+            <a href="" class="btn btn-lg btn-border">Find out more forms</a>
           </div>
         </div>
       </section>
@@ -386,6 +391,8 @@
   
 
   <!-- modal.html -->
+
+<!-- Sign UP -->
 <div class="modal modal-sign fade" id="modal-sign" tabindex="-1" role="dialog">
   <div class="sign-up">
     <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
@@ -469,6 +476,32 @@
     </div>
   </div>
 </div>
+
+
+<!-- Local -->
+<div class="modal modal-local fade" id="modal-local" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Please choose your country</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+
+
   
   <!-- scripts.html -->
 
@@ -497,7 +530,7 @@
     <a href="/doc.html" class="m2 btn btn-sm btn-warning">doc</a>
     <a href="/category.html" class="m2 btn btn-sm btn-warning">cat</a>
     <a href="/templates.html" class="m2 btn btn-sm btn-warning">temp</a>
-    <a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat+t</a>
+    <!--<a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat+t</a>-->
     <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat+t2</a>
     <a href="/search.html" class="m2 btn btn-sm btn-warning">search</a>
   </div>

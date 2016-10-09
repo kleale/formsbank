@@ -53,7 +53,7 @@ module.exports = {
     "$br": "3px",
   
     //box-shadow
-    "$bsh": "1px 1px 8px rgba(0, 0, 0, 0.15)",
-    "$bsh2": "1px 1px 30px rgba(0, 0, 0, 0.2)"
+    "$bsh": "1px 1px 5px rgba(0, 0, 0, 0.15)",
+    "$bsh2": "1px 1px 10px rgba(0, 0, 0, 0.2)"
   
 };

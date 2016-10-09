@@ -360,34 +360,53 @@ Choosen end
 /*
 Modal
 */
-
+.modal-backdrop{
+  background-color: #31A4BA;
+  &.in {
+    filter: alpha(opacity=50);
+    opacity:.8;
+  }
+}
 .modal-content {
   background: #fff;
   border-radius: $br;
   border-width: 0;
   color: #333;
+  border-radius: 0;
+  box-shadow: 0 0 0 10px #FFF3, 0 0 10px 10px #0003;
   
   .modal-header{
     border-color: #eee;
     position: relative;
     text-align: center;
-    
-    .close{
-      position: absolute 5px 5px * *;
+    .modal-title {
+      text-transform: uppercase;
+    }
+    .close {
+      color: #fff;
+      font-size: 61px;
+      opacity: 0.7;
+      text-shadow: none;
+      position: absolute -80px * * 50%;
+      margin-left: -20px;
+      
+      &:hover{
+      opacity: 1;
+      }
     }
   }
   .modal-footer{
     border-color:#eee;
   }
 }
-.close {
-  color: $link-color;
-  font-size: 31px;
-  margin-right: 10px;
-  opacity: 0.6;
-  text-shadow: 0 1px 0 #000000;
+.modal-dialog {
+  margin: 90px auto 20px;
 }
-
+.modal-local{
+  .modal-dialog {
+  width: 800px;
+  }
+}
 /*
 Register
 */

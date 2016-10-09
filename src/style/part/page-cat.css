@@ -186,7 +186,7 @@
   }
 }
 .cat_h2{
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   @media (max-width: $toM){
     margin-bottom: 15px;
   }
@@ -247,6 +247,7 @@
 }
 
 .cat_list{
+  margin-left: -20px;
   
   @media (max-width: $M){
     margin:0 -15px;

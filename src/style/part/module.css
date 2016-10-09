@@ -130,6 +130,7 @@
     color:$link-color;
     box-shadow: $bsh2;
     text-align: center;
+    transition: $transition;
 
     &[placeholder]{
       color:$link-color;
@@ -555,11 +556,12 @@ body .owl-theme .owl-controls .owl-page.active span{
     display: block;
     height: 1px;
     width: 100%;
-    background: #000;
+    background: #b7b7b7;
     position: absolute 50% * * *;
   }
   .btn-border{
     background: $body-color;
+    font-weight: 300;
   }
   .container{
     position: relative;

@@ -188,6 +188,18 @@
       
     }
   }
+  .btn-local{
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #fff;
+    box-shadow: none;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    .fa{
+      margin: 0 5px 0 -3px;
+    }
+  }
   .searcher1{
     border-color:transparent;
     background: transparent;
@@ -380,9 +392,13 @@
 }
 
 .subheader{
-  background: #31a4ba;
+  background: #31a4ba none repeat scroll 0 0;
+  left: 0;
+  margin-top: 10px;
   padding: 10px 15px;
-  margin: 15px -15px -15px;
+  position: absolute;
+  right: 0;
+  
   @media (max-width: $MH){
     margin: 5px -10px -15px;
   }
