@@ -195,7 +195,17 @@
     color: #fff;
     padding-left: 10px;
     padding-right: 10px;
-    
+    .index & {
+      border-color: #555;
+      color: #555;
+      background: transparent none repeat scroll 0 0;
+      box-shadow: none;
+      padding-left: 10px;
+      padding-right: 10px;
+      &:hover{
+        color: #fff;
+      }
+    }
     .fa{
       margin: 0 5px 0 -3px;
     }
@@ -752,4 +762,66 @@ Sign Up modal
     } 
   }
 }
+
+.modal-body{
+    padding: 30px;
+}
+.modal-local{
+  h5 {
+      border-bottom: 1px solid #e4e4e4;
+      font-weight: normal;
+      margin-bottom: 3px;
+      padding-bottom: 15px;
+      font-size: 18px;
+  }
+  ul {
+      list-style: none;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    li {
+      float: left;
+      margin: 18px 0 24px;
+      width: 146px;
+      a {
+        color: #666;
+        cursor: pointer;
+        display: table;
+        width: 126px;
+        img {
+          float: left;
+          margin: 0 10px 0 0;
+        }
+        span {
+          display: table-cell;
+          vertical-align: middle;
+          width: 86px;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

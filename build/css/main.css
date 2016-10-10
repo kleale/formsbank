@@ -1205,6 +1205,17 @@ a:active,
   padding-left: 10px;
   padding-right: 10px;
 }
+.index .header .btn-local {
+  border-color: #555;
+  color: #555;
+  background: transparent none repeat scroll 0 0;
+  box-shadow: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.index .header .btn-local:hover{
+  color: #fff;
+}
 .header .btn-local .fa{
   margin: 0 5px 0 -3px;
 }
@@ -1739,6 +1750,42 @@ Sign Up modal
   background: #dd4b39 none repeat scroll 0 0;
   color:#fff;
 }
+.modal-body{
+    padding: 30px;
+}
+.modal-local h5 {
+  border-bottom: 1px solid #e4e4e4;
+  font-weight: 400;
+  margin-bottom: 3px;
+  padding-bottom: 15px;
+  font-size: 18px;
+}
+.modal-local ul {
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.modal-local ul li {
+  float: left;
+  margin: 18px 0 24px;
+  width: 146px;
+}
+.modal-local ul li a {
+  color: #666;
+  cursor: pointer;
+  display: table;
+  width: 126px;
+}
+.modal-local ul li a img {
+  float: left;
+  margin: 0 10px 0 0;
+}
+.modal-local ul li a span {
+  display: table-cell;
+  vertical-align: middle;
+  width: 86px;
+}
 /*
   Module
 */
@@ -1848,6 +1895,7 @@ Sign Up modal
   margin: 0 auto;
   padding: 0;
   position: relative;
+  margin-bottom: 50px;
 }
 .mainsearch form {
   display: block;

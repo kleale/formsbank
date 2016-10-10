@@ -8,6 +8,7 @@
 -->
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://raw.github.com/jamietre/ImageMapster/e08cd7ec24ffa9e6cbe628a98e8f14cac226a258/dist/jquery.imagemapster.min.js"></script>
 <!-- Site Sripts -->
 <script src="/js/main.js"></script>
 
@@ -87,6 +88,41 @@
       $('#stylesheet').attr('href','/css/main2.css');
       $(this).addClass('active');
       $(this).siblings().removeClass('active');
+    });
+    
+    // LOcal select USA MAP
+    
+    $('.usa').mapster({
+        fillOpacity: 0.5,
+        render_highlight: {
+            fillColor: '2aff00',
+            stroke: true,
+            altImage: 'examples/images/usa_map_720_alt_4.jpg'
+        },
+        render_select: {
+            fillColor: 'ff000c',
+            stroke: false,
+            altImage: 'examples/images/usa_map_720_alt_5.jpg'
+        },
+        fadeInterval: 50,
+        mapKey: 'data-state',
+        areas: [
+        {
+            key: 'TX',
+            selected: true
+        },
+        {
+            key: 'ME',
+            selected: true
+        },
+        {
+            key: 'WA',
+            staticState: false
+        },
+        {
+            key: 'OR',
+            isSelectable: false
+        }]
     });
     
   }); //end ready

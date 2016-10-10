@@ -115,6 +115,7 @@
   margin: 0 auto;
   padding: 0;
   position: relative;
+  margin-bottom: 50px;
 
   form {
     display: block;
