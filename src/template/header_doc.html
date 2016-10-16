@@ -12,27 +12,29 @@
       </button>
       <div class="collapse navbar-collapse" id="urmenu">
         <div class="conts">
-          <!--
+          {#
             <a href="#" class="searcher1 searcher_js btn">
               <i class="fa fa-search"></i>
             </a>
             <div class="searchbar">
               <div class="doc-srch">
-                  <input type="text" placeholder="Search documents" class="form-control">
-                  <a href="" class="searcher">Go</a>
+                  <form action="search-google.html" method="GET">
+                    <input type="text" name="q" placeholder="Search documents" class="form-control">
+                  </form>
+                  <a onclick="$(this).closest('form').submit();" class="searcher">Go</a>
                 <a href="#" class="searcher-close searcher_js btn">
                   <i class="fa fa-times"></i>
                 </a>
               </div>
             </div>
-          -->
-          <!--
+          #}
+          {#
             <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
-          -->
-          <a data-toggle="modal" data-target="#modal-local" href="#" class="btn-primary btn btn-sign btn-local" title="Choose you country or state to get forms only available for you location"><i class="fa fa-globe"></i><span>Your country or state</span></a>
-          <!--
-          <a data-toggle="modal" data-target="#modal-local" href="#" class="btn-primary btn btn-sign btn-local" title="Choose you country or state to get forms only available for you location"><i class="fa fa-globe"></i><span>USA</span></a>
-          -->
+          #}
+            <a data-toggle="modal" data-target="#modal-local" href="#" class="btn-primary btn btn-sign btn-local" title="Choose you country or state to get forms only available for you location"><i class="fa fa-globe"></i><span>Your country or state</span></a>
+          {#
+            <a data-toggle="modal" data-target="#modal-local" href="#" class="btn-primary btn btn-sign btn-local" title="Choose you country or state to get forms only available for you location"><i class="fa fa-globe"></i><span>USA</span></a>
+          #}
         </div>
         <ul class="nav navbar-nav">
           <li class="w_sub">

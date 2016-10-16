@@ -53,8 +53,10 @@
           </a>
           <div class="searchbar">
             <div class="doc-srch">
-                <input type="text" placeholder="Search documents" class="form-control">
-                <a href="" class="searcher">Go</a>
+              <form action="search-google.html" method="GET">
+                <input type="text" name="q" placeholder="Search documents" class="form-control">
+              </form>
+              <a onclick="$(this).closest('form').submit();" class="searcher">Go</a>
               <a href="#" class="searcher-close searcher_js btn">
                 <i class="fa fa-times"></i>
               </a>

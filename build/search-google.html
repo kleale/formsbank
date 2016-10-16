@@ -53,8 +53,10 @@
           </a>
           <div class="searchbar">
             <div class="doc-srch">
-                <input type="text" placeholder="Search documents" class="form-control">
-                <a href="" class="searcher">Go</a>
+              <form action="search-google.html" method="GET">
+                <input type="text" name="q" placeholder="Search documents" class="form-control">
+              </form>
+              <a onclick="$(this).closest('form').submit();" class="searcher">Go</a>
               <a href="#" class="searcher-close searcher_js btn">
                 <i class="fa fa-times"></i>
               </a>
@@ -99,23 +101,11 @@
             <div class="cat_h2">    
               <h2><span>Search Results</span></h2>
             </div>
-           
-            
             
             <div id="gsediv">
               <gcse:searchbox></gcse:searchbox>
               <gcse:searchresults defaultToImageSearch="false"></gcse:searchresults>
             </div>
-            <script>
-              (function() {
-                var cx = '017643444788069204610:4gvhea_mvga'; // Insert your own Custom Search engine ID here
-                var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-                gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
-                    '//www.google.com/cse/cse.js?cx=' + cx;
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-              })();
-            </script>
-            
           </div>
           <div class="col-md-4">
             <div class="block">

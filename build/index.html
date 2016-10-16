@@ -92,8 +92,11 @@
             <div class="sl-logo"></div>
             <h2>All professional Templates & Forms online</h2>
             <div class="mainsearch">
-              <input type="text" placeholder="Search manual" class="form-control" id="typehead">
-              <a class="searcher" href="#"><span class="fa fa-search"></span></a>
+              
+              <form action="search-google.html" method="GET">
+                <input type="text" name="q" placeholder="Search documents" class="form-control">
+              </form>
+              <a class="searcher" onclick="$(this).closest('form').submit();"><span class="fa fa-search"></span></a>
             </div>
           <!--
           <div class="bycountry">

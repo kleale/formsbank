@@ -153,7 +153,8 @@
   .searcher{
     position: absolute 10px 15px * *;
     font-size: 30px;
-    color:$link-color;
+    color: $link-color;
+    cursor: pointer;
     @media (max-width: $MH){
       top:8px;
       font-size: 24px;

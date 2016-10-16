@@ -2050,7 +2050,8 @@ Sign Up modal
   right: 15px;
   position: absolute;
   font-size: 30px;
-  color:#16a5bf;
+  color: #16a5bf;
+  cursor: pointer;
 }
 @media (max-width: 600px){
   .mainsearch .searcher {
@@ -3282,7 +3283,7 @@ Modal end
   margin-top: 100px;
 }
 #gsediv .gsib_a {
-  padding: 6px 6px 0;
+  padding: 0px 6px 0;
 }
 #gsediv .gsc-input-box {
   border: 1px solid #D9D9D9;
