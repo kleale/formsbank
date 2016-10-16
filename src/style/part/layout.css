@@ -25,11 +25,12 @@
   .conts{
     float: right;
     position: relative;
+    margin-right: -15px;
     
     @media (max-width: $XM){
       float: none;
-      border-bottom:1px solid #fff;
       margin-bottom: 10px;
+      margin-right: 0;
     }
   }
   
@@ -55,11 +56,14 @@
         padding: 12px 10px;
         line-height: 1;
         
-        @media (max-width: $L){
+        @media (max-width: 1300px){
           font-size: 14px;
           padding: 13px 7px;
         }
-        
+        @media (max-width: 1100px){
+          font-size: 13px;
+          padding: 13px 5px;
+        }
         &:hover{
           background: transparent;
           color: $link-color-active;
@@ -167,7 +171,7 @@
     
     @media (max-width: $XM){
       width: 160px;
-      margin: -10px -10px;
+      margin: -15px 0 -15px 0px;
     }
     
     img{
@@ -195,6 +199,27 @@
     color: #fff;
     padding-left: 10px;
     padding-right: 10px;
+    @media (max-width: $L){
+      border: none;
+      font-size: 20px;
+      span{
+        display: none;
+      }
+      .fa{
+        margin: 0!important;
+      }
+    }
+    @media (max-width: $XM){
+      border: 1px solid #fff;
+      font-size: 14px;
+      display: block;
+      span{
+        display: inline;
+      }
+      .fa{
+        margin-right: 5px!important;
+      }
+    }
     .index & {
       border-color: #555;
       color: #555;
@@ -569,21 +594,46 @@
 }
 
 .footer{
-  text-align: center;
-  padding: 30px 0;
+  padding: 30px 0 0 0;
+  .container{
+    border-top: 1px solid #dedede;
+    padding-top: 15px;
+  }
   
+  @media (max-width: $M){
+    text-align: center;
+  }
+  .classify{
+    overflow: hidden;
+    margin-bottom: 15px;
+    @media (max-width: $M){
+      display: none;
+    }
+    dd {
+      float: left;
+      width: 32%;
+    }
+  }
+  h3{
+    font-size: inherit;
+    margin: 0 0 15px 0;
+  }
   .fmenu{
     list-style: none;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
+    text-align: left;
+    @media (max-width: $M){
+      text-align: center;
+    }
+    
     li{
-      display: inline-block;
       color:#494748;
+      @media (max-width: $M){
+        display: inline-block;
+        padding: 0 10px;
+      }
       a{
-        color:#494748;
-        display: block;
-        padding: 5px 10px;
-        
         &:active,
         &:hover,
         &:focus{
@@ -593,15 +643,47 @@
       }
     }
   }
-  .f-social{
-    a{
-      color:#494748;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 50%;
+  .fsubmenu{
+    list-style: none;
+    font-size: 11px;
+    margin: 0;
+    padding: 10px 0;
+    border-top: 1px solid #dedede;
+    margin: 0 -10px;
+    li{
       display: inline-block;
-      
+      color:#494748;
+      padding: 5px 10px;
+      a{
+        color:#494748;
+        display: block;
+
+        &:active,
+        &:hover,
+        &:focus{
+          color: $link-color;
+          text-decoration: underline;
+        }
+      }
+      &.sl{
+        float: right;
+      }
+    }
+  }
+  .f-social{
+    border-top: aliceblue;
+    margin: 15px -10px 10px -10px;
+    padding-top: 10px;
+    border-top: 1px solid #dedede;
+    a{
+      color: #494748;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+
       &:active,
       &:hover,
       &:focus{
@@ -768,20 +850,22 @@ Sign Up modal
 }
 .modal-local{
   h5 {
-      border-bottom: 1px solid #e4e4e4;
-      font-weight: normal;
-      margin-bottom: 3px;
-      padding-bottom: 15px;
-      font-size: 18px;
+    border-bottom: 1px solid #e4e4e4;
+    font-weight: 400;
+    margin-bottom: 3px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-top: 0;
   }
   ul {
       list-style: none;
       overflow: hidden;
       margin: 0;
+      margin-bottom: 20px;
       padding: 0;
     li {
       float: left;
-      margin: 18px 0 24px;
+      margin: 10px 0 10px;
       width: 146px;
       a {
         color: #666;
@@ -800,6 +884,24 @@ Sign Up modal
         }
       }
     }
+  }
+}
+
+.p404{
+  .cat-header {
+    h1{
+      font-size: 110px;
+      font-weight: 200;
+    }
+  }
+  .subtext{
+    font-size: 18px;
+  }
+}
+
+.search-results{
+  .mainsearch{
+    margin: 0 auto 20px;
   }
 }
 

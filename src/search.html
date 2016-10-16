@@ -18,15 +18,13 @@
     
     <section class="cat-header">
       <div class="container search-results">
-        {% include "template/breadcrumbs.html" %}
+        <br>
         <div class="row">
           <div class="col-sm-12">
-            <h1> Search results</h1>
               <div class="mainsearch">
                 <input type="text" placeholder="Search manual" class="form-control" id="typehead">
                 <a class="searcher" href="#"><span class="fa fa-search"></span></a>
               </div>
-            <div class="total">Total 743 templates</div>
           </div>
         </div>
       </div>
@@ -37,25 +35,23 @@
         <div class="row">
           <div class="col-md-8">
             <div class="cat_h2">    
-              <!--
-              <div class="btn-group">
-                  <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Sort by popularity <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Sort by name</a></li>
-                    <li><a href="#">Sort by size</a></li>
-                  </ul>
+              <div class="cat_actions">
+                <div class="sorter">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sort by popularity <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Sort by name</a></li>
+                      <li><a href="#">Sort by size</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="catfilter">
+                  <input type="text" class="form-control" placeholder="Filter templates...">
+                </div>
               </div>
-              -->
-              <select style="width:200px;" data-placeholder="Filter by country or State..." class="chosen-select pull-right" multiple tabindex="4">
-                <option selected="selected" disabled>Filter by country or State...</option>
-                <option value="United States">United States</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-              </select>
+              <h2><span>Search Results</span></h2>
             </div>
            
             <div class="tem_list">

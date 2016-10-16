@@ -1,0 +1,90 @@
+{% set title = "Search Google" %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ title }}</title>
+  
+  {% include "template/head.html" %}
+  
+</head>
+<body class="page-cat p404">
+  <div class="wrapper">
+    {% include "template/header_cat.html" %}
+    
+    <section class="cat-header">
+      <div class="container search-results">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>Oops!</h1>
+            <div class="subtext">
+              We can't seem to find the page you're looking for.
+              <h4>Error code: 404</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cat-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h3 class="text-center">You may want to try these popular forms below</h3>
+            
+            <div class="block">
+              <div class="row">
+                <div class="col-sm-6 ">
+                  <ul>
+                    <li><a href="">Agreement Template</a></li>
+                    <li><a href="">Bill of Sale Form</a></li>
+                    <li><a href="">Business Template</a></li>
+                    <li><a href="">Business Proposal Template</a></li>
+                    <li><a href="">Certificate Template</a></li>
+                    <li><a href="">Education Template</a></li>
+                    <li><a href="">Finance Template</a></li>
+                    <li><a href="">Home & Famliy Template</a></li>
+                    <li><a href="">Invoice Template</a></li>
+                    <li><a href="">Legal Template</a></li>
+                    <li><a href="">Letter Template</a></li>
+                    <li><a href="">List & Chart Template</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 ">
+                  <ul>
+                    <li><a href="">Agreement Template</a></li>
+                    <li><a href="">Bill of Sale Form</a></li>
+                    <li><a href="">Business Template</a></li>
+                    <li><a href="">Business Proposal Template</a></li>
+                    <li><a href="">Certificate Template</a></li>
+                    <li><a href="">Education Template</a></li>
+                    <li><a href="">Finance Template</a></li>
+                    <li><a href="">Home & Famliy Template</a></li>
+                    <li><a href="">Invoice Template</a></li>
+                    <li><a href="">Legal Template</a></li>
+                    <li><a href="">Letter Template</a></li>
+                    <li><a href="">List & Chart Template</a></li>
+                  </ul>
+                </div>
+              </div>
+              <a href="" class="btn btn-border btn-lg btn-block">Or go home</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {% include "template/footer.html" %}
+  </div>
+  
+
+  {% include "template/modals.html" %}
+  {% include "template/scripts.html" %}
+
+</body>
+</html>

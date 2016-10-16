@@ -2,18 +2,109 @@
 
 <!--Import jQuery-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 <!-- jQuery for older IE -->
 <!--
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 -->
-<!-- Latest compiled and minified JavaScript -->
+<!-- Latest compiled and minified bootstrap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://raw.github.com/jamietre/ImageMapster/e08cd7ec24ffa9e6cbe628a98e8f14cac226a258/dist/jquery.imagemapster.min.js"></script>
+
+<!-- MAP -->
+<script type="text/javascript" src="/assets/js/jqvmap/jquery.vmap.js"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/jquery.vmap.usa.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.africa.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.asia.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.australia.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.europe.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.north-america.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.south-america.js" charset="utf-8"></script>
+<script type="text/javascript">
+// MAP SCRIPT
+  jQuery(document).ready(function () {
+    
+    if ($('#vectorMap').length ) {
+      // USA choosen two state selects
+      $("#ctry").change(function(){
+        if($("#ctry option:selected").val()=="United States"){
+          $("#ifusa").show();
+          $("#ifusa .chosen-select").chosen("destroy");
+          $("#ifusa .chosen-select").chosen({width: "100%"}); 
+        } else {
+          $("#ifusa").hide();
+        }
+      });
+
+      // dropdown select to button
+      $(function(){
+         $("#mapdrop .dropdown-menu li a").click(function(){
+            $(".btn:first-child").text($(this).text());
+            $(".btn:first-child").val($(this).text());
+         });
+      });
+
+      // map init
+      jQuery('#vmap-usa').vectorMap({
+        map: 'usa_en',
+        //backgroundColor: '#81c3d0',
+        //borderColor: '#818181',
+        //hoverColor: '#c9dfaf',
+        showLabels: true,
+        enableZoom: true,
+        showTooltip: true,
+        // click state ivent
+        onRegionClick: function (element, code, region) {
+          var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase();
+          alert(message);
+        }
+      });
+
+      jQuery('#vmap-asia').vectorMap({
+        map: 'asia_en',
+        //showLabels: true, //bugs margin ??
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-europe').vectorMap({
+        map: 'europe_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-australia').vectorMap({
+        map: 'australia_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-africa').vectorMap({
+        map: 'africa_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-northamerica').vectorMap({
+        map: 'north-america_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-southamerica').vectorMap({
+        map: 'south-america_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+    }
+  });
+</script>
+<!-- .MAP -->
+
 <!-- Site Sripts -->
 <script src="/js/main.js"></script>
 
 
-<!--PAGES-->
+<!--PAGES select-->
 <div style="position: fixed;
     z-index: 10;
     bottom: 5px;
@@ -25,14 +116,15 @@
     <a href="/index.html" class="m1 btn btn-sm btn-warning">home</a>
     <a href="/doc.html" class="m2 btn btn-sm btn-warning">doc</a>
     <a href="/category.html" class="m2 btn btn-sm btn-warning">cat</a>
-    <a href="/templates.html" class="m2 btn btn-sm btn-warning">temp</a>
-    <!--<a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat+t</a>-->
-    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat+t2</a>
+    <a href="/templates.html" class="m2 btn btn-sm btn-warning">templates</a>
+    <a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat and templates</a>
+    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat and templates v2</a>
     <a href="/search.html" class="m2 btn btn-sm btn-warning">search</a>
+    <a href="/search-google.html" class="m2 btn btn-sm btn-warning">search google</a>
+    <a href="/404.html" class="m2 btn btn-sm btn-warning">404</a>
   </div>
 </div>
-
-
+<!-- .PAGES select-->
 <!--STYLE CHANGE-->
 {#
 <div style="position: fixed;
@@ -49,7 +141,6 @@
     -->
   </div>
 </div>
-#}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script>
 (function ($) {
@@ -90,42 +181,9 @@
       $(this).siblings().removeClass('active');
     });
     
-    // LOcal select USA MAP
-    
-    $('.usa').mapster({
-        fillOpacity: 0.5,
-        render_highlight: {
-            fillColor: '2aff00',
-            stroke: true,
-            altImage: 'examples/images/usa_map_720_alt_4.jpg'
-        },
-        render_select: {
-            fillColor: 'ff000c',
-            stroke: false,
-            altImage: 'examples/images/usa_map_720_alt_5.jpg'
-        },
-        fadeInterval: 50,
-        mapKey: 'data-state',
-        areas: [
-        {
-            key: 'TX',
-            selected: true
-        },
-        {
-            key: 'ME',
-            selected: true
-        },
-        {
-            key: 'WA',
-            staticState: false
-        },
-        {
-            key: 'OR',
-            isSelectable: false
-        }]
-    });
-    
   }); //end ready
 
 }(jQuery));
 </script>
+<!-- .STYLE CHANGE -->
+#}

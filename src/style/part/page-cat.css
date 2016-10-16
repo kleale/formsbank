@@ -33,6 +33,7 @@
     color:#fff;
     font-weight: 300;
     text-align: left;
+    font-size: 13px;
     ol{
       padding: 0;
       
@@ -46,7 +47,7 @@
   }
   
   h1{
-    font-weight: 200;
+    font-weight: 300;
     font-size: 25px;
     margin-top: 14px;
     margin: 3px 0 20px 0;
@@ -98,14 +99,14 @@
   }
   .total{
     color: #fff;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 18px;
     margin-top: 20px;
   }
   
   @media (max-width: $toM){
     text-align: center;
-    padding: 75px 15px 15px 15px;
+    padding: 90px 15px 15px 15px;
     
     .ic{
       float: none;
@@ -180,7 +181,7 @@
 }
 
 .cat-content{
-  padding: 50px 0;
+  padding: 30px 0;
   @media (max-width: $toM){
     padding: 20px 0;
   }
@@ -192,7 +193,7 @@
   }
   h2{
     position: relative;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 300;
     margin-top: 3px;
     @media (max-width: $toM){
@@ -215,21 +216,22 @@
       position: absolute;
     }
   }
-  .catfilter{
-    width: 300px;
+  .cat_actions{
     float: right;
     position: relative;
     z-index: 2;
+    background: #f1f1f1;
     top: -3px;
+  }
+  .catfilter{
+    width: 200px;
+    float: right;
+    margin-right: 5px;
+    position: relative;
+    z-index: 2;
     
     input{
-      font-size: 16px;
-      color:#4d4d4d;
-      background: #f2f2f2;
-      box-shadow: none;
       border: 1px solid #ddd;
-      padding: 10px;
-      height: 40px;
     }
     &:after{
       content: '\f0b0';
@@ -247,15 +249,10 @@
 }
 
 .cat_list{
-  margin-left: -20px;
-  
-  @media (max-width: $M){
-    margin:0 -15px;
-  }
   
   .cat_item{
     padding: 15px;
-    /*border: 1px solid #dedede;*/
+    border: 1px solid #dedede;
     margin: -1px 0 0 0;
     overflow: hidden;
     
@@ -270,7 +267,7 @@
     }
     
     h4{
-      margin: 10px 0 20px 10px;
+      margin: 5px 0 4px 11px;
       font-size: 22px;
       line-height: 1.5;
       
@@ -304,7 +301,7 @@
         min-width: 40px;
         text-align: center;
       }
-      span{
+      em{
         font-size: 12px;
         line-height: 12px;
         display: block;
@@ -350,7 +347,7 @@
           width: 190px;
           
           @media (max-width: $toM){
-            width: 130px;
+            width: 160px;
           }
         }
       }
@@ -440,7 +437,7 @@
 .search-results{
   text-align: center;
 }
-
+/*
 .cat-temp{
   .cat-content{
     background: #fff;
@@ -461,15 +458,11 @@
     }
   }
 }
+*/
 
-.cat-temp .cat-content.temp-content{
-  background: #f2f2f2;
-  
-  .cat_h2{
-    span{
-      background:#f2f2f2;
-    }
-  }
+
+.temp-content{
+  margin-bottom: 40px;
 }
 
 .list-opener{
@@ -480,42 +473,39 @@
   transition: $transition;
   
   &.active{
-    max-height: 3000px;
     padding-bottom: 70px;
   }
-  
-  .cat_h2 h2{
-    text-align: center;
-    font-size: 24px;
-    span{
-      padding: 0 15px;
-    }
+}
+#list-opener{
+  &.active{
+    max-height: 3000px;
   }
-  
-  .list-loader{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+}
+
+
+.list-loader{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#f2f2f2 40%);
+  padding: 40px 0 0 0;
+
+  &:after{
+    content: '';
+    display: block;
+    height: 1px;
     width: 100%;
-    text-align: center;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#f2f2f2 40%);
-    padding: 40px 0 0 0;
-    
-    &:after{
-      content: '';
-      display: block;
-      height: 1px;
-      width: 100%;
-      background: #ddd;
-      top: 60px;
-      position: absolute;
-    }
-    a{
-      position: relative;
-      z-index: 2;
-    }
-    
+    border-bottom: 1px dashed #ccc;
+    top: 60px;
+    position: absolute;
   }
+  a{
+    position: relative;
+    z-index: 2;
+  }
+
 }
 
 .cat_list_sm.cat_list{
@@ -540,18 +530,277 @@
     }
   }
 }
-
+.holder{
+  padding: 0 5px;
+}
 .docs-holder{
   padding: 0;
   list-style: none;
   
   .f-item{
-  padding: 5px 5px 30px 5px;
+  padding: 5px 0 10px 0;
   
   }
 }
 
+/*JS MAP*/
+.mapdiv{
+  h3{
+    margin-top: 0;
+  }
+  .tab-content > .tab-pane:not(.active), 
+  .pill-content > .pill-pane:not(.active){
+    height:auto;
+    opacity: 1;
+  }
+  .tab-content{
+    position: relative;
+    height: 200px;
+  }
+  .tab-pane{
+    position: absolute 0 0 0 0;
+    z-index: 0;
+  }
+  .tab-pane.active{
+    z-index: 1;
+  }
+  .jqvmap-label{
+    z-index: 2; 
+  }
+  .jqvmap-zoomin {
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    font-size: 20px;
+    background: #3cbcd4;
+  }
+  .jqvmap-zoomout {
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    line-height: 30px;
+    line-height: 25px;
+    font-size: 20px;
+    background: #3cbcd4;
+  }
+  .jqvmap-pin {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  /* Hide Whichever Labels you want */
+  #jqvmap1_ri_pin, #jqvmap1_dc_pin, #jqvmap1_de_pin, #jqvmap1_md_pin {
+    display: none;
+  }
+  /* Reposition Labels that are not quite right ( labels are centered in shape, and sometimes need tweaking ) */
+
+  #jqvmap1_ak_pin {
+    margin-top: -2%;
+  }
+  #jqvmap1_ca_pin {
+    margin-left: -2%;
+  }
+  #jqvmap1_ct_pin {
+    margin-top: -0.25%;
+    margin-left: -0.25%;
+  }
+  #jqvmap1_fl_pin {
+    margin-left: 5%;
+  }
+  #jqvmap1_id_pin {
+    margin-top: 3%;
+    margin-left: -1%;
+  }
+  #jqvmap1_ky_pin {
+    margin-left: 2%;
+  }
+  #jqvmap1_la_pin {
+    margin-left: -2%;
+  }
+  #jqvmap1_mi_pin {
+    margin-top: 4%;
+    margin-left: 3%;
+  }
+  #jqvmap1_ma_pin {
+    margin-top: -0.25%;
+  }
+  #jqvmap1_mn_pin {
+    margin-top: 2%;
+    margin-left: -2%;
+  }
+  #jqvmap1_nh_pin {
+    margin-top: 1%;
+    margin-left: -0.25%;
+  }
+  #jqvmap1_nj_pin {
+    margin-top: 1%;
+  }
+  #jqvmap1_ok_pin {
+    margin-left: 2%;
+  }
+  #jqvmap1_va_pin {
+    margin-left: 2%;
+  }
+  #jqvmap1_wv_pin {
+    margin-left: -1%;
+    margin-top: 1%;
+  }
+
+  /* Add responsibe support to resize labels for difference screen sizes */
+  @media only screen and (min-width: 320px) {
+    .jqvmap-pin {
+      font-size: 6px;
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    .jqvmap-pin {
+      font-size: 8px;
+    }
+  }
+  @media only screen and (min-width: 640px) {
+    .jqvmap-pin {
+      font-size: 10px;
+    }
+  }
+  @media only screen and (min-width: 800px) {
+    .jqvmap-pin {
+      font-size: 12px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .jqvmap-pin {
+      font-size: 14px;
+    }
+  }
+
+  .mapmenu .nav-tabs>li.active>a, 
+  .mapmenu .nav-tabs>li.active>a:focus, 
+  .mapmenu .nav-tabs>li.active>a:hover{
+      color: #fff;
+      background-color: #a5bfdd;
+  }
+  
+}
+.mapcont{
+  border-right:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  border-left:1px solid #ddd;
+}
+.mapper{
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#vmap{
+  /* This breaks it also */
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
 
 
+/* END JS MAP*/
+.browse_type{
+  h3{
+    margin-top: 0;
+  }
+  .type_tags{
+    position: relative;
+    padding-bottom: 40px;
+    line-height: 29px;
+    max-height: 105px;
+    overflow: hidden;
 
+    .list-loader {
+      padding: 20px 0 0 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#ffffff 40%);
+      &:after {
+        top: 35px;
+      }
+    }
+    .label{
+        background: #c7e5ea;
+        color: #000;
+        font-weight: 400;
+        font-size: 13px;
+      &:hover{
+        color: $button-blue-text;
+        background: $button-blue;
+      }
+    }
+  }
+}
+.cat_list .cat_item_style2{
+  position: relative;
+  padding: 15px 15px 0 15px;
+  .cmore{
+    position: absolute 50% 25px * *;
+    text-align: center;
+    margin-top: -15px;
+    @media (max-width: $MH){
+      position: relative auto auto auto auto;
+      display:block;
+      margin:0 0 10px 0;
+      width: 100%;
+    }
+    b{
+      display: block;
+      font-size: 24px;
+      line-height: 1;
+      @media (max-width: $MH){
+        display: inline ;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+  .idocs{
+    &:after{
+      width: 100px;
+    }
+    .f-item{
+      .f-pic{
+        position: relative;
+        span{
+          position: absolute * 0 0 0;
+          border-bottom: 3px solid #3cbcd4;
+          font-size: 15px;
+          line-height: 18px;
+          padding: 65px 15px 10px 15px;
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 44%,rgba(255,255,255,1) 63%);
 
+          @media (max-width: $toM){
+            font-size: 12px;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}
+.cat_item_style2{
+    .f-item{
+      .f-pic{
+        position: relative;
+        span{
+          position: absolute * 0 0 0;
+          border-bottom: 3px solid #3cbcd4;
+          font-size: 15px;
+          line-height: 18px;
+          padding: 65px 15px 10px 15px;
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 44%,rgba(255,255,255,1) 63%);
+
+          @media (max-width: $toM){
+            font-size: 12px;
+            line-height: 1.2;
+          }
+          b{
+            font-size: 75%;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+}

@@ -692,7 +692,6 @@ body .owl-theme .owl-controls .owl-page.active span{
   border: 1px solid #dedede;
   
   h3{
-    text-align: center;
     color: #000;
     font-size: 20px;
     font-weight: 300;
@@ -779,9 +778,11 @@ body .owl-theme .owl-controls .owl-page.active span{
 }
 
 .sorter{
-  margin: -20px 0 15px 0;
-  text-align: right;
-  
+  margin: 0px;
+  float: right;
+  .btn{
+    background: #f1f1f1;
+  }
   @media (max-width: $M){
     margin: 15px 0;
     .btn-group{
@@ -796,7 +797,27 @@ body .owl-theme .owl-controls .owl-page.active span{
   }
 }
 
-
+/* textcutter*/
+.complete{
+    display:none;
+}
+.more{
+  cursor: pointer;
+  color: #ffee36;
+  border: 1px solid;
+  margin-left: 10px;
+  padding: 3px 5px;
+  font-size: 12px;
+  border-radius: 2px;
+  &:focus,
+  &:active,
+  &:hover{
+    background: #3cbcd4;
+    color: #fff;
+    border: 1px solid #3cbcd4;
+  }
+}
+/**/
 
 
 

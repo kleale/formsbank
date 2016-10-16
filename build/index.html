@@ -15,6 +15,7 @@
 
  <!-- Import bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="/assets/js/jqvmap/jqvmap.min.css" media="screen" rel="stylesheet" type="text/css">
 
 <!-- Import main styles -->
 <link rel="stylesheet" href="/css/main.css" id="stylesheet">
@@ -362,28 +363,43 @@
       <!-- footer.html -->
 <footer class="footer">
   <div class="container">
-    <ul class="fmenu">
-      <li><a href="">About</a></li>
-      <li><a href="">Forms</a></li>
-      <li><a href="">FAQ</a></li>
-      <li><a href="">Help</a></li>
-      <li><a href="">Contact us</a></li>
-    </ul>
-
-    <div class="f-social">
-      <a href=""><i class="fa fa-facebook"></i></a>
-      <a href=""><i class="fa fa-twitter"></i></a>
-      <a href=""><i class="fa fa-pinterest"></i></a>
-      <a href=""><i class="fa fa-google-plus"></i></a>
+    <div class="row">
+      <div class="col-sm-3">
+        <h3>FormsBank</h3>
+        <ul class="fmenu">
+          <li><a href="">About</a></li>
+          <li><a href="">Forms</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">Help</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+        
+        <div class="f-social">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-pinterest"></i></a>
+            <a href=""><i class="fa fa-google-plus"></i></a>
+        </div>
+        
+      </div>
+      
+      <div class="col-sm-9 pull-left">
+        <dl class="classify">
+          <dt><h3>Featured Categories</h3></dt>
+          <dd><a href="/invoice-template.html">Invoice Template</a></dd><dd><a href="/resume-template.html">Resume Template</a></dd><dd><a href="/company-profile-sample.html">Company Profile Sample</a></dd><dd><a href="/receipt-template.html">Receipt Template</a></dd><dd><a href="/business-proposal-template.html">Business Proposal Template</a></dd><dd><a href="/manual-sample.html">Manual Sample</a></dd><dd><a href="/newsletter-template.html">Newsletter Template</a></dd><dd><a href="/menu-template.html">Menu Template</a></dd><dd><a href="/job-offer-letter-sample.html">Job Offer Letter Sample</a></dd><dd><a href="/cv-template.html">CV Template</a></dd><dd><a href="/certificate-template.html">Certificate Template</a></dd><dd><a href="/basic-resume-template.html">Basic Resume Template</a></dd><dd><a href="/rental-application-template.html">Rental Application Form</a></dd><dd><a href="/simple-loan-agreement-template.html">Simple Loan Agreement Template</a></dd><dd><a href="/power-of-attorney-form.html">Power of Attorney Form</a></dd>
+        </dl>
+        
+        <ul class="fsubmenu">
+            <li>FormsBank. all rights reserved. 2016 ©</li>
+            <li><a href="">Terms of service.</a></li>
+            <li><a href="">Accessibility</a></li>
+            <li><a href="">Privacy</a></li>
+            <li class="sl">Site Language: <u>English</u></li>
+        </ul>
+        
+      </div>
+      
     </div>
-
-    <ul class="fmenu">
-      <li>FormsBank. all rights reserved. 2016 ©</li>
-      <li><a href="">Terms of service.</a></li>
-      <li><a href="">Accessibility</a></li>
-      <li><a href="">Privacy</a></li>
-      <li>Site Language: <u>English</u></li>
-    </ul>
   </div>
 </footer>
 
@@ -487,66 +503,62 @@
         <h4 class="modal-title">Please choose your country</h4>
       </div>
       <div class="modal-body">
-        <h5>The United States, Canada, and Puerto Rico</h5>
-        
+        <h5>The United States</h5>
         <select class="form-control">
-	<option value="AL">Alabama</option>
-	<option value="AK">Alaska</option>
-	<option value="AZ">Arizona</option>
-	<option value="AR">Arkansas</option>
-	<option value="CA">California</option>
-	<option value="CO">Colorado</option>
-	<option value="CT">Connecticut</option>
-	<option value="DE">Delaware</option>
-	<option value="DC">District Of Columbia</option>
-	<option value="FL">Florida</option>
-	<option value="GA">Georgia</option>
-	<option value="HI">Hawaii</option>
-	<option value="ID">Idaho</option>
-	<option value="IL">Illinois</option>
-	<option value="IN">Indiana</option>
-	<option value="IA">Iowa</option>
-	<option value="KS">Kansas</option>
-	<option value="KY">Kentucky</option>
-	<option value="LA">Louisiana</option>
-	<option value="ME">Maine</option>
-	<option value="MD">Maryland</option>
-	<option value="MA">Massachusetts</option>
-	<option value="MI">Michigan</option>
-	<option value="MN">Minnesota</option>
-	<option value="MS">Mississippi</option>
-	<option value="MO">Missouri</option>
-	<option value="MT">Montana</option>
-	<option value="NE">Nebraska</option>
-	<option value="NV">Nevada</option>
-	<option value="NH">New Hampshire</option>
-	<option value="NJ">New Jersey</option>
-	<option value="NM">New Mexico</option>
-	<option value="NY">New York</option>
-	<option value="NC">North Carolina</option>
-	<option value="ND">North Dakota</option>
-	<option value="OH">Ohio</option>
-	<option value="OK">Oklahoma</option>
-	<option value="OR">Oregon</option>
-	<option value="PA">Pennsylvania</option>
-	<option value="RI">Rhode Island</option>
-	<option value="SC">South Carolina</option>
-	<option value="SD">South Dakota</option>
-	<option value="TN">Tennessee</option>
-	<option value="TX">Texas</option>
-	<option value="UT">Utah</option>
-	<option value="VT">Vermont</option>
-	<option value="VA">Virginia</option>
-	<option value="WA">Washington</option>
-	<option value="WV">West Virginia</option>
-	<option value="WI">Wisconsin</option>
-	<option value="WY">Wyoming</option>
-</select>	
-        
-
-       USA MAP
-        
-        
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+      </select>	
+        <br>
+        <h5>Canada, and Puerto Rico</h5>
         <ul>
           <li><a href="/ca/">
               <img src="http://images.apple.com/global/elements/flags/30x30/canada.png" alt="" width="30" height="30">
@@ -755,18 +767,109 @@
 
 <!--Import jQuery-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 <!-- jQuery for older IE -->
 <!--
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 -->
-<!-- Latest compiled and minified JavaScript -->
+<!-- Latest compiled and minified bootstrap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://raw.github.com/jamietre/ImageMapster/e08cd7ec24ffa9e6cbe628a98e8f14cac226a258/dist/jquery.imagemapster.min.js"></script>
+
+<!-- MAP -->
+<script type="text/javascript" src="/assets/js/jqvmap/jquery.vmap.js"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/jquery.vmap.usa.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.africa.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.asia.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.australia.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.europe.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.north-america.js" charset="utf-8"></script>
+<script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.south-america.js" charset="utf-8"></script>
+<script type="text/javascript">
+// MAP SCRIPT
+  jQuery(document).ready(function () {
+    
+    if ($('#vectorMap').length ) {
+      // USA choosen two state selects
+      $("#ctry").change(function(){
+        if($("#ctry option:selected").val()=="United States"){
+          $("#ifusa").show();
+          $("#ifusa .chosen-select").chosen("destroy");
+          $("#ifusa .chosen-select").chosen({width: "100%"}); 
+        } else {
+          $("#ifusa").hide();
+        }
+      });
+
+      // dropdown select to button
+      $(function(){
+         $("#mapdrop .dropdown-menu li a").click(function(){
+            $(".btn:first-child").text($(this).text());
+            $(".btn:first-child").val($(this).text());
+         });
+      });
+
+      // map init
+      jQuery('#vmap-usa').vectorMap({
+        map: 'usa_en',
+        //backgroundColor: '#81c3d0',
+        //borderColor: '#818181',
+        //hoverColor: '#c9dfaf',
+        showLabels: true,
+        enableZoom: true,
+        showTooltip: true,
+        // click state ivent
+        onRegionClick: function (element, code, region) {
+          var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase();
+          alert(message);
+        }
+      });
+
+      jQuery('#vmap-asia').vectorMap({
+        map: 'asia_en',
+        //showLabels: true, //bugs margin ??
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-europe').vectorMap({
+        map: 'europe_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-australia').vectorMap({
+        map: 'australia_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-africa').vectorMap({
+        map: 'africa_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-northamerica').vectorMap({
+        map: 'north-america_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-southamerica').vectorMap({
+        map: 'south-america_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+    }
+  });
+</script>
+<!-- .MAP -->
+
 <!-- Site Sripts -->
 <script src="/js/main.js"></script>
 
 
-<!--PAGES-->
+<!--PAGES select-->
 <div style="position: fixed;
     z-index: 10;
     bottom: 5px;
@@ -778,95 +881,17 @@
     <a href="/index.html" class="m1 btn btn-sm btn-warning">home</a>
     <a href="/doc.html" class="m2 btn btn-sm btn-warning">doc</a>
     <a href="/category.html" class="m2 btn btn-sm btn-warning">cat</a>
-    <a href="/templates.html" class="m2 btn btn-sm btn-warning">temp</a>
-    <!--<a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat+t</a>-->
-    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat+t2</a>
+    <a href="/templates.html" class="m2 btn btn-sm btn-warning">templates</a>
+    <a href="/cat-temp.html" class="m2 btn btn-sm btn-warning">cat and templates</a>
+    <a href="/cat-temp2.html" class="m2 btn btn-sm btn-warning">cat and templates v2</a>
     <a href="/search.html" class="m2 btn btn-sm btn-warning">search</a>
+    <a href="/search-google.html" class="m2 btn btn-sm btn-warning">search google</a>
+    <a href="/404.html" class="m2 btn btn-sm btn-warning">404</a>
   </div>
 </div>
-
-
+<!-- .PAGES select-->
 <!--STYLE CHANGE-->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script>
-(function ($) {
-  'use strict';
-
-  $(document).ready(function () {
-    
-    $(function () {
-        setNavigation();
-    });
-
-    function setNavigation() {
-        var path = window.location.pathname;
-        path = path.replace(/\/$/, "");
-        path = decodeURIComponent(path);
-
-        $("#hpages a").each(function () {
-            var href = $(this).attr('href');
-            if (path.substring(0, href.length) === href) {
-                $(this).addClass('active');
-            }
-        });
-    }
-  
-    $('.m1').click(function (){
-      $('#stylesheet').attr('href','/css/main.css');
-      $(this).addClass('active');
-      $(this).siblings().removeClass('active');
-    });
-    $('.m2').click(function (){
-      $('#stylesheet').attr('href','/css/main1.css');
-      $(this).addClass('active');
-      $(this).siblings().removeClass('active');
-    });
-    $('.m3').click(function (){
-      $('#stylesheet').attr('href','/css/main2.css');
-      $(this).addClass('active');
-      $(this).siblings().removeClass('active');
-    });
-    
-    // LOcal select USA MAP
-    
-    $('.usa').mapster({
-        fillOpacity: 0.5,
-        render_highlight: {
-            fillColor: '2aff00',
-            stroke: true,
-            altImage: 'examples/images/usa_map_720_alt_4.jpg'
-        },
-        render_select: {
-            fillColor: 'ff000c',
-            stroke: false,
-            altImage: 'examples/images/usa_map_720_alt_5.jpg'
-        },
-        fadeInterval: 50,
-        mapKey: 'data-state',
-        areas: [
-        {
-            key: 'TX',
-            selected: true
-        },
-        {
-            key: 'ME',
-            selected: true
-        },
-        {
-            key: 'WA',
-            staticState: false
-        },
-        {
-            key: 'OR',
-            isSelectable: false
-        }]
-    });
-    
-  }); //end ready
-
-}(jQuery));
-</script>
 
 </body>
 </html>

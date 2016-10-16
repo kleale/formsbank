@@ -1,0 +1,78 @@
+{% set title = "Search Google" %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>{{ title }}</title>
+  
+  {% include "template/head.html" %}
+  
+</head>
+<body class="page-cat">
+  <div class="wrapper">
+    {% include "template/header_cat.html" %}
+    <section class="search-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="cat_h2">    
+              <h2><span>Search Results</span></h2>
+            </div>
+           
+            {#
+            https://developers.google.com/custom-search/docs/js/rendering
+            
+            #}
+            
+            <div id="gsediv">
+              <gcse:searchbox></gcse:searchbox>
+              <gcse:searchresults defaultToImageSearch="false"></gcse:searchresults>
+            </div>
+            <script>
+              (function() {
+                var cx = '017643444788069204610:4gvhea_mvga'; // Insert your own Custom Search engine ID here
+                var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+                gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+                    '//www.google.com/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            
+          </div>
+          <div class="col-md-4">
+            <div class="block">
+              <h3>Popular Categories</h3>
+              <ul>
+                <li><a href="">Agreement Template</a></li>
+                <li><a href="">Bill of Sale Form</a></li>
+                <li><a href="">Business Template</a></li>
+                <li><a href="">Business Proposal Template</a></li>
+                <li><a href="">Certificate Template</a></li>
+                <li><a href="">Education Template</a></li>
+                <li><a href="">Finance Template</a></li>
+                <li><a href="">Home & Famliy Template</a></li>
+                <li><a href="">Invoice Template</a></li>
+                <li><a href="">Legal Template</a></li>
+                <li><a href="">Letter Template</a></li>
+                <li><a href="">List & Chart Template</a></li>
+              </ul>
+              <a href="" class="btn btn-border btn-block">More Related Categories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    {% include "template/footer.html" %}
+  </div>
+  
+
+  {% include "template/modals.html" %}
+  {% include "template/scripts.html" %}
+
+</body>
+</html>

@@ -22,19 +22,11 @@
         <div class="row">
           <div class="col-sm-4">
             <i class="ic ic-business-w"></i> <h1> Business</h1>
-              <select data-placeholder="Filter by country or State..." class="chosen-select" multiple tabindex="4">
-                <option selected="selected" disabled>Filter by country or State...</option>
-                <option value="United States">United States</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-              </select>
-              <div class="total">Total 743 templates</div>
+            <div class="total">Total 743 templates</div>
           </div>
           <div class="col-sm-8">
             <div class="cat-text">
-              The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. This file teaches you how to stand out among various interviewees. It can decide whether you have the chance to attend the interview. Making a well-contented and well-structured resume will give you a bright future.
+              <span class="teaser">The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. This</span><span class="complete">file teaches you how to stand out among various interviewees. It can decide whether you have the chance to attend the interview. Making a well-contented and well-structured resume will give you a bright future.</span><span class="more">more...</span>
             </div>
           </div>
         </div>
@@ -52,84 +44,85 @@
       </div>
     </div>
     -->
-    
-    <section class="cat-content temp-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="cat_h2">              
-              <div class="catfilter">
-                <input type="text" class="form-control" placeholder="Type word to fast filter templates...">
-              </div>
-              <h2><span>Templates in Business</span></h2> 
-            </div>
-            <div class="tem_list clearfix loaded-list">
-              {% for i in 0..5 %}
-                <div class="tem_item">
-                  <div class="row">
-                    <div class="col-sm-3 col-md-2 col-lg-2">
-                      <div class="f-item">
-                        <a href="" class="f-pic">
-                          <img src="img/form.png" alt="">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-sm-8 col-md-10 col-lg-10">
-                      <div class="tem-descr">
-                        <h4><a href="">Certificate of Completion Template</a></h4>
-                        <div class="tem-info">
-                          <span class="stars">
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star half-o active"></i>
-                            <i class="fa fa-star-o"></i>
-                          </span>
-                          <span class="types">
-                            <b class="label label-border">PDF</b>
-                            <b class="label label-border">TXT</b>
-                            <b class="label label-border">DOC</b>
-                            <b class="label label-border">ONLINE</b>
-                          </span>
-                          <div class="specs">
-                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
-                          </div>
-                        </div>
-                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
-                        </p>
-                        <a href="" class="btn btn-default">View Form</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              {% endfor %}
-              
-              <div class="list-lader">
-                <a href="" class="btn btn-xl btn-primary">See more forms</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-      
+       
     <section class="cat-content">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
+            <div class="temp-content">
+              <div class="list-opener" id="list-opener">
+                <div class="cat_h2">              
+                  <div class="cat_actions">
+                    <div class="sorter">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Sort by popularity <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Sort by name</a></li>
+                          <li><a href="#">Sort by size</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="catfilter">
+                      <input type="text" class="form-control" placeholder="Filter templates...">
+                    </div>
+                  </div>
+                  <h2><span>Templates in Business</span></h2> 
+                </div>
+                
+                <div class="holder">
+                  <ul class="row docs-holder cat_item_style2">
+                    <li class="col-md-3 col-sm-4 col-xs-6">
+                      <div class="f-item">
+                        <a href="" class="f-pic">
+                          <img src="img/form.png" alt="">
+                          <span>Principles of Drug Testing Technology <b class="f-cat label label-primary">Subcategory</b></span>
+                        </a>
+                      </div>
+                    </li>
+                    {% for i in 0..10 %}
+                      <li class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                            <span>Principles of Drug Testing Technology <b class="f-cat label label-primary">Subcategory</b></span>
+                          </a>
+                        </div>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                
+
+                <div class="list-loader">
+                    <a class="btn btn-lg btn-primary">Expand</a>
+                </div>
+              </div> <!-- temp opener -->
+            </div>
+           
             <div class="cat_h2">
-              <!--
-               <div class="catfilter">
-                <input type="text" class="form-control" placeholder="Type word to fast filter categories...">
+              <div class="cat_actions">
+                <div class="sorter">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-border dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sort by popularity <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Sort by name</a></li>
+                      <li><a href="#">Sort by size</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="catfilter">
+                  <input type="text" class="form-control" placeholder="Filter templates...">
+                </div>
               </div>
-              -->
               <h2><span>Subcategories in Business</span></h2>
             </div>
            
             <div class="cat_list">
-              {% for i in 0..5 %}
-                <div class="cat_item">
+              <div class="cat_item cat_item_style2">
                   <h4><a href="">Certificate of Completion Template</a></h4>
                   <div class="idocs">
                     <ul>
@@ -138,21 +131,43 @@
                         <div class="f-item">
                           <a href="" class="f-pic">
                             <img src="img/form.png" alt="">
-                          </a>
-                          <a href="" class="f-link">
                             <span>Principles of Drug Testing Technology</span>
                           </a>
-                          <!--<a href="" class="f-cat label label-primary">Business</a>-->
                         </div>
                       </li>
                       {% endfor %}
                     </ul>
                   </div>
-                  <div class="istat">
-                    <b>21</b>
-                    <span>templates<br>in this category</span>
-                    <a href="" class="btn btn-default">See more</a>
+                  <a href="" class="cmore btn btn-default pull-right">See more <b>21</b> templates</a>
+              </div>
+              {% for i in 0..5 %}
+                <div class="cat_item cat_item_style2">
+                  <h4><a href="">Certificate of Completion Template</a></h4>
+                  <div class="idocs">
+                    <ul>
+                      {% for i in 0..5 %}
+                      <li>
+                       <!--
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                          </a>
+                          <a href="" class="f-link">
+                            <span>Principles of Drug Testing Technology</span>
+                          </a>
+                        </div>
+                        -->
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                            <span>Principles of Drug Testing Technology</span>
+                          </a>
+                        </div>
+                      </li>
+                      {% endfor %}
+                    </ul>
                   </div>
+                  <a href="" class="cmore btn btn-default pull-right">See more <b>21</b> templates</a>
                 </div>
               {% endfor %}
             </div>
@@ -194,3 +209,4 @@
 
 </body>
 </html>
+ 
