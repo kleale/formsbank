@@ -32,10 +32,15 @@
     z-index: 2;
     color:#fff;
     font-weight: 300;
-    text-align: left;
     font-size: 13px;
+    text-align: left;
+    
+    @media (max-width: $XM){
+      text-align: center;
+    }
     ol{
       padding: 0;
+      margin-bottom: 10px;
       
       li{
         color:#fff;
@@ -50,7 +55,7 @@
     font-weight: 300;
     font-size: 25px;
     margin-top: 14px;
-    margin: 3px 0 20px 0;
+    margin: 3px 0 15px 0;
   }
   .ic{
     margin-right: 10px;
@@ -101,12 +106,12 @@
     color: #fff;
     font-weight: 300;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   
-  @media (max-width: $toM){
+  @media (max-width: $XM){
     text-align: center;
-    padding: 90px 15px 15px 15px;
+    padding: 70px 15px 15px 15px;
     
     .ic{
       float: none;
@@ -206,6 +211,7 @@
       position: relative;
       z-index: 2;
     }
+    /*
     &:after{
       content: '';
       display: block;
@@ -214,14 +220,20 @@
       background: #ddd;
       top: 50%;
       position: absolute;
-    }
+    }*/
   }
   .cat_actions{
     float: right;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     background: #f1f1f1;
     top: -3px;
+    @media (max-width: $toM){
+      width: auto;
+      float: none;
+      margin-bottom: 15px;
+      top: 0px;
+    }
   }
   .catfilter{
     width: 200px;
@@ -229,7 +241,11 @@
     margin-right: 5px;
     position: relative;
     z-index: 2;
-    
+    @media (max-width: $toM){
+      width: auto;
+      float: none;
+      margin-bottom: 15px;
+    }
     input{
       border: 1px solid #ddd;
     }
@@ -239,11 +255,6 @@
       position: absolute 5px 10px * *;
       font-family: FontAwesome;
       color: #b7b7b7;
-    }
-    @media (max-width: $toM){
-      width: auto;
-      float: none;
-      margin-bottom: 15px;
     }
   }
 }
