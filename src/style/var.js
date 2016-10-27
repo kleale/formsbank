@@ -5,6 +5,8 @@ module.exports = {
     "$subcolor": "#31a4ba",
     "$subcolortext": "#fff",
   
+    "$body-color": "#f7fdff",
+    "$bg-sub-section": "#252a2c",
   
     // Breakpoints
     "$S": "300px", 
@@ -29,9 +31,6 @@ module.exports = {
     "$link-white-active": "#a6c6cb",
     "$link-gray": "#b7b7b7",
     "$link-gray-active": "#fff",
-  
-    "$body-color": "#fff",
-    "$bg-sub-section": "#252a2c",
   
     "$button-blue": "#31a4ba",
     "$button-blue-text": "#fff",

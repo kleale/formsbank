@@ -1,7 +1,7 @@
 /*Doc page*/
 
 .page-doc {
-  background: rgba(242,242,242,1);
+  background: #f7fdff;
   position: relative;
   
   .pdf{
@@ -9,44 +9,61 @@
     transform-origin: left top 0;
   }
   .wrapper{
-    padding: 150px 0 0 0;
+    padding: 120px 0 0 0;
     overflow: hidden;
+    @media (max-width: $XM){
+      padding: 110px 0 0 0;
+    }
+  }
+  .bread{
+    text-align: left;
+    max-width: 960px;
+    margin: 0 auto;
   }
 }
 .doc-header {
-  max-width: 940px;
-  margin: 30px auto 0;
-  padding: 10px 50px 100px 50px;
-  border: 1px solid $subcolor;
+  max-width: 952px;
+  margin: 20px auto 0;
+  padding: 10px 30px 80px;
+  border: 1px solid #d2d2d2;
   @media (max-width: $toM){
     border: 0;
     margin: 0;
-    padding: 10px 15px 100px 15px;
+    padding: 10px 15px 80px;
   }
   
+  h1{
+    color: #000;
+    float: left;
+    margin: 20px 55px 0;
+  }
+  
+  /* move ribbon in header
   .lined{
-    font-size: 34px;
+    font-size: 30px;
     text-align: center;
     line-height: 1;
     font-weight: 300;
-    margin: -35px 0 30px 0;
+    margin: 0px 0 15px 0;
     @media (max-width: $toM){
       font-size: 24px;
       font-size: 24px;
-      margin: -30px 0 10px 0;
+      margin: 0px 0 10px 0;
     }
     
     span{
+      
       display: inline-block;
       position: relative;
       background: $subcolor;
       color: $subcolortext;
       padding: 5px 20px;
+      
       @media (max-width: $toM){
         background: transparent;
         color: #000;
       }
-
+     
       &:after{
         content: '';
         display: block;
@@ -71,15 +88,30 @@
           display: none;
         }
       }
+     
     }
-  }
+  }*/
+  
   div{
-    font-size: 18px;
+    font-size: 14px;
     color: #5c5c5c;
     @media (max-width: $toM){
-      font-size: 15px;
+      font-size: 14px;
+    }
+    p {
+      margin: 0 0 5px;
     }
   }
+  
+  &.noribbon{
+    margin: 0px auto -1px;
+    padding: 10px 10px 30px;
+    .doc-pages {
+      max-width: none;
+      margin-top: 0;
+    }
+  }
+  
 }
 .doc-pages{
   max-width: 940px;
@@ -91,7 +123,7 @@
     list-style: none;
     margin: 0;
     overflow: hidden;
-    padding: 15px 50px;
+    padding: 0px 50px;
     
     li{
       float: left;
@@ -128,14 +160,16 @@
   .owl-theme .owl-controls .owl-buttons .owl-prev{left:10px;}
   .owl-wrapper-outer{
     position: relative;
+    /*
     &:after{
       content: '';
       display: block;
       height: 100%;
       width: 50px;
-      background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(242,242,242,1) 50%);
+      background: linear-gradient(to right,  rgba(255,255,255,0) 0%, #f7fdff 50%);
       position: absolute 0 0 * *;
     }
+    */
   }
   .owl-theme .owl-controls {
     margin-top: -20px;
@@ -143,6 +177,15 @@
   }
   .owl-pagination{
     display: none;
+  }
+}
+
+.page-doc-top-a{
+  /*box-shadow: $bsh;*/
+  margin: 15px -10px -30px;
+  border-top: 1px solid #d2d2d2;
+  img{
+    width: 100%
   }
 }
 
@@ -154,14 +197,8 @@
   @media (max-width: $XM){
     padding: 0;
   }
-  
-  .page-doc-top-a{
-    box-shadow: $bsh;
-    margin: 0 0 15px 0;
-    
-    img{
-      width: 100%
-    }
+  .page-doc{
+    box-shadow: 0 0 0 1px #d2d2d2; 
   }
   .page-doc-bot-a{
     box-shadow: $bsh;

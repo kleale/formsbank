@@ -120,12 +120,15 @@
         <div class="row">
           <div class="col-md-4">
             <i class="ic ic-business-w"></i> <h1> Business</h1>
-            <div class="total">Total 743 templates</div>
+            <!--<div class="total">Total 743 templates</div>-->
           </div>
           <div class="col-md-8">
+          <div class="total" style="text-align:right;">Total 743 templates</div>
+           <!--
             <div class="cat-text">
               <span class="teaser">The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. This</span><span class="complete">file teaches you how to stand out among various interviewees. It can decide whether you have the chance to attend the interview. Making a well-contented and well-structured resume will give you a bright future.</span><span class="more">more...</span>
             </div>
+            -->
           </div>
         </div>
       </div>
@@ -687,69 +690,105 @@
             </div>
             
             <div class="cat_list">
-              <div class="cat_item cat_item_style2">
+              <!-- Different name lenght -->
+                <div class="cat_item cat_item_style2">
                   <h4><a href="">Certificate of Completion Template</a></h4>
                   <div class="idocs">
                     <ul>
-                      
                       <li>
                         <div class="f-item">
                           <a href="" class="f-pic">
                             <img src="img/form.png" alt="">
-                            <span>Principles of Drug Testing Technology</span>
+                            <span>Principles of Drug</span>
                           </a>
                         </div>
                       </li>
-                      
                       <li>
                         <div class="f-item">
                           <a href="" class="f-pic">
                             <img src="img/form.png" alt="">
-                            <span>Principles of Drug Testing Technology</span>
+                            <span>Professional Resume Templates</span>
                           </a>
                         </div>
                       </li>
-                      
                       <li>
                         <div class="f-item">
                           <a href="" class="f-pic">
                             <img src="img/form.png" alt="">
-                            <span>Principles of Drug Testing Technology</span>
+                            <span>Letter Template</span>
                           </a>
                         </div>
                       </li>
-                      
                       <li>
                         <div class="f-item">
                           <a href="" class="f-pic">
                             <img src="img/form.png" alt="">
-                            <span>Principles of Drug Testing Technology</span>
+                            <span>Professional Rent and Lease Template</span>
                           </a>
                         </div>
                       </li>
-                      
                       <li>
                         <div class="f-item">
                           <a href="" class="f-pic">
                             <img src="img/form.png" alt="">
-                            <span>Principles of Drug Testing Technology</span>
+                            <span>Menu Template</span>
                           </a>
                         </div>
                       </li>
-                      
-                      <li>
-                        <div class="f-item">
-                          <a href="" class="f-pic">
-                            <img src="img/form.png" alt="">
-                            <span>Principles of Drug Testing Technology</span>
-                          </a>
-                        </div>
-                      </li>
-                      
                     </ul>
                   </div>
                   <a href="" class="cmore btn btn-default pull-right">See more <b>21</b> templates</a>
-              </div>
+                </div>
+              
+                <div class="cat_item cat_item_style2">
+                  <h4><a href="">Certificate of Completion Template</a></h4>
+                  <div class="idocs">
+                    <ul>
+                      <li>
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                            <span>Professional Rent and Lease Template</span>
+                          </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                            <span>Bill of Sale Form</span>
+                          </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                            <span>Illustrator Brochure Templates</span>
+                          </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                            <span>Menu Template</span>
+                          </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="f-item">
+                          <a href="" class="f-pic">
+                            <img src="img/form.png" alt="">
+                            <span>Menu Template</span>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="" class="cmore btn btn-default pull-right">See more <b>21</b> templates</a>
+                </div>
+              
               
                 <div class="cat_item cat_item_style2">
                   <h4><a href="">Certificate of Completion Template</a></h4>
@@ -1969,85 +2008,7 @@
 <script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.europe.js" charset="utf-8"></script>
 <script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.north-america.js" charset="utf-8"></script>
 <script type="text/javascript" src="/assets/js/jqvmap/maps/continents/jquery.vmap.south-america.js" charset="utf-8"></script>
-<script type="text/javascript">
-// MAP SCRIPT
-  jQuery(document).ready(function () {
-    
-    if ($('#vectorMap').length ) {
-      // USA choosen two state selects
-      $("#ctry").change(function(){
-        if($("#ctry option:selected").val()=="United States"){
-          $("#ifusa").show();
-          $("#ifusa .chosen-select").chosen("destroy");
-          $("#ifusa .chosen-select").chosen({width: "100%"}); 
-        } else {
-          $("#ifusa").hide();
-        }
-      });
-
-      // dropdown select to button
-      $(function(){
-         $("#mapdrop .dropdown-menu li a").click(function(){
-            $(".btn:first-child").text($(this).text());
-            $(".btn:first-child").val($(this).text());
-         });
-      });
-
-      // map init
-      jQuery('#vmap-usa').vectorMap({
-        map: 'usa_en',
-        //backgroundColor: '#81c3d0',
-        //borderColor: '#818181',
-        //hoverColor: '#c9dfaf',
-        showLabels: true,
-        enableZoom: true,
-        showTooltip: true,
-        // click state ivent
-        onRegionClick: function (element, code, region) {
-          var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase();
-          alert(message);
-        }
-      });
-
-      jQuery('#vmap-asia').vectorMap({
-        map: 'asia_en',
-        //showLabels: true, //bugs margin ??
-        enableZoom: true,
-        showTooltip: true
-      });
-      jQuery('#vmap-europe').vectorMap({
-        map: 'europe_en',
-        //showLabels: true,
-        enableZoom: true,
-        showTooltip: true
-      });
-      jQuery('#vmap-australia').vectorMap({
-        map: 'australia_en',
-        //showLabels: true,
-        enableZoom: true,
-        showTooltip: true
-      });
-      jQuery('#vmap-africa').vectorMap({
-        map: 'africa_en',
-        //showLabels: true,
-        enableZoom: true,
-        showTooltip: true
-      });
-      jQuery('#vmap-northamerica').vectorMap({
-        map: 'north-america_en',
-        //showLabels: true,
-        enableZoom: true,
-        showTooltip: true
-      });
-      jQuery('#vmap-southamerica').vectorMap({
-        map: 'south-america_en',
-        //showLabels: true,
-        enableZoom: true,
-        showTooltip: true
-      });
-    }
-  });
-</script>
+<!-- map init in app.js -->
 <!-- .MAP -->
 
 <!-- Site Sripts -->
@@ -2076,6 +2037,161 @@
 </div>
 <!-- .PAGES select-->
 <!--STYLE CHANGE-->
+
+<div style="position: fixed;
+    z-index: 10;
+    bottom: 55px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.22);
+    padding: 10px;
+    border-radius: 5px;">
+  <div class="btn-group" role="group">
+    <!--<a class="m1 btn btn-sm btn-default active">Style 1</a>
+    <a class="m2 btn btn-sm btn-default">Style 2</a>
+    <a class="m3 btn btn-sm btn-default">Style 3</a>
+    -->
+    
+    <a class="bg1 btn btn-sm btn-default active">HEAD BG 1</a>
+    <a class="bg3 btn btn-sm btn-default">BG 3</a>
+    <a class="bg4 btn btn-sm btn-default">BG 4</a>
+    <a class="bg5 btn btn-sm btn-default">BG 5</a>
+    <a class="bg6 btn btn-sm btn-default">BG 6</a>
+    <a class="bg8 btn btn-sm btn-default">BG pat 8</a>
+    <a class="bg9 btn btn-sm btn-default">BG pat 9</a>
+  </div>
+  <!--
+  <div class="btn-group" role="group">
+    <a class="p1 btn btn-sm active btn-default">pageBG1</a>
+    <a class="p2 btn btn-sm btn-default">pageBG2</a>
+    <a class="p3 btn btn-sm btn-default">pageBG3</a>
+    <a class="p4 btn btn-sm btn-default">pageBG4</a>
+  </div>
+  -->
+  <div class="btn-group" role="group">
+    <a class="hd1 btn btn-sm btn-default">Head blue</a>
+    <a class="hd2 btn btn-sm active btn-default">Head light</a>
+  </div>
+  
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script>
+(function ($) {
+  'use strict';
+
+  $(document).ready(function () {
+    
+    $(function () {
+        setNavigation();
+    });
+
+    function setNavigation() {
+        var path = window.location.pathname;
+        path = path.replace(/\/$/, "");
+        path = decodeURIComponent(path);
+
+        $("#hpages a").each(function () {
+            var href = $(this).attr('href');
+            if (path.substring(0, href.length) === href) {
+                $(this).addClass('active');
+            }
+        });
+    }
+    // style toggle
+    $('.m1').click(function (){
+      $('#stylesheet').attr('href','/css/main.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.m2').click(function (){
+      $('#stylesheet').attr('href','/css/main1.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.m3').click(function (){
+      $('#stylesheet').attr('href','/css/main2.css');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    
+    // bg toggle
+    $('.bg1').click(function (){
+      $('.cat-header').css('backgroundImage','url(/img/cat-header1.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.bg3').click(function (){
+      $('.cat-header').css('backgroundImage','url(http://thelaneorg.com/wp-content/uploads/2013/09/bigstock-Businesswoman-Working-At-Her-O-54866588-copy.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.bg4').click(function (){
+      $('.cat-header').css('backgroundImage','url(http://www.makdeniz.com/wp-content/uploads/2012/05/bigstock_folder_2801331.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.bg5').click(function (){
+      $('.cat-header').css('backgroundImage','url(http://www.rponte.com.br/wp-content/uploads/2016/04/files-and-folders-tiny-1200x627.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+     $('.bg6').click(function (){
+      $('.cat-header').css('backgroundImage','url(https://userscontent2.emaze.com/images/8f2d7177-a80b-4d83-94cb-40c00ca7a364/bceb8c3192dec238c4746bb10209af85.jpeg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.bg8').click(function (){
+      $('.cat-header').css('backgroundImage','url(/img/cat-header2.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.bg9').click(function (){
+      $('.cat-header').css('backgroundImage','url(/img/cat-header3.jpg)');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    
+    //page color
+    /*
+    $('.p1').click(function (){
+      $('.page-cat, .page-doc').css('backgroundColor','#f3f9f9');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.p2').click(function (){
+      $('.page-cat, .page-doc').css('backgroundColor','#ffffff');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.p3').click(function (){
+      $('.page-cat, .page-doc').css('backgroundColor','#f7fdff');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.p4').click(function (){
+      $('.page-cat, .page-doc').css('backgroundColor','#fefff7');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    */
+    
+    //header color
+    $('.hd1').click(function (){
+      $('.subheader').removeClass('subheaderlight');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    $('.hd2').click(function (){
+      $('.subheader').addClass('subheaderlight');
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    });
+    
+  }); //end ready
+
+}(jQuery));
+</script>
+<!-- .STYLE CHANGE -->
 
 
 </body>

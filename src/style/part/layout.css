@@ -6,7 +6,7 @@
   top: 0;
   width: 100%;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   z-index: 15;
   transition: $transition;
   
@@ -463,12 +463,12 @@
   background: #31a4ba none repeat scroll 0 0;
   left: 0;
   margin-top: 10px;
-  padding: 10px 15px;
+  padding: 10px 10px;
   position: absolute;
   right: 0;
   
-  @media (max-width: $MH){
-    margin: 5px -10px -15px;
+  @media (max-width: $XM){
+    margin: 5px 0 0 0;
   }
   .doc-btns{
     float:left;
@@ -477,12 +477,13 @@
     }
     .btn{
       font-weight: 300;
-      height: 38px;
+      height: 34px;
       font-size: 15px;
-      line-height: 1.8;
+      line-height: 1.7;
+      padding: 3px 10px;
       @media (max-width: $M){
         font-size: 14px;
-        height: 38px;
+        height: 32px;
         span{
           display: none;
         }
@@ -521,6 +522,7 @@
   .doc-pgr-select{
     display: none;
     padding: 0 5px;
+    
     select{
       display: inline-block;
       width: 100px;
@@ -528,7 +530,7 @@
       border: 1px solid transparent;
       text-align: left;
       color: #fff;
-      height: 38px;
+      height: 32px;
       border-radius: 2px;
       box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     }
@@ -555,7 +557,7 @@
       border: 1px solid transparent;
       text-align: center;
       color: #fff;
-      height: 38px;
+      height: 34px;
     }
     span{
       display: inline-block;
@@ -575,10 +577,49 @@
   }
   .doc-srch{
     .fa-search{
-      padding: 8px;
+      padding: 5px 8px;
     }
   }
-}
+  
+  
+  /*light style*/
+  &.subheaderlight{
+    background: #d3eef3;
+
+    .doc-btns .btn{
+      background: #3cbcd4;
+      border-color: #3cbcd4;
+      
+      &:hover,
+      &:focus,
+      &:active{
+        background: rgb(94, 192, 212);
+        color: #fff;
+      }
+      &.dropdown-toggle{
+        background: #7cc2d0;
+      }
+    }
+    .doc-pgr {
+      color: #333;
+      
+      .btn {
+        background: #3cbcd4;
+        border-color: #3cbcd4;
+        
+        &:hover,
+        &:focus,
+        &:active{
+          background: rgb(94, 192, 212);
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+} /*subheader*/
+
+
 
 .doc-srch{
   float: right;
@@ -609,7 +650,7 @@
     background: #7cc2d0;
     border: 1px solid transparent;
     color: #fff;
-    height: 38px;
+    height: 34px;
 
     &::-webkit-input-placeholder {
       color: #fff;
@@ -625,7 +666,7 @@
     }
   }
   .searcher{
-    position: absolute 9px 10px * *;
+    position: absolute 5px 10px * *;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -743,8 +784,8 @@
   Breadcrums Bar
 */
 .bread{
-  text-align: center;
-  font-size: 16px;
+  text-align: left;
+  font-size: 14px;
   
   ol{
     display: inline-block;
@@ -754,6 +795,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     padding: 15px 30px;
+    margin: 0;
     
     li {
       display: inline-block;

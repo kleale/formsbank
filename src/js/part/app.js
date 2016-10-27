@@ -93,10 +93,10 @@
       navigationText: ["",""],
       responsiveClass:true,
       items : 7, 
-      itemsDesktop : [1000,5], 
-      itemsDesktopSmall : [900,4], 
-      itemsTablet: [600,3],
-      itemsMobile : [400,2]
+      itemsDesktop : [1000,6], 
+      itemsDesktopSmall : [900,6], 
+      itemsTablet: [600,4],
+      itemsMobile : [400,3]
     });
     
     //category chosen
@@ -142,7 +142,7 @@
       $('div.pdf').css({'-webkit-transform': 'scale(' + scale + ')'});
       $('div.pdf').css({'-o-transform': 'scale(' + scale + ')'});
 
-      $('div.page-doc').css({ width: maxWidth * scale, height: maxHeight * scale });
+      $('div.page-doc').css({ width: maxWidth * scale - 2, height: maxHeight * scale });
     });
 
     $(window).resize(function(evt) {
@@ -169,10 +169,87 @@
       $('div.pdf').css({'-webkit-transform': 'scale(' + scale + ')'});
       $('div.pdf').css({'-o-transform': 'scale(' + scale + ')'});
 
-      $('div.page-doc').css({ width: maxWidth * scale, height: maxHeight * scale });
+      $('div.page-doc').css({ width: maxWidth * scale - 2, height: maxHeight * scale });
     });
     // end scale pdf on css3
     
+    
+    // MAP INIT
+    
+      if ($('#vectorMap').length ) {
+      // USA choosen two state selects
+      $("#ctry").change(function(){
+        if($("#ctry option:selected").val()=="United States"){
+          $("#ifusa").show();
+          $("#ifusa .chosen-select").chosen("destroy");
+          $("#ifusa .chosen-select").chosen({width: "100%"}); 
+        } else {
+          $("#ifusa").hide();
+        }
+      });
+
+      // dropdown select to button
+      $(function(){
+         $("#mapdrop .dropdown-menu li a").click(function(){
+            $(".btn:first-child").text($(this).text());
+            $(".btn:first-child").val($(this).text());
+         });
+      });
+
+      // map init
+      jQuery('#vmap-usa').vectorMap({
+        map: 'usa_en',
+        //backgroundColor: '#81c3d0',
+        //borderColor: '#818181',
+        //hoverColor: '#c9dfaf',
+        showLabels: true,
+        enableZoom: true,
+        showTooltip: true,
+        // click state ivent
+        onRegionClick: function (element, code, region) {
+          var message = 'You clicked "' + region + '" which has the code: ' + code.toUpperCase();
+          alert(message);
+        }
+      });
+
+      jQuery('#vmap-asia').vectorMap({
+        map: 'asia_en',
+        //showLabels: true, //bugs margin ??
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-europe').vectorMap({
+        map: 'europe_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-australia').vectorMap({
+        map: 'australia_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-africa').vectorMap({
+        map: 'africa_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-northamerica').vectorMap({
+        map: 'north-america_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+      jQuery('#vmap-southamerica').vectorMap({
+        map: 'south-america_en',
+        //showLabels: true,
+        enableZoom: true,
+        showTooltip: true
+      });
+    }
+    // end map init
     
   }); //end ready
 

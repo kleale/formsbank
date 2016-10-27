@@ -16,13 +16,20 @@
   <div class="wrapper">
     {% include "template/header_doc.html" %}
     {% include "template/breadcrumbs.html" %}
+      {#
+      <!-- if ribbon
       <section class="doc-header">
+         
         <h1 class="lined">
           <span>Basic Resume Template</span>
         </h1>
         <div>
           <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. This file teaches you how to stand out among various interviewees. </p><p>It can decide whether you have the chance to attend the interview. Making a well-contented and well-structured resume will give you a bright future.</p>
         </div>
+        
+        <h1>
+          Basic Resume Template
+        </h1>
       </section>
       <div class="doc-pages">
         <ul>
@@ -36,10 +43,30 @@
           {% endfor %}
         </ul>
       </div>
-      <section class="doc-container">
+      -->#}
+      
+      <section class="doc-header noribbon">
+        <h1>
+          Basic Resume Template
+        </h1>
+        <div class="doc-pages">
+          <ul>
+            <li class="active">
+              <a href=""><img src="img/form.png" alt=""></a>
+            </li>
+            {% for i in 0..10 %}
+              <li>
+                <a href=""><img src="img/form.png" alt=""></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
         <div class="page-doc-top-a">
           <a href=""><img src="img/b2.jpg" alt=""></a>
         </div>
+      </section>
+      
+      <section class="doc-container">
         <div class="page-wrap">
           <div class="page-doc">
             <style>
