@@ -352,6 +352,10 @@
         width: 50px;
         background: linear-gradient(to right,  rgba(255,255,255,0) 0%, #f7fdff 50%);
         position: absolute 0 0 * *;
+        
+        @media (max-width: $SSM){
+          display: none;
+        }
       }
       
       ul{
@@ -360,18 +364,28 @@
         padding: 0;
         margin: 0;
         list-style: none;
-        
+        @media (max-width: $SSM){
+          width: 100%; 
+        }
         li{
           float: left;
-          width: 190px;
+          width: 180px;
           
-          @media (max-width: $toM){
-            width: 145px;
-          }
-          @media (max-width: $MH){
-            width: 145px;
+          @media (max-width: $L){
+            width: 150px;
             .f-item {
               padding: 10px;
+            }
+          }
+          @media (max-width: $SSM){
+            display: none;
+            width: 50%;
+            
+            &:nth-child(1){
+              display: block;
+            }
+            &:nth-child(2){
+              display: block;
             }
           }
         }
