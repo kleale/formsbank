@@ -23,6 +23,10 @@
     content: '';
     display: block;
   }
+  .cat-header-wr{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .row{
     position: relative;
     z-index: 2;
@@ -107,6 +111,10 @@
     font-weight: 300;
     font-size: 21px;
     margin-top: 15px;
+    text-align: right;
+    @media (max-width: $XM){
+      text-align: center;
+    }
   }
   
   @media (max-width: $XM){
@@ -261,14 +269,13 @@
   
   .cat_item{
     padding: 15px;
-    /*border: 1px solid #dedede;*/
+    border: 1px solid #dee7ea;
     margin: -1px 0 0 0;
     overflow: hidden;
     
     &:nth-child(2n){
       background: #edf4f7;
-      border-radius: &br;
-      box-shadow: $bsh;
+      /*border-radius: $br;*/
       
       .idocs{
         &:after{
@@ -359,7 +366,13 @@
           width: 190px;
           
           @media (max-width: $toM){
-            width: 160px;
+            width: 145px;
+          }
+          @media (max-width: $MH){
+            width: 145px;
+            .f-item {
+              padding: 10px;
+            }
           }
         }
       }
@@ -774,6 +787,9 @@
   .idocs{
     &:after{
       width: 100px;
+      @media (max-width: $MH){
+        width: 30px;
+      }
     }
     .f-item{
       .f-pic{

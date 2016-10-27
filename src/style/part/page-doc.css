@@ -19,6 +19,9 @@
     text-align: left;
     max-width: 960px;
     margin: 0 auto;
+    ol{
+      padding: 9px 5px 5px 5px;
+    }
   }
 }
 .doc-header {

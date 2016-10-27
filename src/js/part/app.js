@@ -83,7 +83,7 @@
       itemsDesktop : [1000,6], 
       itemsDesktopSmall : [900,5], 
       itemsTablet: [600,3],
-      itemsMobile : [400,1]
+      itemsMobile : [400,2]
     });
     
     //page slider at doc page
