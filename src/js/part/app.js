@@ -6,6 +6,12 @@
 
   $(document).ready(function () {
     
+    // header mobile opener
+    $('.w_sub-sub-opener').click(function() {
+      $(this).siblings('ul.sub').toggleClass('active');
+      //$('ul.sub').removeClass('active');
+    });
+    
     // affix header
     $('.header').affix({
       /*

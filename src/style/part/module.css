@@ -227,6 +227,10 @@
       font-weight: 200;
       font-size: 18px;
       display: block;
+      @media (max-width: $M){
+        display: inline-block;
+        font-size: 21px;
+      }
     }
     
     i{
@@ -248,6 +252,14 @@
       &.ic3{
         background-image: url(/img/ico5.svg);
       }
+      
+      @media (max-width: $M){
+        width: 25px;
+        height: 25px;
+        margin: 0 10px 0 0;
+        display: inline-block;
+        vertical-align: text-bottom;
+      }
     }
     em{
       font-weight: 200;
@@ -260,22 +272,25 @@
       padding: 0 20px;
       @media (max-width: $M){
         margin-top: 0px;
+        font-size: 25px;
       }
       &:after{
-      content:'';
-      display: block;
-      width: 200px;
-      height: 1px;
-      background: #fff;
-      position: absolute 50% * * 100%;
+        content:'';
+        display: block;
+        width: 200px;
+        height: 1px;
+        background: #fff;
+        position: absolute 50% * * 100%;
+        @media (max-width: $M){ display:none;}
       }
       &:before{
-      content:'';
-      display: block;
-      width: 200px;
-      height: 1px;
-      background: #fff;
-      position: absolute 50% 100% * *;
+        content:'';
+        display: block;
+        width: 200px;
+        height: 1px;
+        background: #fff;
+        position: absolute 50% 100% * *;
+        @media (max-width: $M){ display:none;}
       }
     }
   }
@@ -376,7 +391,8 @@
     margin-top: -100px;
     margin-bottom: 30px;
     @media (max-width: $M){
-      margin-top: -60px;
+      margin-top: -55px;
+      font-size:18px;
     }
   }
   
@@ -394,6 +410,11 @@
       background-position: center;
       float: left;
       
+      @media (max-width: $M){
+        width: 35px;
+        height: 35px;
+        margin: -5px 10px;
+      }
       &.i1{
         background-image: url(/img/ico/ico1.svg);
       }
@@ -418,6 +439,10 @@
       font-weight: 300;
       margin: 0 0 5px 75px;
       padding: 20px 0px;
+      @media (max-width: $M){
+        padding: 0px 0px;
+        font-size: 18px;
+      }
       a{
         color: #000;
       }
@@ -433,6 +458,9 @@
         padding: 5px 0 5px 50px;
         font-size: 17px;
         line-height: 1;
+        @media (max-width: $M){
+          font-size: 13px;
+        }
         
         &:after{
           position: absolute * * 0 0;
@@ -466,6 +494,11 @@
   
   .lined2{
     margin-bottom: 40px;
+    
+    @media (max-width: $M){
+      font-size:18px;
+    }
+    
   }
 }
 
@@ -479,6 +512,9 @@
     
     li{
       float: left;
+    }
+    .owl-item li{
+      float: none;
     }
   }
 }
@@ -540,8 +576,8 @@ body .owl-theme .owl-controls .owl-page.active span{
     overflow: hidden;
     display: block;
     box-shadow: $bsh2;
-    max-width: 200px;
-    margin: 0 auto 10px;
+    max-width: 130px;
+    margin: 0 0 10px;
     
     &:active,
     &:hover,
@@ -558,6 +594,24 @@ body .owl-theme .owl-controls .owl-page.active span{
     text-decoration: none;
     margin-bottom: 10px;
     display: block;
+    span{
+      display: block;
+      max-height: 5.5em;
+      position: relative;
+      padding-bottom: 8px;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
+      &:after{
+        content:'';
+        position: absolute * 0 0 0;
+        height: 20px;
+        background: linear-gradient(to bottom, rgba(247,253,255,0) 0%,rgba(247,253,255,1) 100%);
+        display: block;
+      }
+    }
   }
 }
 

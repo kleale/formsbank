@@ -60,6 +60,10 @@
     font-size: 35px;
     margin-top: 14px;
     margin: 3px 0 5px 0;
+    
+    @media (max-width: $XM){
+      font-size: 21px;
+    }
   }
   .ic{
     margin-right: 10px;
@@ -114,6 +118,8 @@
     text-align: right;
     @media (max-width: $XM){
       text-align: center;
+      font-size: 16px;
+      margin-top: 5px;
     }
   }
   
