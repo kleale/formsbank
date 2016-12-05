@@ -1062,7 +1062,7 @@ h6{}
 }
 .header ul.nav li{
   position: relative;
-  overflow: hidden;/*sub*/
+  overflow: hidden;
 }
 .header ul.nav li:hover,
         .header ul.nav li:active,
@@ -1214,6 +1214,23 @@ h6{}
     transform: scale(1);
     z-index: 1000;
   }
+}
+/*sub*/
+.header ul.nav li:last-child .sub li.w_sub-sub a:after{
+  right: auto;
+  position: absolute;
+  left: 15px;
+}
+.header ul.nav li:last-child .sub li.w_sub-sub:hover a:after{
+  right: auto;
+  position: absolute;
+  left: 15px;
+  transform: rotate(180deg);
+}
+.header ul.nav li:last-child .sub ul{
+  left: auto;
+  position: absolute;
+  right: 100%;
 }
 .header .navbar-brand{
   width: 200px;
@@ -2569,6 +2586,8 @@ Sign Up modal
 }
 .f-slider{
   overflow: hidden;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 .f-slider ul{
   padding: 0 50px;
@@ -2587,7 +2606,7 @@ body .owl-theme .owl-controls .owl-buttons .owl-prev{
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: -100px;
+  margin-top: -120px;
   font-size: 80px;
   line-height: 1;
 }
@@ -2606,7 +2625,7 @@ body .owl-theme .owl-controls .owl-buttons .owl-next{
   position: absolute;
   right: 0;
   top: 50%;
-  margin-top: -100px;
+  margin-top: -120px;
   font-size: 80px;
   line-height: 1;
 }
@@ -6818,7 +6837,7 @@ Modal end
 .list-opener{
   position: relative;
   overflow: hidden;
-  max-height: 720px;
+  max-height: 310px;
   position: relative;
   transition: all .2s ease;
 }
@@ -6834,7 +6853,7 @@ Modal end
   left: 0;
   width: 100%;
   text-align: center;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#f2f2f2 40%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,#f7fdff 40%);
   padding: 40px 0 0 0;
 
 }
@@ -6844,7 +6863,7 @@ Modal end
   height: 1px;
   width: 100%;
   border-bottom: 1px dashed #ccc;
-  top: 60px;
+  top: 61px;
   position: absolute;
 }
 .list-loader a{
@@ -7067,7 +7086,7 @@ Modal end
 }
 .cat_list .cat_item_style2{
   position: relative;
-  padding: 15px 15px 0 15px;
+  padding: 15px 15px 15px 15px;
 }
 .cat_list .cat_item_style2 .cmore{
   top: 50%;
@@ -7110,17 +7129,30 @@ Modal end
 }
 .cat_list .cat_item_style2 .idocs .f-item .f-pic{
   position: relative;
+  border-bottom: 3px solid #3cbcd4;
 }
 .cat_list .cat_item_style2 .idocs .f-item .f-pic span{
   right: 0;
   bottom: 0;
   left: 0;
   position: absolute;
-  border-bottom: 3px solid #3cbcd4;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 16px;
   padding: 65px 15px 10px 15px;
   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.7) 44%,rgba(255,255,255,1) 63%);
+  max-height: 163px;
+  border-bottom: 0;
+  overflow: hidden;
+}
+.cat_list .cat_item_style2 .idocs .f-item .f-pic span:after{
+  content: '';
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: 20px;
+  background: linear-gradient(to bottom, rgba(247,253,255,0) 0%,rgba(247,253,255,1) 100%);
+  display: block;
 }
 @media (max-width: 767px){
   .cat_list .cat_item_style2 .idocs .f-item .f-pic span {

@@ -186,6 +186,28 @@
           }
         }
       }
+      
+      &:last-child{
+        .sub{
+          li.w_sub-sub a:after{
+            right: auto;
+            position: absolute;
+            left: 15px;
+          }
+          li.w_sub-sub:hover a:after{
+            right: auto;
+            position: absolute;
+            left: 15px;
+            transform: rotate(180deg);
+          }
+          ul{
+            left: auto;
+            position: absolute;
+            right: 100%;
+          }
+        }
+      }
+      
     }/*li*/
   }
   .navbar-brand{
