@@ -36,7 +36,7 @@
     z-index: 2;
     color:#fff;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 12px;
     text-align: left;
     
     @media (max-width: $XM){

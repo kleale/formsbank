@@ -6,6 +6,24 @@
 
   $(document).ready(function () {
     
+    // breadcrumbs
+    toggle_ellipses();
+    $(window).resize(function() {
+      toggle_ellipses();
+    });
+
+    function toggle_ellipses() {
+      var ellipses1 = $("#ellipses");
+      var howlong = $("#bc1 li:hidden").length;
+      if ($("#bc1 li:hidden").length > 1) {
+        ellipses1.show();
+        //console.log("length: " + howlong + " => show")
+      } else {
+        ellipses1.hide();
+        //console.log("length: " + howlong + " => hide")
+      }
+    }
+    
     // header mobile opener
     $('.w_sub-sub-opener').click(function() {
       $(this).siblings('ul.sub').toggleClass('active');

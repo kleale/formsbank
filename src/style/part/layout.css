@@ -758,11 +758,19 @@
     overflow: hidden;
     margin-bottom: 15px;
     @media (max-width: $M){
-      display: none;
+      margin-top: 15px;
+      border-top: 1px solid #dedede;
+      padding-top: 15px;
     }
     dd {
       float: left;
       width: 32%;
+      @media (max-width: $MH){
+        width: 50%;
+      }
+      @media (max-width: $SM){
+        width: 100%;
+      }
     }
   }
   h3{
@@ -817,13 +825,13 @@
         }
       }
       &.sl{
-        float: right;
+        
       }
     }
   }
   .f-social{
     border-top: aliceblue;
-    margin: 15px -10px 10px -10px;
+    margin: 0;
     padding-top: 10px;
     border-top: 1px solid #dedede;
     
@@ -856,7 +864,7 @@
 */
 .bread{
   text-align: left;
-  font-size: 14px;
+  font-size: 12px;
   
   ol{
     display: inline-block;
