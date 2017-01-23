@@ -1,0 +1,21 @@
+<div class="carousel">
+  <div class="active">
+    <a href=""><img src="img/form.png" alt=""></a>
+  </div>
+  {% for i in 0..10 %}
+    <div>
+      <a href=""><img src="img/form.png" alt=""></a>
+    </div>
+  {% endfor %}
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/assets/js/owl.carousel.min.js">
+</script>
+<script>
+  $(document).ready(function(){
+    $(".carousel").owlCarousel();
+  });
+  
+</script>

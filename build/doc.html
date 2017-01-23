@@ -88,46 +88,53 @@
   </nav>
   
   <div class="subheader subheaderlight clearfix">
-    <div class="doc-btns">
-      <div class="btn-group">
-        <button type="button" class="btn btn-1 btn-border btn-white"><i class="i1"></i><span>Download</span></button>
-        <button type="button" class="btn btn-border btn-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          PDF
-          <span class="caret"></span>
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="active"><a href="#">PDF <b class="label label-primary pull-right">123Kb</b></a></li>
-          <li><a href="#">DOC <b class="label label-primary pull-right">123Kb</b></a></li>
-          <li><a href="#">TXT <b class="label label-primary pull-right">123Kb</b></a></li>
-        </ul>
+    <div class="dochead-wr">
+      <div class="doc-btns">
+        <div class="btn-group">
+          <button type="button" class="btn btn-1 btn-border btn-white"><!--<i class="i1"></i><--><i class="fa fa-download"></i><span>Download</span></button>
+          <button type="button" class="btn btn-border btn-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PDF
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="active"><a href="#">PDF <b class="label label-primary pull-right">123Kb</b></a></li>
+            <li><a href="#">DOC <b class="label label-primary pull-right">123Kb</b></a></li>
+            <li><a href="#">TXT <b class="label label-primary pull-right">123Kb</b></a></li>
+          </ul>
+        </div>
+        <!--
+        <button type="button" class="btn btn-2 btn-border btn-white"><i class="i2"></i><span>Fill in this form online</span></button>
+        -->
+        <button type="button" class="btn btn-2 btn-border btn-white"><i class="fa fa-print"></i><span>Print page</span></button>
+        <button type="button" class="btn btn-2 btn-border btn-white"><i class="fa fa-share"></i><span>Share</span></button>
       </div>
-      <button type="button" class="btn btn-2 btn-border btn-white"><i class="i2"></i><span>Fill in this form online</span></button>
-    </div>
-    <div class="doc-srch">
-      <div class="swr">
-        <input type="text" placeholder="Search documents" class="form-control">
-        <a href="" class="searcher">Go</a>
+      <div class="doc-srch">
+        <div class="swr">
+          <input type="text" placeholder="Search documents" class="form-control">
+          <a href="" class="searcher">Go</a>
+        </div>
+        <i class="fa fa-search" id="mob-show-search"></i>
       </div>
-      <i class="fa fa-search"></i>
-    </div>
-    <div class="doc-pgr">
-      <input type="text" value="150" class="form-control">
-      <span>Page of 150</span>
-      <button type="button" class="btn btn-1 btn-border btn-white">Go</button>
-    </div>
-    <div class="doc-pgr-select">
-      <select>
-        <option value="1">page 1</option>
-        <option value="1">page 2</option>
-        <option value="1">page 3</option>
-        <option value="1">page 4</option>
-        <option value="1">page 5</option>
-      </select>
+      <div class="doc-pgr">
+        <span>Page <input type="text" value="5" class="form-control"> of 15</span>
+        <button type="button" class="btn btn-1 btn-border btn-white">Go</button>
+      </div>
+      <div class="doc-pgr-select">
+        <select>
+          <option value="1">page 1</option>
+          <option value="1">page 2</option>
+          <option value="1">page 3</option>
+          <option value="1">page 4</option>
+          <option value="1">page 5</option>
+        </select>
+      </div>
     </div>
   </div>
 </header>
-    <!-- breadcrumbs.html -->
+      
+      <section class="doc-header noribbon">
+        <!-- breadcrumbs.html -->
 <div class="bread">
   <ol id="bc1" class="breadcrumb"><span id="ellipses" style="display: inline;">...</span>
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
@@ -145,63 +152,42 @@
   </ol>
 </div>
 
-      
-      
-      <section class="doc-header noribbon">
         <h1>
           Basic Resume Template
         </h1>
         <div class="doc-pages">
-          <ul>
-            <li class="active">
-              <a href=""><img src="img/form.png" alt=""></a>
-            </li>
+          <div class="owl-carousel owl-theme" id="doc_c">
+            <a class="da" href="#p1" data-hash="p1"><img src="img/form.png" alt=""><b>1</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p2" data-hash="p2"><img src="img/form.png" alt=""><b>2</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p3" data-hash="p3"><img src="img/form.png" alt=""><b>3</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p4" data-hash="p4"><img src="img/form.png" alt=""><b>4</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p5" data-hash="p5"><img src="img/form.png" alt=""><b>5</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p6" data-hash="p6"><img src="img/form.png" alt=""><b>6</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p7" data-hash="p7"><img src="img/form.png" alt=""><b>7</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p8" data-hash="p8"><img src="img/form.png" alt=""><b>8</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p9" data-hash="p9"><img src="img/form.png" alt=""><b>9</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p10" data-hash="p10"><img src="img/form.png" alt=""><b>10</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p11" data-hash="p11"><img src="img/form.png" alt=""><b>11</b></a>
             
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+              <a class="da" href="#p12" data-hash="p12"><img src="img/form.png" alt=""><b>12</b></a>
             
-          </ul>
+              <a class="da" href="#p13" data-hash="p13"><img src="img/form.png" alt=""><b>13</b></a>
+            
+              <a class="da" href="#p14" data-hash="p14"><img src="img/form.png" alt=""><b>14</b></a>
+            
+              <a class="da" href="#p15" data-hash="p15"><img src="img/form.png" alt=""><b>15</b></a>
+            
+          </div>
         </div>
         <div class="page-doc-top-a">
           <a href=""><img src="img/b2.jpg" alt=""></a>
@@ -235,6 +221,8 @@
             <div style="left:542px;top:424px;font-size:20px;">2 lb. EXPRESSBAKE&trade;</div>
             <div style="left:542px;top:455px;font-size:20px;">Breadmaker</div></div>
             <div class="clear"></div>
+            <div class="doc-next"><i class="fa fa-chevron-right"></i></div>
+            <div class="doc-prev"><i class="fa fa-chevron-left"></i></div>
           </div>
         
           <ul class="share-doc">
@@ -286,19 +274,21 @@
       <section class="doc-action clearfix">
         <div class="doc-btns">
           <div class="row">
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
               <button type="button" class="btn btn-1 btn-border tip" title="Size: 123Kb"><i class="i1"></i><span>Download</span> PDF</button>
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
               <button type="button" class="btn btn-2 btn-border tip" title="Size: 
               123Kb"><i class="i2"></i><span>Download</span> TXT</button>
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
               <button type="button" class="btn btn-3 btn-border tip" title="Size: 123Kb"><i class="i2"></i><span>Download</span> DOC</button>
             </div>
+            <!--
             <div class="col-sm-6 col-md-3">
               <button type="button" class="btn btn-4 btn-border tip" title="Size: 123Kb"><i class="i2"></i>Fill in <span>this form</span></button>
             </div>
+            -->
           </div>
         </div>
         
@@ -338,150 +328,126 @@
       </section>
       
       <section class="hotforms">
-        <h3 class="lined2"><span>Related forms</span></h3>
-        <div class="f-slider">
-          <ul class="f-slider">
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            
-          </ul>
+  <h3 class="lined2"><span>Related forms</span></h3>
+  <div class="f-slider owl-carousel">
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
         </div>
-        <div class="btn-footer">
-          <div class="container">
-            <a href="" class="btn btn-lg btn-border">Find out more forms</a>
-          </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
         </div>
-      </section>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+        <div class="f-item">
+          <a href="" class="f-pic">
+            <img src="img/form.png" alt="">
+          </a>
+          <a href="" class="f-link">
+            <span>Principles of Drug Testing Technology</span>
+          </a>
+          <a href="" class="f-cat label label-primary">Business</a>
+        </div>
+      
+  </div>
+  <div class="btn-footer">
+    <div class="container">
+      <a href="" class="btn btn-lg btn-border">Find out more forms</a>
+    </div>
+  </div>
+</section>
       
       <section class="rel-cats">
         <div class="clearfix">

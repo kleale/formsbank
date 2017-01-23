@@ -9,19 +9,20 @@
     transform-origin: left top 0;
   }
   .wrapper{
-    padding: 120px 0 0 0;
+    padding: 98px 0 0 0;
     overflow: hidden;
-    @media (max-width: $XM){
-      padding: 110px 0 0 0;
-    }
   }
   .bread{
     text-align: left;
     max-width: 960px;
     margin: 0 auto;
     ol{
-      padding: 9px 5px 5px 5px;
+      padding: 0px 5px;
+      font-size: 12px;
     }
+  }
+  .subheader{
+    border-bottom: 1px solid #d2d2d2;
   }
 }
 .doc-header {
@@ -37,67 +38,14 @@
   
   h1{
     color: #000;
-    float: left;
-    margin: 20px 55px 0;
+    margin: 10px 3px;
+    font-size: 1.7em;
   }
   
-  /* move ribbon in header
-  .lined{
-    font-size: 30px;
-    text-align: center;
-    line-height: 1;
-    font-weight: 300;
-    margin: 0px 0 15px 0;
-    @media (max-width: $toM){
-      font-size: 24px;
-      font-size: 24px;
-      margin: 0px 0 10px 0;
-    }
-    
-    span{
-      
-      display: inline-block;
-      position: relative;
-      background: $subcolor;
-      color: $subcolortext;
-      padding: 5px 20px;
-      
-      @media (max-width: $toM){
-        background: transparent;
-        color: #000;
-      }
-     
-      &:after{
-        content: '';
-        display: block;
-        height: 100%;
-        width: 40px;
-        background: $subcolor;
-        transform: skewX(-20deg);
-        position: absolute 0 -20px * *;
-        @media (max-width: $toM){
-          display: none;
-        }
-      }
-      &:before{
-        content: '';
-        display: block;
-        height: 100%;
-        width: 40px;
-        background: $subcolor;
-        transform: skewX(-20deg);
-        position: absolute 0 * * -20px;
-        @media (max-width: $toM){
-          display: none;
-        }
-      }
-     
-    }
-  }*/
-  
   div{
-    font-size: 14px;
+    font-size: 12px;
     color: #5c5c5c;
+    
     @media (max-width: $toM){
       font-size: 14px;
     }
@@ -111,81 +59,100 @@
     padding: 10px 10px 30px;
     .doc-pages {
       max-width: none;
-      margin-top: 0;
+      margin: 0;
     }
   }
   
 }
 .doc-pages{
   max-width: 940px;
-  margin: 0 auto;
-  margin-top: -105px;
+  margin: -105px auto 0;
   
-  ul{
-    padding: 0 50px;
-    list-style: none;
-    margin: 0;
+  .owl-carousel {
     overflow: hidden;
-    padding: 0px 50px;
-    
-    li{
-      float: left;
-      padding: 30px 15px;
-      
-      a{
-        width: 90px;
-        display: block;
-        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-        
+    padding: 0 30px;
+    .da{
+      padding: 10px 10px 30px;
+      display: inline-block;
+      position: relative;
+      top: 0px;
+      transition: $transition;
+
+      img{
+        width: 100%;
+        box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
+      }
+      &:hover{
+        position: relative;
+        top: -8px;
         img{
-          width: 100%;
-        }
-        &:hover{
-          box-shadow: $bsh2 , 0 0 0 2px $subcolor;
+          box-shadow: 1px 6px 14px 3px rgba(0, 0, 0, 0.2), 0 0 0 2px $subcolor;
         }
       }
-      &.active a{
-        box-shadow: $bsh , 0 0 0 2px $subcolor;
-        transform: scale(1.1);
+      b{
+        bottom: 21px;
+        left: 42px;
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        border-radius: 30px;
+        font-size: 10px;
+        font-weight: 400;
+        color: #f7fdff;
+        background: #3cbcd4;
+        z-index: 2;
       }
     }
-    .owl-item li a{
-      width: 100%;
+    .owl-item.cur{
+      position: relative;
+      top: -8px;
+      img{
+        box-shadow: 1px 6px 20px rgba(0, 0, 0, 0.3), 0 0 0 2px #94d1dc;
+      }
     }
   }
-  .owl-theme .owl-controls .owl-buttons .owl-next,
-  .owl-theme .owl-controls .owl-buttons .owl-prev{
-    margin-top: -25px;
-    font-size: 60px;
-    color: #31a4ba;
+  .owl-dots{
+    display: none;
   }
-  .owl-theme .owl-controls .owl-buttons .owl-next{right:10px;}
-  .owl-theme .owl-controls .owl-buttons .owl-prev{left:10px;}
   .owl-wrapper-outer{
     position: relative;
-    /*
-    &:after{
-      content: '';
-      display: block;
-      height: 100%;
-      width: 50px;
-      background: linear-gradient(to right,  rgba(255,255,255,0) 0%, #f7fdff 50%);
-      position: absolute 0 0 * *;
+  }
+}
+
+.owl-nav {
+  margin-top: -20px;
+  text-align: center;
+  div{
+    padding: 3px 0px;
+    margin: 0;
+  }
+  .owl-next,
+  .owl-prev{
+    margin-top: -35px;
+    font-size: 40px;
+    color: #31a4ba;
+    position: absolute 50% 0 * *;
+    &:hover,
+    &:focus,
+    &:active{
+      opacity: 1;
     }
-    */
+    &.disabled{
+      text-shadow: 1px -2px #c6e1e6;
+      color: #d3eef3;
+    }
   }
-  .owl-theme .owl-controls {
-    margin-top: -20px;
-    text-align: center;
-  }
-  .owl-pagination{
-    display: none;
+  .owl-prev{
+    left:0px;
+    right:auto;
   }
 }
 
 .page-doc-top-a{
-  /*box-shadow: $bsh;*/
-  margin: 15px -10px -30px;
+  margin: 5px -10px -30px;
   border-top: 1px solid #d2d2d2;
   img{
     width: 100%
@@ -203,9 +170,33 @@
   .page-doc{
     box-shadow: 0 0 0 1px #d2d2d2; 
   }
+  .doc-next, 
+  .doc-prev{
+    margin-top: -65px;
+    font-size: 60px;
+    color: #31a4ba;
+    background: #fff;
+    position: absolute 50% 0 * *;
+    line-height: 1;
+    display: block;
+    zoom: 1;
+    opacity: .5;
+    cursor: pointer;
+    padding: 30px 10px;
+    
+    &:hover,
+    &:active,
+    &:focus{
+      opacity: 1;
+    }
+  }
+  .doc-prev{
+    right: auto;
+    left: 0;
+  }
   .page-doc-bot-a{
     box-shadow: $bsh;
-    margin: 15px 0 0 0;
+    margin: 0 0 0 0;
     
     img{
       width: 100%
@@ -214,7 +205,7 @@
   .page-doc-right-a{
     box-shadow: $bsh;
     position: absolute 0 * * 100%;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .nav-pager{
     padding: 0 15px;
@@ -292,10 +283,12 @@
     .btn{
       display: block;
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 15px;
+      
       i{
         display: block;
-        margin-bottom: 15px;
         width: 22px;
         height: 22px;
         margin: 0 auto;
@@ -303,7 +296,7 @@
         background-repeat: no-repeat;
         background-position: center;
         float: left;
-        margin-right: 10px;
+        margin: -1px 8px -3px -5px;
       
         &.i1{
           background-image: url("../img/ico_download_black.svg");
@@ -324,7 +317,7 @@
   .m-rate{
     overflow: hidden;
     display: inline-block;
-    font-size: 36px;
+    font-size: 26px;
     padding: 1px 3px 1px 0;
     position: relative;
     vertical-align: middle;
@@ -340,6 +333,7 @@
       font-style: normal;
       font-weight: normal;
       cursor: pointer;
+      margin-right: 3px;
 
       &:before {
         color: #dddddd;
@@ -364,7 +358,7 @@
 
   .rgg{
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     vertical-align: text-top;
     @media (max-width: $MH){
         float: right;
@@ -386,15 +380,17 @@
     display: inline-block;
     
     a{
-      color:#b0b0b0;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
+      color: #b0b0b0;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
       border-radius: 50%;
       display: inline-block;
-      font-size: 24px;
+      font-size: 20px;
       text-decoration: none;
       text-align: center;
+      margin-left: 10px;
+      
       @media (max-width: $M){
         font-size: 16px;
         width: 30px;

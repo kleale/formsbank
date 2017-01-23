@@ -48,6 +48,12 @@
       $('.searchbar').toggleClass('active');  
     });
     
+    //mob search
+    $('#mob-show-search').click(function() {
+      $(this).toggleClass('active').toggleClass('fa-times').toggleClass('fa-search');
+      $('.doc-srch').toggleClass('active');  
+    });
+    
     // expander block
     $('.list-loader').hide();
     if ($('#list-opener').height() > 50) {
@@ -80,7 +86,6 @@
         $(this).text("more..").siblings(".complete").hide();    
     });
     
-    
     //  aftocomplete in search form example
     $('#typehead').typeahead({
         hint: true,
@@ -98,30 +103,79 @@
     $('.tip').tooltip();
     
     //form slider at index
-    $('.f-slider ul').owlCarousel({
-      loop:true,
-      navigation: true,
-      navigationText: ["",""],
+    $('.f-slider').owlCarousel({
+      loop: true,
+      navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],      
+      dots: true,
+      slideBy: 3,
       responsiveClass:true,
-      items : 8, 
-      itemsDesktop : [1000,6], 
-      itemsDesktopSmall : [900,5], 
-      itemsTablet: [600,3],
-      itemsMobile : [400,2]
+      responsive:{
+        0:{
+            items:2,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:6,
+            nav:true,
+            loop:false
+        },
+        1300:{
+            items:8,
+            nav:true,
+            loop:false
+        }
+      }
     });
     
-    //page slider at doc page
-    $('.doc-pages ul').owlCarousel({
-      loop:false,
-      navigation: true,
-      navigationText: ["",""],
+    
+    var owl_doc = $('#doc_c');
+    owl_doc.owlCarousel({
+      loop: true,
+      navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+      //URLhashListener:true,
+      startPosition: 'URLHash',      
+      //center:true,
+      dots: false,
+      slideBy: 3,
       responsiveClass:true,
-      items : 7, 
-      itemsDesktop : [1000,6], 
-      itemsDesktopSmall : [900,6], 
-      itemsTablet: [600,4],
-      itemsMobile : [400,3]
+      responsive:{
+        0:{
+            items:2,
+            nav:true
+        },
+        600:{
+            items:4,
+            nav:false
+        },
+        1000:{
+            items:8,
+            nav:true,
+            loop:false
+        }
+      },
+      onChanged: callback
     });
+    
+    function callback(e) {
+      var cur = e.item.index;
+      $('.owl-item').removeClass('cur');
+      $('.owl-item').eq(cur).addClass('cur');
+    }
+    
+    // jQuery method on
+    /*
+    owl_doc.on('changed.owl.carousel',function(e){
+      var cur = e.item.index;
+      $('.owl-item').removeClass('cur');
+      $('.owl-item').eq(cur).addClass('cur');
+    });
+    */  
+
+    
     
     //category chosen
     $(function() {
@@ -130,9 +184,6 @@
     });
     
     //USA MAP
-    
-    
-    
     
     
     

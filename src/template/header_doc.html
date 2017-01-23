@@ -64,42 +64,47 @@
   </nav>
   
   <div class="subheader subheaderlight clearfix">
-    <div class="doc-btns">
-      <div class="btn-group">
-        <button type="button" class="btn btn-1 btn-border btn-white"><i class="i1"></i><span>Download</span></button>
-        <button type="button" class="btn btn-border btn-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          PDF
-          <span class="caret"></span>
-          <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <ul class="dropdown-menu">
-          <li class="active"><a href="#">PDF <b class="label label-primary pull-right">123Kb</b></a></li>
-          <li><a href="#">DOC <b class="label label-primary pull-right">123Kb</b></a></li>
-          <li><a href="#">TXT <b class="label label-primary pull-right">123Kb</b></a></li>
-        </ul>
+    <div class="dochead-wr">
+      <div class="doc-btns">
+        <div class="btn-group">
+          <button type="button" class="btn btn-1 btn-border btn-white"><!--<i class="i1"></i><--><i class="fa fa-download"></i><span>Download</span></button>
+          <button type="button" class="btn btn-border btn-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            PDF
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li class="active"><a href="#">PDF <b class="label label-primary pull-right">123Kb</b></a></li>
+            <li><a href="#">DOC <b class="label label-primary pull-right">123Kb</b></a></li>
+            <li><a href="#">TXT <b class="label label-primary pull-right">123Kb</b></a></li>
+          </ul>
+        </div>
+        <!--
+        <button type="button" class="btn btn-2 btn-border btn-white"><i class="i2"></i><span>Fill in this form online</span></button>
+        -->
+        <button type="button" class="btn btn-2 btn-border btn-white"><i class="fa fa-print"></i><span>Print page</span></button>
+        <button type="button" class="btn btn-2 btn-border btn-white"><i class="fa fa-share"></i><span>Share</span></button>
       </div>
-      <button type="button" class="btn btn-2 btn-border btn-white"><i class="i2"></i><span>Fill in this form online</span></button>
-    </div>
-    <div class="doc-srch">
-      <div class="swr">
-        <input type="text" placeholder="Search documents" class="form-control">
-        <a href="" class="searcher">Go</a>
+      <div class="doc-srch">
+        <div class="swr">
+          <input type="text" placeholder="Search documents" class="form-control">
+          <a href="" class="searcher">Go</a>
+        </div>
+        <i class="fa fa-search" id="mob-show-search"></i>
       </div>
-      <i class="fa fa-search"></i>
-    </div>
-    <div class="doc-pgr">
-      <input type="text" value="150" class="form-control">
-      <span>Page of 150</span>
-      <button type="button" class="btn btn-1 btn-border btn-white">Go</button>
-    </div>
-    <div class="doc-pgr-select">
-      <select>
-        <option value="1">page 1</option>
-        <option value="1">page 2</option>
-        <option value="1">page 3</option>
-        <option value="1">page 4</option>
-        <option value="1">page 5</option>
-      </select>
+      <div class="doc-pgr">
+        <span>Page <input type="text" value="5" class="form-control"> of 15</span>
+        <button type="button" class="btn btn-1 btn-border btn-white">Go</button>
+      </div>
+      <div class="doc-pgr-select">
+        <select>
+          <option value="1">page 1</option>
+          <option value="1">page 2</option>
+          <option value="1">page 3</option>
+          <option value="1">page 4</option>
+          <option value="1">page 5</option>
+        </select>
+      </div>
     </div>
   </div>
 </header>

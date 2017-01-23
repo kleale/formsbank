@@ -15,51 +15,19 @@
 <body class="page-doc">
   <div class="wrapper">
     {% include "template/header_doc.html" %}
-    {% include "template/breadcrumbs.html" %}
-      {#
-      <!-- if ribbon
-      <section class="doc-header">
-         
-        <h1 class="lined">
-          <span>Basic Resume Template</span>
-        </h1>
-        <div>
-          <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. This file teaches you how to stand out among various interviewees. </p><p>It can decide whether you have the chance to attend the interview. Making a well-contented and well-structured resume will give you a bright future.</p>
-        </div>
-        
-        <h1>
-          Basic Resume Template
-        </h1>
-      </section>
-      <div class="doc-pages">
-        <ul>
-          <li class="active">
-            <a href=""><img src="img/form.png" alt=""></a>
-          </li>
-          {% for i in 0..10 %}
-            <li>
-              <a href=""><img src="img/form.png" alt=""></a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      -->#}
       
       <section class="doc-header noribbon">
+        {% include "template/breadcrumbs.html" %}
         <h1>
           Basic Resume Template
         </h1>
         <div class="doc-pages">
-          <ul>
-            <li class="active">
-              <a href=""><img src="img/form.png" alt=""></a>
-            </li>
-            {% for i in 0..10 %}
-              <li>
-                <a href=""><img src="img/form.png" alt=""></a>
-              </li>
+          <div class="owl-carousel owl-theme" id="doc_c">
+            <a class="da" href="#p1" data-hash="p1"><img src="img/form.png" alt=""><b>1</b></a>
+            {% for i in 2..15 %}
+              <a class="da" href="#p{{i}}" data-hash="p{{i}}"><img src="img/form.png" alt=""><b>{{i}}</b></a>
             {% endfor %}
-          </ul>
+          </div>
         </div>
         <div class="page-doc-top-a">
           <a href=""><img src="img/b2.jpg" alt=""></a>
@@ -93,6 +61,8 @@
             <div style="left:542px;top:424px;font-size:20px;">2 lb. EXPRESSBAKE&trade;</div>
             <div style="left:542px;top:455px;font-size:20px;">Breadmaker</div></div>
             <div class="clear"></div>
+            <div class="doc-next"><i class="fa fa-chevron-right"></i></div>
+            <div class="doc-prev"><i class="fa fa-chevron-left"></i></div>
           </div>
         
           <ul class="share-doc">
@@ -124,19 +94,21 @@
       <section class="doc-action clearfix">
         <div class="doc-btns">
           <div class="row">
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
               <button type="button" class="btn btn-1 btn-border tip" title="Size: 123Kb"><i class="i1"></i><span>Download</span> PDF</button>
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
               <button type="button" class="btn btn-2 btn-border tip" title="Size: 
               123Kb"><i class="i2"></i><span>Download</span> TXT</button>
             </div>
-            <div class="col-sm-6 col-md-3">
+            <div class="col-sm-6 col-md-4">
               <button type="button" class="btn btn-3 btn-border tip" title="Size: 123Kb"><i class="i2"></i><span>Download</span> DOC</button>
             </div>
+            <!--
             <div class="col-sm-6 col-md-3">
               <button type="button" class="btn btn-4 btn-border tip" title="Size: 123Kb"><i class="i2"></i>Fill in <span>this form</span></button>
             </div>
+            -->
           </div>
         </div>
         
@@ -175,31 +147,7 @@
         </div>
       </section>
       
-      <section class="hotforms">
-        <h3 class="lined2"><span>Related forms</span></h3>
-        <div class="f-slider">
-          <ul class="f-slider">
-            {% for i in 0..10 %}
-              <li>
-                <div class="f-item">
-                  <a href="" class="f-pic">
-                    <img src="img/form.png" alt="">
-                  </a>
-                  <a href="" class="f-link">
-                    <span>Principles of Drug Testing Technology</span>
-                  </a>
-                  <a href="" class="f-cat label label-primary">Business</a>
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="btn-footer">
-          <div class="container">
-            <a href="" class="btn btn-lg btn-border">Find out more forms</a>
-          </div>
-        </div>
-      </section>
+      {% include "template/rel-block.html" %}
       
       <section class="rel-cats">
         <div class="clearfix">
