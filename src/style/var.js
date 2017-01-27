@@ -20,7 +20,7 @@ module.exports = {
     "$XL": "1328px",
   
     // Colors
-    "$text-main": "#222",
+    "$text-main": "#555",
     "$text-gray-1": "#5c5f62",
     "$text-gray-2": "#6c6c6c",
     "$text-gray-3": "#8f8f8f",

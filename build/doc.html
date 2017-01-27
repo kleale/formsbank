@@ -45,19 +45,35 @@
 <header class="header header-doc">
   <nav class="navbar">
     <div class="">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
+          <i class="fa fa-bars"></i>
+      </button>
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
           <img src="img/logo_white.svg">
         </a>
       </div>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
-          <i class="fa fa-bars"></i>
-      </button>
+      <div class="hsearch">
+        <a href="#" class="searcher1 searcher_js btn">
+          <i class="fa fa-search"></i>
+        </a>
+        <div class="searchbar">
+          <div class="doc-srch">
+              <form action="search-google.html" method="GET">
+                <input type="text" name="q" placeholder="Search documents" class="form-control">
+              </form>
+              <a onclick="$(this).closest('form').submit();" class="searcher">Go</a>
+            <a href="#" class="searcher-close searcher_js btn">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="collapse navbar-collapse" id="urmenu">
         <div class="conts">
           
           
-            <a data-toggle="modal" data-target="#modal-local" href="#" class="btn-primary btn btn-sign btn-local" title="Choose you country or state to get forms only available for you location"><i class="fa fa-globe"></i><span>Your country or state</span></a>
+            <a data-toggle="modal" data-target="#modal-local" href="#" class="btn-primary btn btn-local" title="Choose you country or state to get forms only available for you location"><i class="fa fa-globe"></i><span>Your country or state</span></a>
           
         </div>
         <ul class="nav navbar-nav">
@@ -120,35 +136,40 @@
         <span>Page <input type="text" value="5" class="form-control"> of 15</span>
         <button type="button" class="btn btn-1 btn-border btn-white">Go</button>
       </div>
-      <div class="doc-pgr-select">
-        <select>
-          <option value="1">page 1</option>
-          <option value="1">page 2</option>
-          <option value="1">page 3</option>
-          <option value="1">page 4</option>
-          <option value="1">page 5</option>
-        </select>
+      
+      <div class="dropdown doc-pgr-select">
+        <button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+          page 2
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">page 1</a></li>
+          <li class="active"><a href="#">page 2</a></li>
+          <li><a href="#">page 3</a></li>
+        </ul>
       </div>
     </div>
   </div>
 </header>
+<div class="swipe-area"></div>
       
       <section class="doc-header noribbon">
         <!-- breadcrumbs.html -->
 <div class="bread">
-  <ol id="bc1" class="breadcrumb"><span id="ellipses" style="display: inline;">...</span>
+  <ol id="bc1" class="breadcrumb">
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-      <a  itemprop="url" href="/"><span itemprop="title">Forms</span></a>
+      <a  itemprop="url" href="/"><span itemprop="title"><i class="fa fa-home"></i></span></a>
     </li>
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-      <a itemprop="url" href="/dota-2"><span itemprop="title">Resume Templates</span></a>
+      <a itemprop="url" href="#"><span itemprop="title">Resume Templates</span></a>
     </li>
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-      <a itemprop="url" href="/dota-2"><span itemprop="title">Basic Resume Template Timeless Design</span></a>
+      <a itemprop="url" href="#"><span itemprop="title">Basic Resume Template Timeless Design</span></a>
     </li>
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
       <span itemprop="title">Basic Resume Template</span>
     </li>
+    <span class="bc-opener"><i class="fa fa-ellipsis-h"></i></span>
   </ol>
 </div>
 
@@ -914,6 +935,11 @@
 
 
 <!--PAGES select-->
+<style>
+  body{
+    margin-bottom: 50px;
+  }
+</style>
 <div style="position: fixed;
     z-index: 10;
     bottom: 5px;

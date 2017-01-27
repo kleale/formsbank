@@ -45,30 +45,34 @@
 <header class="header header-doc">
   <nav class="navbar">
     <div class="">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
+          <i class="fa fa-bars"></i>
+      </button>
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
           <img src="img/logo_white.svg">
         </a>
       </div>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
-          <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="urmenu">
-        <div class="conts">
-          <a href="#" class="searcher1 searcher_js btn">
-            <i class="fa fa-search"></i>
-          </a>
-          <div class="searchbar">
-            <div class="doc-srch">
+      
+      <div class="hsearch">
+        <a href="#" class="searcher1 searcher_js btn">
+          <i class="fa fa-search"></i>
+        </a>
+        <div class="searchbar">
+          <div class="doc-srch">
               <form action="search-google.html" method="GET">
                 <input type="text" name="q" placeholder="Search documents" class="form-control">
               </form>
               <a onclick="$(this).closest('form').submit();" class="searcher">Go</a>
-              <a href="#" class="searcher-close searcher_js btn">
-                <i class="fa fa-times"></i>
-              </a>
-            </div>
+            <a href="#" class="searcher-close searcher_js btn">
+              <i class="fa fa-times"></i>
+            </a>
           </div>
+        </div>
+      </div>
+      
+      <div class="collapse navbar-collapse" id="urmenu">
+        <div class="conts">
           <!--
           <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
           -->
@@ -101,24 +105,27 @@
     </div><!-- /.container-fluid -->
   </nav>
 </header>
+<div class="swipe-area"></div>
+
     
     <section class="cat-header">
       <div class="container">
         <!-- breadcrumbs.html -->
 <div class="bread">
-  <ol id="bc1" class="breadcrumb"><span id="ellipses" style="display: inline;">...</span>
+  <ol id="bc1" class="breadcrumb">
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-      <a  itemprop="url" href="/"><span itemprop="title">Forms</span></a>
+      <a  itemprop="url" href="/"><span itemprop="title"><i class="fa fa-home"></i></span></a>
     </li>
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-      <a itemprop="url" href="/dota-2"><span itemprop="title">Resume Templates</span></a>
+      <a itemprop="url" href="#"><span itemprop="title">Resume Templates</span></a>
     </li>
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-      <a itemprop="url" href="/dota-2"><span itemprop="title">Basic Resume Template Timeless Design</span></a>
+      <a itemprop="url" href="#"><span itemprop="title">Basic Resume Template Timeless Design</span></a>
     </li>
     <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
       <span itemprop="title">Basic Resume Template</span>
     </li>
+    <span class="bc-opener"><i class="fa fa-ellipsis-h"></i></span>
   </ol>
 </div>
 
@@ -161,231 +168,195 @@
             </div>
             <div class="tem_list clearfix">
               
-                <div class="tem_item">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="f-item">
-                        <a href="" class="f-pic">
-                          <img src="img/form.png" alt="">
-                        </a>
+                <div class="tem_item clearfix">
+                  <div class="f-item">
+                    <a href="" class="f-pic">
+                      <img src="img/form.png" alt="">
+                    </a>
+                  </div>
+                  <div class="tem-descr">
+                    <h4><a href="">Certificate of Completion Template</a></h4>
+                    <div class="tem-info">
+                      <span class="stars">
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star half-o active"></i>
+                        <i class="fa fa-star-o"></i>
+                      </span>
+                      <span class="types">
+                        <b class="label label-border">PDF</b>
+                        <b class="label label-border">TXT</b>
+                        <b class="label label-border">DOC</b>
+                        <b class="label label-border">ONLINE</b>
+                      </span>
+                      <div class="specs">
+                      6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
                       </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="tem-descr">
-                        <h4><a href="">Certificate of Completion Template</a></h4>
-                        <div class="tem-info">
-                          <span class="stars">
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star half-o active"></i>
-                            <i class="fa fa-star-o"></i>
-                          </span>
-                          <span class="types">
-                            <b class="label label-border">PDF</b>
-                            <b class="label label-border">TXT</b>
-                            <b class="label label-border">DOC</b>
-                            <b class="label label-border">ONLINE</b>
-                          </span>
-                          <div class="specs">
-                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
-                          </div>
-                        </div>
-                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
-                        </p>
-                        <a href="" class="btn btn-default">View Form</a>
-                      </div>
-                    </div>
+                    <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
+                    </p>
+                    <a href="" class="btn btn-default">View Form</a>
                   </div>
                 </div>
               
-                <div class="tem_item">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="f-item">
-                        <a href="" class="f-pic">
-                          <img src="img/form.png" alt="">
-                        </a>
+                <div class="tem_item clearfix">
+                  <div class="f-item">
+                    <a href="" class="f-pic">
+                      <img src="img/form.png" alt="">
+                    </a>
+                  </div>
+                  <div class="tem-descr">
+                    <h4><a href="">Certificate of Completion Template</a></h4>
+                    <div class="tem-info">
+                      <span class="stars">
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star half-o active"></i>
+                        <i class="fa fa-star-o"></i>
+                      </span>
+                      <span class="types">
+                        <b class="label label-border">PDF</b>
+                        <b class="label label-border">TXT</b>
+                        <b class="label label-border">DOC</b>
+                        <b class="label label-border">ONLINE</b>
+                      </span>
+                      <div class="specs">
+                      6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
                       </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="tem-descr">
-                        <h4><a href="">Certificate of Completion Template</a></h4>
-                        <div class="tem-info">
-                          <span class="stars">
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star half-o active"></i>
-                            <i class="fa fa-star-o"></i>
-                          </span>
-                          <span class="types">
-                            <b class="label label-border">PDF</b>
-                            <b class="label label-border">TXT</b>
-                            <b class="label label-border">DOC</b>
-                            <b class="label label-border">ONLINE</b>
-                          </span>
-                          <div class="specs">
-                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
-                          </div>
-                        </div>
-                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
-                        </p>
-                        <a href="" class="btn btn-default">View Form</a>
-                      </div>
-                    </div>
+                    <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
+                    </p>
+                    <a href="" class="btn btn-default">View Form</a>
                   </div>
                 </div>
               
-                <div class="tem_item">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="f-item">
-                        <a href="" class="f-pic">
-                          <img src="img/form.png" alt="">
-                        </a>
+                <div class="tem_item clearfix">
+                  <div class="f-item">
+                    <a href="" class="f-pic">
+                      <img src="img/form.png" alt="">
+                    </a>
+                  </div>
+                  <div class="tem-descr">
+                    <h4><a href="">Certificate of Completion Template</a></h4>
+                    <div class="tem-info">
+                      <span class="stars">
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star half-o active"></i>
+                        <i class="fa fa-star-o"></i>
+                      </span>
+                      <span class="types">
+                        <b class="label label-border">PDF</b>
+                        <b class="label label-border">TXT</b>
+                        <b class="label label-border">DOC</b>
+                        <b class="label label-border">ONLINE</b>
+                      </span>
+                      <div class="specs">
+                      6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
                       </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="tem-descr">
-                        <h4><a href="">Certificate of Completion Template</a></h4>
-                        <div class="tem-info">
-                          <span class="stars">
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star half-o active"></i>
-                            <i class="fa fa-star-o"></i>
-                          </span>
-                          <span class="types">
-                            <b class="label label-border">PDF</b>
-                            <b class="label label-border">TXT</b>
-                            <b class="label label-border">DOC</b>
-                            <b class="label label-border">ONLINE</b>
-                          </span>
-                          <div class="specs">
-                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
-                          </div>
-                        </div>
-                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
-                        </p>
-                        <a href="" class="btn btn-default">View Form</a>
-                      </div>
-                    </div>
+                    <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
+                    </p>
+                    <a href="" class="btn btn-default">View Form</a>
                   </div>
                 </div>
               
-                <div class="tem_item">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="f-item">
-                        <a href="" class="f-pic">
-                          <img src="img/form.png" alt="">
-                        </a>
+                <div class="tem_item clearfix">
+                  <div class="f-item">
+                    <a href="" class="f-pic">
+                      <img src="img/form.png" alt="">
+                    </a>
+                  </div>
+                  <div class="tem-descr">
+                    <h4><a href="">Certificate of Completion Template</a></h4>
+                    <div class="tem-info">
+                      <span class="stars">
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star half-o active"></i>
+                        <i class="fa fa-star-o"></i>
+                      </span>
+                      <span class="types">
+                        <b class="label label-border">PDF</b>
+                        <b class="label label-border">TXT</b>
+                        <b class="label label-border">DOC</b>
+                        <b class="label label-border">ONLINE</b>
+                      </span>
+                      <div class="specs">
+                      6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
                       </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="tem-descr">
-                        <h4><a href="">Certificate of Completion Template</a></h4>
-                        <div class="tem-info">
-                          <span class="stars">
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star half-o active"></i>
-                            <i class="fa fa-star-o"></i>
-                          </span>
-                          <span class="types">
-                            <b class="label label-border">PDF</b>
-                            <b class="label label-border">TXT</b>
-                            <b class="label label-border">DOC</b>
-                            <b class="label label-border">ONLINE</b>
-                          </span>
-                          <div class="specs">
-                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
-                          </div>
-                        </div>
-                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
-                        </p>
-                        <a href="" class="btn btn-default">View Form</a>
-                      </div>
-                    </div>
+                    <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
+                    </p>
+                    <a href="" class="btn btn-default">View Form</a>
                   </div>
                 </div>
               
-                <div class="tem_item">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="f-item">
-                        <a href="" class="f-pic">
-                          <img src="img/form.png" alt="">
-                        </a>
+                <div class="tem_item clearfix">
+                  <div class="f-item">
+                    <a href="" class="f-pic">
+                      <img src="img/form.png" alt="">
+                    </a>
+                  </div>
+                  <div class="tem-descr">
+                    <h4><a href="">Certificate of Completion Template</a></h4>
+                    <div class="tem-info">
+                      <span class="stars">
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star half-o active"></i>
+                        <i class="fa fa-star-o"></i>
+                      </span>
+                      <span class="types">
+                        <b class="label label-border">PDF</b>
+                        <b class="label label-border">TXT</b>
+                        <b class="label label-border">DOC</b>
+                        <b class="label label-border">ONLINE</b>
+                      </span>
+                      <div class="specs">
+                      6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
                       </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="tem-descr">
-                        <h4><a href="">Certificate of Completion Template</a></h4>
-                        <div class="tem-info">
-                          <span class="stars">
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star half-o active"></i>
-                            <i class="fa fa-star-o"></i>
-                          </span>
-                          <span class="types">
-                            <b class="label label-border">PDF</b>
-                            <b class="label label-border">TXT</b>
-                            <b class="label label-border">DOC</b>
-                            <b class="label label-border">ONLINE</b>
-                          </span>
-                          <div class="specs">
-                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
-                          </div>
-                        </div>
-                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
-                        </p>
-                        <a href="" class="btn btn-default">View Form</a>
-                      </div>
-                    </div>
+                    <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
+                    </p>
+                    <a href="" class="btn btn-default">View Form</a>
                   </div>
                 </div>
               
-                <div class="tem_item">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="f-item">
-                        <a href="" class="f-pic">
-                          <img src="img/form.png" alt="">
-                        </a>
+                <div class="tem_item clearfix">
+                  <div class="f-item">
+                    <a href="" class="f-pic">
+                      <img src="img/form.png" alt="">
+                    </a>
+                  </div>
+                  <div class="tem-descr">
+                    <h4><a href="">Certificate of Completion Template</a></h4>
+                    <div class="tem-info">
+                      <span class="stars">
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star active"></i>
+                        <i class="fa fa-star half-o active"></i>
+                        <i class="fa fa-star-o"></i>
+                      </span>
+                      <span class="types">
+                        <b class="label label-border">PDF</b>
+                        <b class="label label-border">TXT</b>
+                        <b class="label label-border">DOC</b>
+                        <b class="label label-border">ONLINE</b>
+                      </span>
+                      <div class="specs">
+                      6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
                       </div>
                     </div>
-                    <div class="col-sm-8">
-                      <div class="tem-descr">
-                        <h4><a href="">Certificate of Completion Template</a></h4>
-                        <div class="tem-info">
-                          <span class="stars">
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star active"></i>
-                            <i class="fa fa-star half-o active"></i>
-                            <i class="fa fa-star-o"></i>
-                          </span>
-                          <span class="types">
-                            <b class="label label-border">PDF</b>
-                            <b class="label label-border">TXT</b>
-                            <b class="label label-border">DOC</b>
-                            <b class="label label-border">ONLINE</b>
-                          </span>
-                          <div class="specs">
-                          6 page &nbsp;|&nbsp; Size: 123Mb &nbsp;|&nbsp; USA, California
-                          </div>
-                        </div>
-                        <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
-                        </p>
-                        <a href="" class="btn btn-default">View Form</a>
-                      </div>
-                    </div>
+                    <p>The Basic Resume Template is a template used for finding a job by applicants. An excellent resume template helps you find a proper job and saves you lots of time wandering around different recruit sites. 
+                    </p>
+                    <a href="" class="btn btn-default">View Form</a>
                   </div>
                 </div>
               
@@ -888,6 +859,11 @@
 
 
 <!--PAGES select-->
+<style>
+  body{
+    margin-bottom: 50px;
+  }
+</style>
 <div style="position: fixed;
     z-index: 10;
     bottom: 5px;

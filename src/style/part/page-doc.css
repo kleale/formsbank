@@ -17,7 +17,8 @@
     max-width: 960px;
     margin: 0 auto;
     ol{
-      padding: 0px 5px;
+      color: #555;
+      padding: 1px 5px;
       font-size: 12px;
     }
   }
@@ -37,9 +38,12 @@
   }
   
   h1{
-    color: #000;
+    color: #555;
     margin: 10px 3px;
     font-size: 1.7em;
+    @media (max-width: $toM){
+      font-size: 1.2em;
+    }
   }
   
   div{
@@ -91,7 +95,8 @@
       }
       b{
         bottom: 21px;
-        left: 42px;
+        left: 50%;
+        margin-left: -12.5px;
         position: absolute;
         display: block;
         width: 25px;
@@ -144,6 +149,10 @@
       text-shadow: 1px -2px #c6e1e6;
       color: #d3eef3;
     }
+    @media (max-width: $XM){
+      margin-top: -26px;
+      font-size: 30px;
+    }
   }
   .owl-prev{
     left:0px;
@@ -189,6 +198,10 @@
     &:focus{
       opacity: 1;
     }
+    @media (max-width: $XM){
+      margin-top: -26px;
+      font-size: 30px;
+    }
   }
   .doc-prev{
     right: auto;
@@ -227,9 +240,6 @@
         width: 100%;
         li{
           display: table-cell;
-          a{
-            width: auto!important;
-          }
         }
       }
 
@@ -251,6 +261,12 @@
             color: $link-gray-active;
             background: $button-blue;
           }
+          @media (max-width: $XM){
+            width: auto!important;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+          }
         }
         &.sh-fb{
           a{
@@ -269,12 +285,13 @@
 .doc-action{
   background: #fff;
   box-shadow: $bsh;
-  padding: 30px 30px 30px 30px;
+  padding: 30px;
   max-width: 940px;
   margin: 0 auto 40px;
   
   @media (max-width: $XM){
-    margin: 0 15px 40px;
+    margin: 0 15px 15px;
+    padding: 15px;
   }
   
   .doc-btns{
@@ -286,6 +303,9 @@
       margin-bottom: 10px;
       text-align: center;
       font-size: 15px;
+      @media (max-width: $XM){
+        padding-right: 22px;
+      }
       
       i{
         display: block;
@@ -297,6 +317,7 @@
         background-position: center;
         float: left;
         margin: -1px 8px -3px -5px;
+        opacity: .6;
       
         &.i1{
           background-image: url("../img/ico_download_black.svg");
@@ -323,7 +344,7 @@
     vertical-align: middle;
     margin-right: 15px;
     @media (max-width: $M){
-      font-size: 21px;
+      font-size: 16px;
     }
     
     span {
@@ -415,7 +436,10 @@
   padding: 40px 30px 30px 40px;
   max-width: 940px;
   margin: 40px auto 40px;
-  
+  @media (max-width: $M){
+    padding: 20px;
+    margin: auto;
+  }
   h3{
     font-size: 24px;
     text-align: center;
@@ -430,7 +454,7 @@
       background: $subcolor;
       color: $subcolortext;
       padding: 10px 10px;
-
+  
       &:after{
         content: '';
         display: block;
@@ -448,6 +472,16 @@
         background: $subcolor;
         transform: skewX(-20deg);
         position: absolute 0 * * -20px;
+      }
+      @media (max-width: $SM){
+        background: transparent;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        color: #555;
+        &:after,&:before{
+          display: none;
+        }
       }
     }
   }
@@ -477,6 +511,7 @@
     
     @media (max-width: $M){
       text-align: center;
+      font-size: 13px;
     }
     
     ul{
@@ -536,7 +571,7 @@
     h3, .parcat{
       float: none;
       text-align: center;
-      margin: 0px 0 15px 0;
+      margin: 0;
     }
     .cats-search{
       padding-top:40px;

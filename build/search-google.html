@@ -45,30 +45,34 @@
 <header class="header header-doc">
   <nav class="navbar">
     <div class="">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
+          <i class="fa fa-bars"></i>
+      </button>
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
           <img src="img/logo_white.svg">
         </a>
       </div>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#urmenu">
-          <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="urmenu">
-        <div class="conts">
-          <a href="#" class="searcher1 searcher_js btn">
-            <i class="fa fa-search"></i>
-          </a>
-          <div class="searchbar">
-            <div class="doc-srch">
+      
+      <div class="hsearch">
+        <a href="#" class="searcher1 searcher_js btn">
+          <i class="fa fa-search"></i>
+        </a>
+        <div class="searchbar">
+          <div class="doc-srch">
               <form action="search-google.html" method="GET">
                 <input type="text" name="q" placeholder="Search documents" class="form-control">
               </form>
               <a onclick="$(this).closest('form').submit();" class="searcher">Go</a>
-              <a href="#" class="searcher-close searcher_js btn">
-                <i class="fa fa-times"></i>
-              </a>
-            </div>
+            <a href="#" class="searcher-close searcher_js btn">
+              <i class="fa fa-times"></i>
+            </a>
           </div>
+        </div>
+      </div>
+      
+      <div class="collapse navbar-collapse" id="urmenu">
+        <div class="conts">
           <!--
           <a class="btn btn-primary btn-sign" data-toggle="modal" data-target="#modal-sign" href="">Sign up</a>
           -->
@@ -101,6 +105,8 @@
     </div><!-- /.container-fluid -->
   </nav>
 </header>
+<div class="swipe-area"></div>
+
     <section class="search-content">
       <div class="container">
         <div class="row">
@@ -570,6 +576,11 @@
 
 
 <!--PAGES select-->
+<style>
+  body{
+    margin-bottom: 50px;
+  }
+</style>
 <div style="position: fixed;
     z-index: 10;
     bottom: 5px;

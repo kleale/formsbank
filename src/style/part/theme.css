@@ -50,8 +50,8 @@
     }
     
     a{
-      color: $link-gray;
-      padding: 10px 15px;
+      color: #777;
+      padding: 6px 10px;
       
       &:active,
       &:focus,
@@ -143,7 +143,7 @@
 
 .open>.dropdown-toggle.btn{
   background-color: $bg-dropdown;
-  color: $link-gray;
+  color: #777;
   border-radius: $br $br 0 0;
   position: relative;
   /*z-index: 1002;*/
@@ -151,12 +151,12 @@
 
 body .open>.dropdown-toggle.btn-default:focus{
   background-color: $bg-dropdown;
-  color: $link-gray;
+  color: #777;
 }
 
 .btn-border{
   background: transparent;
-  border: 1px solid #888;
+  border: 1px solid #ccc;
   color:#888;
   box-shadow: none;
   &:active,
@@ -222,7 +222,8 @@ body .open>.dropdown-toggle.btn-default:focus{
 */
 .form-control{
   border-radius: $br;
-  background: $bg-form;
+  background: #edf4f7;
+  border: 1px solid #c3d5dc;
   border: 0;
   color: $text-main;
   
@@ -240,6 +241,10 @@ body .open>.dropdown-toggle.btn-default:focus{
 .well{
   background: #fff;
   border-radius: 0;
+  
+  @media (max-width: $toM){
+    padding: 10px;
+  }
 }
 
 .breadcrumb{
@@ -253,9 +258,20 @@ body .open>.dropdown-toggle.btn-default:focus{
   >li+li:before {
     padding: 0px;
   }
+  &.active {
+    > li{
+      display: inline !important;
+    }
+    .bc-opener{
+      text-indent: -1px;
+    }
+  }
 }
 .breadcrumb > *:nth-child(n+1) {
   display:none;
+}
+.breadcrumb > *:nth-child(1) {
+  display: inline !important;
 }
 .invisible{
   display:none;
@@ -285,24 +301,24 @@ body .open>.dropdown-toggle.btn-default:focus{
     max-width: 170px;
   }
 }    
-
-
-
-
-::-webkit-input-placeholder {
-  opacity: 1 !important;
+.bc-opener{
+  color: #222;
+  width: 16px;
+  height: 16px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0 10px;
+  background: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+  font-weight: bold;
+  display: none!important;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #c3c3c3;
+  @media (max-width: 992px) {
+    display: inline-block!important;
+  }
 }
-:-moz-placeholder { /* Firefox 18- */
-  opacity: 1 !important;
-}
-::-moz-placeholder {  /* Firefox 19+ */
-  opacity: 1 !important;
-}
-:-ms-input-placeholder {  
-  opacity: 1 !important;
-}
-
-
 
 /* bootstrap hack: fix content width inside hidden tabs */
 .tab-content > .tab-pane:not(.active),
@@ -608,6 +624,10 @@ Modal end
 /* responsive tabs*/
 .mapmenu.nav>li>a {
   padding: 10px 10px;
+  @media screen and (max-width: 709px) {
+    padding: 5px;
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 709px) {
   .nav-tabs-responsive {

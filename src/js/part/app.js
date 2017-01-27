@@ -6,12 +6,26 @@
 
   $(document).ready(function () {
     
-    // breadcrumbs
-    toggle_ellipses();
-    $(window).resize(function() {
-      toggle_ellipses();
+    // swappable
+    $(".swipe-area").swipe({
+      swipeStatus: function (event, phase, direction, distance, duration, fingers) {
+        if (phase == "move" && direction == "right") {
+          $(".navbar-collapse").addClass("in");
+          $(".navbar-toggle").addClass("active");
+          $(".swipe-area").addClass("active");
+          return false;
+        }
+        if (phase == "move" && direction == "left") {
+          $(".navbar-collapse").removeClass("in");
+          $(".navbar-toggle").removeClass("active");
+          $(".swipe-area").removeClass("active");
+          return false;
+        }
+      }
     });
-
+    
+    
+    // breadcrumbs
     function toggle_ellipses() {
       var ellipses1 = $("#ellipses");
       var howlong = $("#bc1 li:hidden").length;
@@ -23,9 +37,25 @@
         //console.log("length: " + howlong + " => hide")
       }
     }
+    toggle_ellipses();
+    $(window).resize(function () {
+      toggle_ellipses();
+    });
+
+    // header mobile opener
+    $('.bc-opener').click(function () {
+      $('#bc1').toggleClass('active');
+      $(this).toggleClass('active');
+      $(this).find('i.fa').toggleClass('fa-ellipsis-h').toggleClass('fa-chevron-left');
+    });
+    
+    $('.navbar-toggle').click(function () {
+      $(this).toggleClass('active');
+      $('.swipe-area').toggleClass("active");
+    });
     
     // header mobile opener
-    $('.w_sub-sub-opener').click(function() {
+    $('.w_sub-sub-opener').click(function () {
       $(this).siblings('ul.sub').toggleClass('active');
       //$('ul.sub').removeClass('active');
     });
@@ -43,15 +73,16 @@
     });
     
     // search in header
-    $('.searcher_js').click(function() {
+    $('.searcher_js').click(function () {
       $(this).toggleClass('active');
-      $('.searchbar').toggleClass('active');  
+      $(this).find('i.fa').toggleClass('fa-search').toggleClass('fa-times');
+      $('.searchbar').toggleClass('active');
     });
     
     //mob search
-    $('#mob-show-search').click(function() {
+    $('#mob-show-search').click(function () {
       $(this).toggleClass('active').toggleClass('fa-times').toggleClass('fa-search');
-      $('.doc-srch').toggleClass('active');  
+      $('.doc-srch').toggleClass('active');
     });
     
     // expander block
@@ -60,39 +91,39 @@
       $('.list-loader').show();
       $('#list-opener').addClass('iseeyou');
     }
-    $('.list-loader a').click(function() {
-      $(this).toggleClass('active').html($(this).text() == 'Hide' ? 'Expand' : 'Hide');
+    $('.list-loader a').click(function () {
+      $(this).toggleClass('active').html($(this).text() === 'Hide' ? 'Expand' : 'Hide');
       $('#list-opener').toggleClass('active');
-    });    
+    });
 
     //textcutter
-    (function($) {
-      $.fn.clickToggle = function(func1, func2) {
-          var funcs = [func1, func2];
-          this.data('toggleclicked', 0);
-          this.click(function() {
-              var data = $(this).data();
-              var tc = data.toggleclicked;
-              $.proxy(funcs[tc], this)();
-              data.toggleclicked = (tc + 1) % 2;
-          });
-          return this;
+    (function ($) {
+      $.fn.clickToggle = function (func1, func2) {
+        var funcs = [func1, func2];
+        this.data('toggleclicked', 0);
+        this.click(function () {
+          var data = $(this).data();
+          var tc = data.toggleclicked;
+          $.proxy(funcs[tc], this)();
+          data.toggleclicked = (tc + 1) % 2;
+        });
+        return this;
       };
     }(jQuery));
 
-    $(".more").clickToggle(function(){
-        $(this).text("less..").siblings(".complete").show();    
-    }, function(){
-        $(this).text("more..").siblings(".complete").hide();    
+    $(".more").clickToggle(function () {
+      $(this).text("less..").siblings(".complete").show();
+    }, function () {
+      $(this).text("more..").siblings(".complete").hide();
     });
     
     //  aftocomplete in search form example
     $('#typehead').typeahead({
-        hint: true,
-        highlight: true,
-        minLength: 1,
-        autoSelect: true,
-        source: [{ id: 1, name: 'Toronto' }, { id: 2, name: 'Montreal' }, { id: 3, name: 'New York' }, { id: 4, name: 'qwertyuiopasdfghjklzxcvbnm' }]
+      hint: true,
+      highlight: true,
+      minLength: 1,
+      autoSelect: true,
+      source: [{ id: 1, name: 'Toronto' }, { id: 2, name: 'Montreal' }, { id: 3, name: 'New York' }, { id: 4, name: 'qwertyuiopasdfghjklzxcvbnm' }]
     });
     
     $(function () {
@@ -144,7 +175,7 @@
       responsiveClass:true,
       responsive:{
         0:{
-            items:2,
+            items:3,
             nav:true
         },
         600:{
@@ -175,18 +206,13 @@
     });
     */  
 
-    
-    
     //category chosen
-    $(function() {
+    $(function () {
       $('.chosen-select').chosen();
       $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
     });
     
     //USA MAP
-    
-    
-    
     // scale pdf on css3
     var maxWidth  = $('div.pdf').width();
     var maxHeight = $('div.pdf').height();
@@ -220,7 +246,7 @@
       $('div.page-doc').css({ width: maxWidth * scale - 2, height: maxHeight * scale });
     });
 
-    $(window).resize(function(evt) {
+    $(window).resize(function (evt) {
       var $window = $(window);
       var width = $window.width();
       //var height = $window.height();
@@ -253,7 +279,7 @@
     
       if ($('#vectorMap').length ) {
       // USA choosen two state selects
-      $("#ctry").change(function(){
+      $("#ctry").change(function (){
         if($("#ctry option:selected").val()=="United States"){
           $("#ifusa").show();
           $("#ifusa .chosen-select").chosen("destroy");
@@ -331,7 +357,7 @@
 }(jQuery));
 
 // resposive bootstrap tabs
-(function($) {
+(function ($) {
   'use strict';
 
   $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function(e) {
@@ -361,7 +387,7 @@
 })(jQuery);
 
 // GOOGLE SEARCH
-(function() {
+(function () {
   var cx = '017643444788069204610:4gvhea_mvga'; // Insert your own Custom Search engine ID here
   var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
   gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +

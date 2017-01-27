@@ -231,7 +231,7 @@
 .cat_h2{
   margin-bottom: 15px;
   @media (max-width: $toM){
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   h2{
     position: relative;
@@ -239,8 +239,9 @@
     font-weight: 300;
     margin-top: 3px;
     @media (max-width: $toM){
-      font-size: 20px;
+      font-size: 16px;
       text-align: center;
+      margin-bottom: 5px;
     }
     span{
       padding-right: 10px;
@@ -263,10 +264,11 @@
     position: relative;
     z-index: 5;
     top: -3px;
+    
     @media (max-width: $toM){
       width: auto;
       float: none;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
       top: 0px;
     }
   }
@@ -276,20 +278,31 @@
     margin-right: 5px;
     position: relative;
     z-index: 2;
-    @media (max-width: $toM){
-      width: auto;
-      float: none;
-      margin-bottom: 15px;
-    }
-    input{
-      border: 1px solid #ddd;
-    }
     &:after{
       content: '\f0b0';
       font-size: 20px;
       position: absolute 5px 10px * *;
       font-family: FontAwesome;
       color: #b7b7b7;
+    }
+    @media (max-width: $toM){
+      width: auto;
+      float: none;
+      margin-bottom: 10px;
+      margin-right: 0;
+      input{
+        padding: 4px 5px;
+        font-size: 12px;
+        height: 27px;
+      }
+      &:after{
+        top: 3px;
+        right: 6px;
+        font-size: 15px;
+      }
+    }
+    input{
+      border: 1px solid #c3d5dc;
     }
   }
 }
@@ -316,12 +329,12 @@
     
     h4{
       margin: 5px 0 4px 11px;
-      font-size: 22px;
+      font-size: 18px;
       line-height: 1.5;
       
       @media (max-width: $toM){
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
       }
       
       a{
@@ -430,6 +443,7 @@
     padding: 15px;
     border: 1px solid #dedede;
     margin: -1px 0 0 0;
+    position: relative;
     
     &:nth-child(2n){
       background: #ededed;
@@ -440,12 +454,25 @@
         }
       }
     }
+    .f-item{
+      float:left;
+      @media (max-width: $toM){
+        width: 100px;
+        margin-right: 15px;
+      }
+    }
     .tem-descr{
-      
+      margin-left: 180px;
+      @media (max-width: $toM){
+        margin-left: 0px;
+      }
       h4{
         margin: 10px 0 15px 0px;
         font-size: 20px;
-
+        @media (max-width: $toM){
+          font-size: 16px;
+          margin: 5px 0;
+        }
         a{
           color: $link-color;
 
@@ -478,18 +505,25 @@
             margin-top:10px;
           }
           .label{
-            color: #000;
+            color: #777;
             border-radius: 3px;
             font-size: 11px;
             vertical-align: middle;
             position: relative;
             top: -2px;
             padding: .4em .6em .3em;
+            margin-bottom: 4px;
+            @media (max-width: $toM){
+              padding: .1em .6em .1em;
+            }
           }
         }
         .specs{
           font-weight: 300;
           margin-top: 10px;
+          @media (max-width: $toM){
+            clear: both;
+          }
         }
       }
       .btn{
@@ -501,39 +535,18 @@
     }
   }
 }
-
 .search-results{
   text-align: center;
 }
-/*
-.cat-temp{
-  .cat-content{
-    background: #fff;
-    
-    .cat_h2{
-      h2{
-        span{
-          background: #fff;
-        }
-      }
-    }
-
-    .cat_list .cat_item .idocs:after{
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgb(255, 255, 255) 50%);
-    }
-    .cat_list .cat_item:nth-child(2n) .idocs:after {
-      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgb(237, 237, 237) 50%);
-    }
-  }
-}
-*/
-
-
 .temp-content{
   margin-bottom: 40px;
+  @media (max-width: $M){
+    margin-bottom: 10px;
+  }
 }
 
 .list-opener{
+  padding-top: 5px;
   position: relative;
   overflow: hidden;
   max-height: 310px;
@@ -615,6 +628,9 @@
 .mapdiv{
   h3{
     margin-top: 0;
+    @media (max-width: $toM){
+      font-size: 15px;
+    }
   }
   .tab-content > .tab-pane:not(.active), 
   .pill-content > .pill-pane:not(.active){
@@ -747,7 +763,6 @@
       color: #fff;
       background-color: #a5bfdd;
   }
-  
 }
 .jqvmap-label{
   z-index: 25; 

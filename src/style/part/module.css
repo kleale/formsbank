@@ -190,8 +190,10 @@
   margin-top: -50px;
   color:#fff;
   border-top: 4px solid #ffee36;
+  text-align: center;
+  
   @media (max-width: $M){
-    padding: 20px 0 20px;
+    padding: 10px 0 20px;
   }
   
   &:before{
@@ -218,20 +220,27 @@
     position: relative;
     overflow: hidden;
     z-index: 2;
-    margin-bottom: 30px;
+    display: inline-block;
+    width: 25%;
+    margin: 0 3% 30px 3%;
+    vertical-align: top;
+      
     @media (max-width: $M){
-      margin-bottom: 20px;
+      width: 130px;
+      margin: 0 2% 20px 2%;
+      padding: 0 0 0 45px;
+      text-align: left;
     }
     b{
       font-weight: 200;
       font-size: 18px;
       display: block;
       @media (max-width: $M){
-        display: inline-block;
-        font-size: 21px;
+        display: block;
+        font-size: 16px;
+        line-height: 14px;
       }
     }
-    
     i{
       display: block;
       margin-bottom: 15px;
@@ -253,11 +262,9 @@
       }
       
       @media (max-width: $M){
-        width: 25px;
-        height: 25px;
-        margin: 0 10px 0 0;
-        display: inline-block;
-        vertical-align: text-bottom;
+        width: 35px;
+        height: 35px;
+        position: absolute 0px * * 0;
       }
     }
     em{
@@ -270,8 +277,9 @@
       margin-top: 0px;
       padding: 0 20px;
       @media (max-width: $M){
-        margin-top: 0px;
-        font-size: 25px;
+        margin: 0px;
+        padding: 0;
+        font-size: 18px;
       }
       &:after{
         content:'';
@@ -384,20 +392,23 @@
 .cats{
   padding: 70px 0 40px;
   @media (max-width: $M){
-    padding: 30px 0;
+    padding: 20px 0;
   }
   .lined{
     margin-top: -100px;
     margin-bottom: 30px;
     @media (max-width: $M){
-      margin-top: -55px;
+      margin-top: -45px;
       font-size:18px;
     }
   }
   
   .citem{
     padding: 15px;
-    
+    @media (max-width: $M){
+      padding: 5px;
+      margin-bottom: 10px;
+    }
     i{
       display: block;
       margin-bottom: 15px;
@@ -514,22 +525,21 @@
 
 .hotforms{
   padding: 0px 0 20px 0;
-  
   .lined2{
-    margin-bottom: 40px;
-    
+    margin-bottom: 10px;
     @media (max-width: $M){
       font-size:18px;
     }
-    
   }
 }
 
 .f-slider{
-  overflow: hidden;
   margin: 0 auto;
   max-width: 1600px;
   padding: 0 50px;  
+  @media (max-width: $M){
+    padding: 0 30px;
+  }
 }
 
 body .owl-theme .owl-controls .owl-buttons .owl-prev{
@@ -584,7 +594,9 @@ body .owl-theme .owl-controls .owl-page.active span{
 
 .f-item{
   padding: 15px;
-  
+  @media (max-width: $M){
+    padding: 5px;
+  }
   .f-pic{
     overflow: hidden;
     display: block;
@@ -603,11 +615,14 @@ body .owl-theme .owl-controls .owl-page.active span{
     }
   }
   .f-link{
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1;
     text-decoration: none;
     margin-bottom: 10px;
     display: block;
+    @media (max-width: $M){
+      font-size: 12px;
+    }
     span{
       display: block;
       max-height: 5.5em;
@@ -621,7 +636,7 @@ body .owl-theme .owl-controls .owl-page.active span{
       &:after{
         content:'';
         position: absolute * 0 0 0;
-        height: 20px;
+        height: 10px;
         background: linear-gradient(to bottom, rgba(247,253,255,0) 0%,rgba(247,253,255,1) 100%);
         display: block;
       }
@@ -661,7 +676,11 @@ body .owl-theme .owl-controls .owl-page.active span{
   .pagination{
     display: block;
     text-align: center;
-    margin: 30px 0 25px;
+    margin: 27px 0 25px;
+    
+    @media (max-width: $XM){
+      margin: 15px 0;
+    }
     
     li{
       display: inline-block;
@@ -774,12 +793,12 @@ body .owl-theme .owl-controls .owl-page.active span{
 
 .block{
   padding: 30px 40px;
-  /*background: #fff;*/
-  /*border-radius: $br;*/
-  /*box-shadow: $bsh;*/
   margin-bottom: 30px;
   border: 1px solid #dedede;
-  
+  @media (max-width: $SM){
+    padding: 15px;
+    margin: 20px 0;
+  }
   h3{
     color: #000;
     font-size: 20px;
@@ -870,22 +889,25 @@ body .owl-theme .owl-controls .owl-page.active span{
   margin: 0px;
   float: right;
   .btn{
-    background: #f1f1f1;
-    border: 1px solid #ddd;
+    background: #edf4f7; 
+    border: 1px solid #c3d5dc; 
   }
   @media (max-width: $toM){
     width: auto;
     float: none;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     
     .btn-group{
       display: block;
       
       .btn{
         display: block;
-        width: 99%;
+        width: 100%;
         float: none;
         text-align: left;
+        padding: 4px 5px;
+        font-size: 12px;
+        
         .caret{
           float: right;
           margin: 8px 1px 0 0;
@@ -917,6 +939,17 @@ body .owl-theme .owl-controls .owl-page.active span{
 }
 /**/
 
-
+@media (max-width: $toM){
+  .chosen-container-single .chosen-single{
+    height: 27px;
+    line-height: 28px;
+  }
+  .chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 4px;
+  }
+  .chosen-container-single .chosen-single div b {
+   background-position: 0 4px;
+  }
+}
 
 
