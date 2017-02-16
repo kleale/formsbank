@@ -531,6 +531,22 @@
       font-size:18px;
     }
   }
+  .owl-nav .owl-next,
+  .owl-nav .owl-prev{
+    margin-top: -64px;
+    font-size: 40px;
+    color: #31a4ba;
+    top: 50%;
+    right: 20px;
+  }
+  .owl-nav .owl-prev{
+    left: 16px;
+    right: auto;
+  }
+  .f-item .f-link span{
+    height: 70px;
+    max-height: auto;
+  }
 }
 
 .f-slider{

@@ -1,4 +1,8 @@
-<section class="hotforms">
+{% set name = ['Sample Contractor Agreement For A Canadian Registered Charity Carrying Out Foreign Activities','Patient Information','Lease Of A Condominum Unit','Application For United States Residency Certification','21 Code For Federal Regulation Parts 1305, 1311','Wisconsin Pharmacy Closing Affidavit']%}
+ 
+{% set label = ['Financial','Business','Legal']%}
+
+ <section class="hotforms">
   <h3 class="lined2"><span>Related forms</span></h3>
   <div class="f-slider owl-carousel">
       {% for i in 0..10 %}
@@ -7,9 +11,9 @@
             <img src="img/form.png" alt="">
           </a>
           <a href="" class="f-link">
-            <span>Principles of Drug Testing Technology</span>
+            <span>{{random(name)}}</span>
           </a>
-          <a href="" class="f-cat label label-primary">Business</a>
+          <a href="" class="f-cat label label-primary">{{random(label)}}</a>
         </div>
       {% endfor %}
   </div>

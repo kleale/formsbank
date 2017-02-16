@@ -243,7 +243,7 @@
       $('div.pdf').css({'-webkit-transform': 'scale(' + scale + ')'});
       $('div.pdf').css({'-o-transform': 'scale(' + scale + ')'});
 
-      $('div.page-doc').css({ width: maxWidth * scale - 2, height: maxHeight * scale });
+      $('div.page-doc').css({ width: maxWidth * scale - 15, height: maxHeight * scale });
     });
 
     $(window).resize(function (evt) {
@@ -270,7 +270,7 @@
       $('div.pdf').css({'-webkit-transform': 'scale(' + scale + ')'});
       $('div.pdf').css({'-o-transform': 'scale(' + scale + ')'});
 
-      $('div.page-doc').css({ width: maxWidth * scale - 2, height: maxHeight * scale });
+      $('div.page-doc').css({ width: maxWidth * scale - 15, height: maxHeight * scale });
     });
     // end scale pdf on css3
     

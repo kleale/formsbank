@@ -3,6 +3,7 @@
 .page-doc {
   background: #f7fdff;
   position: relative;
+  margin: auto;
   
   .pdf{
     display: block !important;
@@ -60,7 +61,7 @@
   
   &.noribbon{
     margin: 0px auto -1px;
-    padding: 10px 10px 30px;
+    padding: 10px 10px 10px;
     .doc-pages {
       max-width: none;
       margin: 0;
@@ -136,8 +137,8 @@
   }
   .owl-next,
   .owl-prev{
-    margin-top: -35px;
-    font-size: 40px;
+    margin-top: -32px;
+    font-size: 35px;
     color: #31a4ba;
     position: absolute 50% 0 * *;
     &:hover,
@@ -161,8 +162,12 @@
 }
 
 .page-doc-top-a{
-  margin: 5px -10px -30px;
+  margin: 5px -10px -8px;
   border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  @media (max-width: $XM){
+    margin: 5px -10px 0px;
+  }
   img{
     width: 100%
   }
@@ -177,7 +182,8 @@
     padding: 0;
   }
   .page-doc{
-    box-shadow: 0 0 0 1px #d2d2d2; 
+    box-shadow: 0 0 0 2px #3cbcd4;
+    overflow: hidden;
   }
   .doc-next, 
   .doc-prev{
@@ -238,6 +244,7 @@
         display: table;
         table-layout:fixed;
         width: 100%;
+        margin-top: 5px;
         li{
           display: table-cell;
         }

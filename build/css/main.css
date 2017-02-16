@@ -901,7 +901,7 @@ textarea {
   Base
 */
 body{
-  color: #222;
+  color: #555;
   font-family: 'Roboto', Arial, sans-serif;
   background: #f7fdff;
   position: relative;
@@ -1709,6 +1709,7 @@ h6{}
   padding: 9px 49px 9px 9px;
   background: #f7fdff;
   box-shadow: -10px 2px 10px rgba(0, 0, 0, 0.35);
+  z-index: 10;
 }
 .doc-srch.active .swr .searcher {
   top: 15px;
@@ -1752,7 +1753,7 @@ h6{}
 .footer{
   padding: 30px 0 0 0;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   .footer {
     text-align: center;
     padding: 0;
@@ -1766,7 +1767,7 @@ h6{}
   overflow: hidden;
   margin-bottom: 15px;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   .footer .classify {
     margin-top: 15px;
     border-top: 1px solid #dedede;
@@ -1797,7 +1798,7 @@ h6{}
   margin: 0;
   text-align: left;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   .footer .fmenu {
     text-align: center;
   }
@@ -1805,7 +1806,7 @@ h6{}
 .footer .fmenu li{
   color:#494748;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   .footer .fmenu li {
     display: inline-block;
     padding: 0 10px;
@@ -1847,7 +1848,7 @@ h6{}
   padding-top: 10px;
   border-top: 1px solid #dedede;
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   .footer .f-social {
     border-top: 0;
   }
@@ -2617,6 +2618,22 @@ Sign Up modal
     font-size: 18px;
   }
 }
+.hotforms .owl-nav .owl-next,
+  .hotforms .owl-nav .owl-prev{
+  margin-top: -64px;
+  font-size: 40px;
+  color: #31a4ba;
+  top: 50%;
+  right: 20px;
+}
+.hotforms .owl-nav .owl-prev{
+  left: 16px;
+  right: auto;
+}
+.hotforms .f-item .f-link span{
+  height: 70px;
+  max-height: auto;
+}
 .f-slider{
   margin: 0 auto;
   max-width: 1600px;
@@ -3211,7 +3228,7 @@ body .open>.dropdown-toggle.btn-default:focus{
   background: #edf4f7;
   border: 1px solid #c3d5dc;
   border: 0;
-  color: #222;
+  color: #555;
 }
 .form-control:active,
   .form-control:focus,
@@ -5923,6 +5940,7 @@ Modal end
 .page-doc {
   background: #f7fdff;
   position: relative;
+  margin: auto;
 }
 .page-doc .pdf{
   display: block !important;
@@ -5983,7 +6001,7 @@ Modal end
 }
 .doc-header.noribbon{
   margin: 0px auto -1px;
-  padding: 10px 10px 30px;
+  padding: 10px 10px 10px;
 }
 .doc-header.noribbon .doc-pages {
   max-width: none;
@@ -6055,8 +6073,8 @@ Modal end
 }
 .owl-nav .owl-next,
   .owl-nav .owl-prev{
-  margin-top: -35px;
-  font-size: 40px;
+  margin-top: -32px;
+  font-size: 35px;
   color: #31a4ba;
   top: 50%;
   right: 0;
@@ -6086,8 +6104,14 @@ Modal end
   right:auto;
 }
 .page-doc-top-a{
-  margin: 5px -10px -30px;
+  margin: 5px -10px -8px;
   border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+}
+@media (max-width: 991px){
+  .page-doc-top-a {
+    margin: 5px -10px 0px;
+  }
 }
 .page-doc-top-a img{
   width: 100%
@@ -6103,7 +6127,8 @@ Modal end
   }
 }
 .doc-container .page-doc{
-  box-shadow: 0 0 0 1px #d2d2d2;
+  box-shadow: 0 0 0 2px #3cbcd4;
+  overflow: hidden;
 }
 .doc-container .doc-next, 
   .doc-container .doc-prev{
@@ -6177,6 +6202,7 @@ Modal end
     display: table;
     table-layout: fixed;
     width: 100%;
+    margin-top: 5px;
   }
   .doc-container .page-wrap .share-doc li{
     display: table-cell;

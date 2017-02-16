@@ -778,6 +778,7 @@
       padding: 9px 49px 9px 9px;
       background: #f7fdff;
       box-shadow: -10px 2px 10px rgba(0, 0, 0, 0.35);
+      z-index: 10;
       .searcher {
         top: 15px;
         right: 57px;
@@ -822,7 +823,7 @@
 
 .footer{
   padding: 30px 0 0 0;
-  @media (max-width: $M){
+  @media (max-width: 767px){
     text-align: center;
     padding: 0;
   }
@@ -833,7 +834,7 @@
   .classify{
     overflow: hidden;
     margin-bottom: 15px;
-    @media (max-width: $M){
+    @media (max-width: 767px){
       margin-top: 15px;
       border-top: 1px solid #dedede;
       padding-top: 15px;
@@ -858,13 +859,13 @@
     padding: 0;
     margin: 0;
     text-align: left;
-    @media (max-width: $M){
+    @media (max-width: 767px){
       text-align: center;
     }
     
     li{
       color:#494748;
-      @media (max-width: $M){
+      @media (max-width: 767px){
         display: inline-block;
         padding: 0 10px;
       }
@@ -911,7 +912,7 @@
     padding-top: 10px;
     border-top: 1px solid #dedede;
     
-    @media (max-width: $M){
+    @media (max-width: 767px){
       border-top: 0;
     }
     
