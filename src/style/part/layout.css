@@ -318,7 +318,7 @@
     }
   }
   .searchbar{
-    overflow: hidden;
+/*    overflow: hidden;*/
     opacity: 0;
     transition: $transition;
     width: 0;

@@ -52,6 +52,8 @@
     a{
       color: #777;
       padding: 6px 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       
       &:active,
       &:focus,
