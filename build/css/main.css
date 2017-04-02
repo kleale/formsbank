@@ -1262,8 +1262,7 @@ h6{}
     display: none;
   }
 }
-.header .searchbar{
-  overflow: hidden;
+.header .searchbar{/*    overflow: hidden;*/
   opacity: 0;
   transition: all .2s ease;
   width: 0;
@@ -1699,6 +1698,7 @@ h6{}
 .doc-srch.active .fa{
   top:5px;
   right: 5px;
+  z-index: 10;
 }
 .doc-srch.active .swr{
   display: block;
@@ -1749,6 +1749,10 @@ h6{}
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
+}
+.doc-srch .typeahead{
+  min-width: 0;
+  width: 100%;
 }
 .footer{
   padding: 30px 0 0 0;
@@ -2055,6 +2059,9 @@ Sign Up modal
 .search-results .mainsearch{
   margin: 0 auto 20px;
 }
+.mainsearch{
+  
+}
 /*
   Module
 */
@@ -2105,9 +2112,9 @@ Sign Up modal
   }
 }
 .sl-content .typeahead {
-  min-width: 375px;
-  width: auto;
+  width: 100%;
   font: 12px/13px Arial, sans serif;
+  min-width: 0;
 }
 .sl-content .bycountry{
   text-align: center;
@@ -2175,8 +2182,6 @@ Sign Up modal
   border: medium none;
   font-size: 21px;
   height: 50px;
-  padding-right:50px;
-  padding-left:50px;
   color:#16a5bf;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -2196,8 +2201,9 @@ Sign Up modal
 }
 @media (max-width: 600px){
   .mainsearch input {
-    font-size: 18px;
-    height: 50px;
+    font-size: 13px;
+    height: 40px;
+    text-align: left;
   }
 }
 .mainsearch .searcher{
@@ -2210,13 +2216,18 @@ Sign Up modal
 }
 @media (max-width: 600px){
   .mainsearch .searcher {
-    top: 8px;
-    font-size: 24px;
+    top: 5px;
+    font-size: 21px;
   }
 }
 .mainsearch .dropdown-item{
   font-size: 18px;
   font-weight: 200;
+}
+@media (max-width: 768px){
+  .mainsearch .dropdown-item {
+    font-size: 13px;
+  }
 }
 @keyframes ani-mouse {
   0%{
@@ -2634,6 +2645,11 @@ Sign Up modal
   height: 70px;
   max-height: auto;
 }
+@media (max-width: 768px){
+  .hotforms .f-item .f-link span {
+    height: 30px;
+  }
+}
 .f-slider{
   margin: 0 auto;
   max-width: 1600px;
@@ -2900,6 +2916,11 @@ body .owl-theme .owl-controls .owl-page.active span{
   padding: 5px 0;
   transition: all .2s ease;
   position: relative;
+}
+@media (max-width: 768px){
+  .block ul li {
+    transition: none;
+  }
 }
 .block ul li:hover{
   margin-left: 20px;
@@ -7117,7 +7138,7 @@ Modal end
   padding-bottom: 70px;
 }
 #list-opener.active{
-  max-height: 3000px;
+  max-height: 30000px;
 }
 .list-loader{
   position: absolute;

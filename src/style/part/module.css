@@ -52,9 +52,9 @@
   }
 
   .typeahead {
-    min-width: 375px;
-    width: auto;
+    width: 100%;
     font: 12px/13px Arial, sans serif;
+    min-width: 0;
   }
   
   .bycountry{
@@ -126,8 +126,6 @@
     border: medium none;
     font-size: 21px;
     height: 50px;
-    padding-right:50px;
-    padding-left:50px;
     color:$link-color;
     box-shadow: $bsh2;
     text-align: center;
@@ -146,8 +144,9 @@
       color:$link-color;
     }  
     @media (max-width: $MH){
-      font-size: 18px;
-      height: 50px;
+      font-size: 13px;
+      height: 40px;
+      text-align: left;
     }
   }
   .searcher{
@@ -157,13 +156,17 @@
     cursor: pointer;
     
     @media (max-width: $MH){
-      top:8px;
-      font-size: 24px;
+      top: 5px;
+      font-size: 21px;
     }
   }
   .dropdown-item{
     font-size: 18px;
     font-weight: 200;
+    
+    @media (max-width: $M){
+      font-size: 13px;
+    }
   }
 }
 
@@ -546,6 +549,9 @@
   .f-item .f-link span{
     height: 70px;
     max-height: auto;
+    @media (max-width: $M){
+      height: 30px;
+    }
   }
 }
 
@@ -829,7 +835,9 @@ body .owl-theme .owl-controls .owl-page.active span{
       padding: 5px 0;
       transition: $transition;
       position: relative;
-      
+      @media (max-width: $M){
+        transition: none;
+      }
       &:hover{
         margin-left: 20px;
         &:after{

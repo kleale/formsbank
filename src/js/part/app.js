@@ -126,6 +126,23 @@
       source: [{ id: 1, name: 'Toronto' }, { id: 2, name: 'Montreal' }, { id: 3, name: 'New York' }, { id: 4, name: 'qwertyuiopasdfghjklzxcvbnm' }]
     });
     
+    $('#typehead_new_top').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1,
+      autoSelect: true,
+      source: [{ id: 1, name: 'Toronto' }, { id: 2, name: 'Montreal' }, { id: 3, name: 'New York' }, { id: 4, name: 'qwertyuiopasdfghjklzxcvbnm' }]
+    });
+    
+/*    $('body').on('click', function (e) {
+      if (!$('li.dropdown.mega-dropdown').is(e.target) 
+          && $('li.dropdown.mega-dropdown').has(e.target).length === 0 
+          && $('.open').has(e.target).length === 0
+      ) {
+          $('#typehead').typeahead('close');
+      }
+  });*/
+    
     $(function () {
       $('[data-toggle="popover"]').popover();
     });
@@ -146,8 +163,8 @@
             nav:true
         },
         600:{
-            items:3,
-            nav:false
+            items:4,
+            nav:true
         },
         1000:{
             items:6,
@@ -180,7 +197,7 @@
         },
         600:{
             items:4,
-            nav:false
+            nav:true
         },
         1000:{
             items:8,

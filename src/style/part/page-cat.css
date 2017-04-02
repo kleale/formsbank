@@ -559,7 +559,7 @@
 }
 #list-opener{
   &.active{
-    max-height: 3000px;
+    max-height: 30000px;
   }
 }
 
