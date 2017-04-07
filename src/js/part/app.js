@@ -72,6 +72,21 @@
       */
     });
     
+    // upper
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if(height  > 100) {
+          $('body').addClass('scrolled');
+        }
+        else{
+          $('body').removeClass('scrolled');
+        }
+    });    
+    $("a.upper").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "fast");
+      return false;
+    });
+    
     // search in header
     $('.searcher_js').click(function () {
       $(this).toggleClass('active');

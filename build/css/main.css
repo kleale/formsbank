@@ -2059,8 +2059,32 @@ Sign Up modal
 .search-results .mainsearch{
   margin: 0 auto 20px;
 }
-.mainsearch{
-  
+.upper{
+  bottom: 10px;
+  left: 50%;
+  position: fixed;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  font-size: 20px;
+  text-align: center;
+  background: #fff;
+  color: #31a4ba;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.23);
+  border-radius: 50%;
+  transition: all .2s ease;
+  opacity: 0;
+  z-index: 100;
+}
+.upper:hover,
+  .upper:focus,
+  .upper:active{
+  background: #31a4ba;
+  color: #fff;
+}
+.scrolled .upper{
+  opacity: 1;
 }
 /*
   Module

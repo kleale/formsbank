@@ -1150,10 +1150,34 @@ Sign Up modal
     margin: 0 auto 20px;
   }
 }
-.mainsearch{
+.upper{
+  position: fixed * * 10px 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  font-size: 20px;
+  text-align: center;
+  background: #fff;
+  color: #31a4ba;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.23);
+  border-radius: 50%;
+  transition: $transition;
+  opacity: 0;
+  z-index: 100;
   
+  &:hover,
+  &:focus,
+  &:active{
+    background: #31a4ba;
+    color: #fff;
+  }
 }
-
+.scrolled{
+  .upper{
+    opacity: 1;
+  }
+}
 
 
 
