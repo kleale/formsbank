@@ -194,13 +194,14 @@
       }
     });
     
-    
+   
+    // DOC pages carousel
     var owl_doc = $('#doc_c');
     owl_doc.owlCarousel({
-      loop: true,
+      loop: false,
       navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-      //URLhashListener:true,
-      startPosition: 'URLHash',      
+      //URLhashListener: true,
+      //startPosition: 'URLHash',      
       //center:true,
       dots: false,
       slideBy: 3,
@@ -219,15 +220,18 @@
             nav:true,
             loop:false
         }
-      },
-      onChanged: callback
+      }
+      //,
+      //onChanged: callback
     });
     
+    /*
     function callback(e) {
       var cur = e.item.index;
       $('.owl-item').removeClass('cur');
       $('.owl-item').eq(cur).addClass('cur');
     }
+    */
     
     // jQuery method on
     /*

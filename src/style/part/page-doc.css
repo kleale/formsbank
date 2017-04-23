@@ -112,10 +112,17 @@
         z-index: 2;
       }
     }
+    /*
     .owl-item.cur{
       position: relative;
       top: -8px;
       img{
+        box-shadow: 1px 6px 20px rgba(0, 0, 0, 0.3), 0 0 0 2px #94d1dc;
+      }
+    }
+    */
+    .owl-item{
+      img.active{
         box-shadow: 1px 6px 20px rgba(0, 0, 0, 0.3), 0 0 0 2px #94d1dc;
       }
     }

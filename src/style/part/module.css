@@ -833,9 +833,9 @@ body .owl-theme .owl-controls .owl-page.active span{
     list-style: none;
     li{
       padding: 5px 0;
-      transition: $transition;
       position: relative;
-      @media (max-width: $M){
+      transition: $transition;
+      @media (max-width: $L){
         transition: none;
       }
       &:hover{

@@ -27,6 +27,7 @@
             {% for i in 2..15 %}
               <a class="da" href="#p{{i}}" data-hash="p{{i}}"><img src="img/form.png" alt=""><b>{{i}}</b></a>
             {% endfor %}
+            <a class="da" href="#p16" data-hash="p16"><img class="active" src="img/form.png" alt=""><b>16</b></a>
           </div>
         </div>
         <div class="page-doc-top-a">
@@ -188,5 +189,15 @@
   
   {% include "template/modals.html" %}
   {% include "template/scripts.html" %}
+  
+  <script>
+  // Прокрутить карусель к выделенному элементу.
+  $(document).ready(function () {
+    var owl = $('#doc_c');
+    owl.trigger('to.owl.carousel', '16');
+  });
+  </script>
+  
+  
 </body>
 </html>
