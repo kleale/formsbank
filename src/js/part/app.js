@@ -23,35 +23,47 @@
         }
       }
     });
-    
-    
+    $(".swipe-area").click(function () {
+      $(".navbar-collapse").removeClass("in");
+      $(".swipe-area").removeClass("active");
+      $(".navbar-toggle").removeClass("active");
+      
+      $('.doc-srch').removeClass('active');
+      $('#mob-show-search').removeClass('active').removeClass('fa-times').addClass('fa-search');
+      $('.searcher_js').removeClass('active');
+      $('.searcher_js').find('i.fa').addClass('fa-search').removeClass('fa-times');
+      $('.searchbar').removeClass('active');
+    });
     // breadcrumbs
     function toggle_ellipses() {
-      var ellipses1 = $("#ellipses");
-      var howlong = $("#bc1 li:hidden").length;
-      if ($("#bc1 li:hidden").length > 1) {
-        ellipses1.show();
-        //console.log("length: " + howlong + " => show")
+      var bread = $("#bread").width();
+      var bc1 = $("#bc1").width();
+      if (bc1 >= bread) {
+        //console.log("length: " + bread + ' & ' + bc1 + " => hide");
+        $('#bread').addClass('cutted');
       } else {
-        ellipses1.hide();
-        //console.log("length: " + howlong + " => hide")
+        console.log("length: " + bread + ' & ' + bc1 + " => show");
+        //$('#bread').removeClass('cutted');
       }
     }
     toggle_ellipses();
     $(window).resize(function () {
       toggle_ellipses();
     });
-
     // header mobile opener
-    $('.bc-opener').click(function () {
-      $('#bc1').toggleClass('active');
-      $(this).toggleClass('active');
-      $(this).find('i.fa').toggleClass('fa-ellipsis-h').toggleClass('fa-chevron-left');
+    $('.cutted span').click(function (e) {
+      $('.cutted').toggleClass('active');
+      //e.preventDefault();
     });
     
     $('.navbar-toggle').click(function () {
       $(this).toggleClass('active');
       $('.swipe-area').toggleClass("active");
+      $('.doc-srch').removeClass('active');
+      $('#mob-show-search').removeClass('active').removeClass('fa-times').addClass('fa-search');
+      $('.searcher_js').removeClass('active');
+      $('.searcher_js').find('i.fa').addClass('fa-search').removeClass('fa-times');
+      $('.searchbar').removeClass('active');
     });
     
     // header mobile opener
@@ -92,12 +104,14 @@
       $(this).toggleClass('active');
       $(this).find('i.fa').toggleClass('fa-search').toggleClass('fa-times');
       $('.searchbar').toggleClass('active');
+      $('.swipe-area').toggleClass("active");
     });
     
     //mob search
     $('#mob-show-search').click(function () {
       $(this).toggleClass('active').toggleClass('fa-times').toggleClass('fa-search');
       $('.doc-srch').toggleClass('active');
+      $('.swipe-area').toggleClass("active");
     });
     
     // expander block

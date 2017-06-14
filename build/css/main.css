@@ -1348,13 +1348,16 @@ h6{}
     left: 0;
     top: 0;
     height: 100%;
-    z-index: 1000;
+    z-index: 10;
+    background: rgba(211, 238, 243, 0.5);
+    opacity: 0;
+    transition: all .3s;
   }
   .swipe-area.active{
     top: 50px;
-    left: 210px;
     right: 0;
     width: auto;
+    opacity: 1;
   }
 }
 @media (max-width: 991px){
@@ -1882,13 +1885,10 @@ h6{}
 }
 .bread ol{
   display: inline-block;
-  overflow: hidden;
   color: #fff;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   padding: 15px 30px;
   margin: 0;
+  line-height: 18px;
 }
 .bread ol li {
   display: inline-block;
@@ -1896,12 +1896,12 @@ h6{}
 }
 .bread ol li a {
   color: #16a5bf;
-  text-decoration: underline;
 }
+/*text-decoration: underline;*/
 .bread ol li a:active,
         .bread ol li a:focus,
         .bread ol li a:hover{
-  text-decoration: none;
+  text-decoration: underline;
   color: #3cbcd4;
 }
 /*
@@ -3305,67 +3305,58 @@ body .open>.dropdown-toggle.btn-default:focus{
   text-overflow: ellipsis;
 }
 .breadcrumb >li+li:before {
-  padding: 0px;
+  padding: 0px 2px;
+  font-family: FontAwesome;
+  content: "\f105";
+  font-size: 13px;
 }
 .breadcrumb.active > li{
-  display: inline !important;
-}
-.breadcrumb.active .bc-opener{
-  text-indent: -1px;
-}
-.breadcrumb > *:nth-child(n+1) {
-  display:none;
-}
-.breadcrumb > *:nth-child(1) {
   display: inline !important;
 }
 .invisible{
   display:none;
 }
-@media (max-width: 767px) {
-  .breadcrumb  > *:nth-last-child(-n+2) {
-    display:inline;
-  } 
-  .breadcrumb  > * {
-    max-width: 60px;
-    font-size: 11px;
-  }
+.cat-header .bread.cutted,
+.bread.cutted{
+    position: relative;
+    max-height: 20px;
+    min-height: 20px;
+    overflow: hidden;
+    transition: all .3s;
+    padding-right: 10px;
 }
-@media (min-width: 768px) and (max-width:991px) {
-  .breadcrumb  > *:nth-last-child(-n+4) {
-    display:inline;
-  } 
-  .breadcrumb  > * {
-    max-width: 100px;
-  }
+.cat-header .bread.cutted ol li,.bread.cutted ol li{
+  display: block;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all .3s;
 }
-@media (min-width: 992px) {
-  .breadcrumb  > *:nth-last-child(-n+6) {
-    display:inline;
-  } 
-  .breadcrumb  > * {
-    max-width: 170px;
-  }
+.cat-header .bread.cutted ol li:last-child,.bread.cutted ol li:last-child{
+  max-height: 100px;
 }
-.bc-opener{
-  color: #222;
-  width: 16px;
-  height: 16px;
-  line-height: 18px;
-  text-align: center;
-  margin: 0 10px;
-  background: #fff;
-  border-radius: 50%;
-  vertical-align: middle;
-  font-weight: 700;
-  display: none!important;
+.cat-header .bread.cutted ol li span,.bread.cutted ol li span{
   cursor: pointer;
-  box-shadow: 0 0 0 1px #c3c3c3;
 }
-@media (max-width: 992px) {
-  .bc-opener {
-    display: inline-block!important;
-  }
+.cat-header .bread.cutted ol li span:hover,.bread.cutted ol li span:hover{
+  color: #ffee36;
+}
+.cat-header .bread.cutted ol li:last-child,.bread.cutted ol li:last-child{
+  color: #ffee36;
+}
+.cat-header .bread.cutted.active,.bread.cutted.active{
+  height: auto;
+  padding: 5px;
+  max-height: 500px;
+  background: rgba(72, 123, 130, 0.57);
+  margin-bottom: 15px;
+}
+.cat-header .bread.cutted.active ol,.bread.cutted.active ol{
+  height: auto;
+  max-height: 920px;
+}
+.cat-header .bread.cutted.active ol li,.bread.cutted.active ol li{
+  max-height: 500px;
+  padding: 5px 0;
 }
 /* bootstrap hack: fix content width inside hidden tabs */
 .tab-content > .tab-pane:not(.active),
@@ -6607,6 +6598,16 @@ Modal end
   padding: 0 0 0 0;
   overflow: hidden;
 }
+.chosen-select{
+  height: 27px;
+  color: #6d6d6d;
+  background: #edf4f7;
+  border-radius: 2px;
+  border: 0;
+  padding: 4px;
+  font-size: 12px;
+  border: 1px solid #c3d5dc;
+}
 .cat-header {
   padding: 70px 20px 10px 20px;
   background-position: center;
@@ -6650,7 +6651,6 @@ Modal end
 }
 .cat-header .bread ol{
   padding: 0;
-  margin-bottom: 10px;
 }
 .cat-header .bread ol li{
   color:#fff;

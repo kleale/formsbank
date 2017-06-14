@@ -21,11 +21,11 @@
   <div class="cat-header-wr">
     
     <!-- breadcrumbs.html -->
-    <div class="bread">
+    <div id="bread" class="bread">
       <ol id="bc1" class="breadcrumb">
        {#<span id="ellipses" style="display: inline;">...</span>#}
         <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
-          <a  itemprop="url" href="/"><span itemprop="title"><i class="fa fa-home"></i></span></a>
+          <a  itemprop="url" href="/"><span itemprop="title"><i class="fa fa-home"></i> Home</span></a>
         </li>
         <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
           <a itemprop="url" href="#"><span itemprop="title">Resume Templates</span></a>
@@ -36,7 +36,7 @@
         <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
           <span itemprop="title">Basic Resume Template</span>
         </li>
-        <span class="bc-opener"><i class="fa fa-ellipsis-h"></i></span>
+        {#<span class="bc-opener"><i class="fa fa-ellipsis-h"></i>#}</span>
       </ol>
     </div>
     

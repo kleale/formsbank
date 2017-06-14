@@ -255,70 +255,67 @@ body .open>.dropdown-toggle.btn-default:focus{
   > li{
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;    
+    text-overflow: ellipsis;
   }
   >li+li:before {
-    padding: 0px;
+    padding: 0px 2px;
+    font-family: FontAwesome;
+    content: "\f105";
+    font-size: 13px;
   }
   &.active {
     > li{
       display: inline !important;
     }
-    .bc-opener{
-      text-indent: -1px;
-    }
   }
 }
-.breadcrumb > *:nth-child(n+1) {
-  display:none;
-}
-.breadcrumb > *:nth-child(1) {
-  display: inline !important;
-}
+
 .invisible{
   display:none;
 }
-@media (max-width: 767px) {
-  .breadcrumb  > *:nth-last-child(-n+2) {
-    display:inline;
-  } 
-  .breadcrumb  > * {
-    max-width: 60px;
-    font-size: 11px;
+
+.cat-header .bread.cutted,
+.bread.cutted{
+    position: relative;
+    max-height: 20px;
+    min-height: 20px;
+    overflow: hidden;
+    transition: all .3s;
+    padding-right: 10px;
+  ol{
+    li{
+      display: block;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all .3s;
+      &:last-child{
+        max-height: 100px;
+      }
+      span{
+        cursor: pointer;
+        &:hover{
+          color: #ffee36;
+        }
+      }
+      &:last-child{
+        color: #ffee36;
+      }
+    }
   }
-}
-@media (min-width: 768px) and (max-width:991px) {
-  .breadcrumb  > *:nth-last-child(-n+4) {
-    display:inline;
-  } 
-  .breadcrumb  > * {
-    max-width: 100px;
-  }
-}
-@media (min-width: 992px) {
-  .breadcrumb  > *:nth-last-child(-n+6) {
-    display:inline;
-  } 
-  .breadcrumb  > * {
-    max-width: 170px;
-  }
-}    
-.bc-opener{
-  color: #222;
-  width: 16px;
-  height: 16px;
-  line-height: 18px;
-  text-align: center;
-  margin: 0 10px;
-  background: #fff;
-  border-radius: 50%;
-  vertical-align: middle;
-  font-weight: bold;
-  display: none!important;
-  cursor: pointer;
-  box-shadow: 0 0 0 1px #c3c3c3;
-  @media (max-width: 992px) {
-    display: inline-block!important;
+  &.active{
+    height: auto;
+    padding: 5px;
+    max-height: 500px;
+    background: rgba(72, 123, 130, 0.57);
+    margin-bottom: 15px;
+    ol{
+      height: auto;
+      max-height: 920px;
+      li{
+        max-height: 500px;
+        padding: 5px 0;
+      }
+    }
   }
 }
 

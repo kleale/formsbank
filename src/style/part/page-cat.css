@@ -7,6 +7,16 @@
     overflow: hidden;
   }
 }
+.chosen-select{
+  height: 27px;
+  color: #6d6d6d;
+  background: #edf4f7;
+  border-radius: 2px;
+  border: 0;
+  padding: 4px;
+  font-size: 12px;
+  border: 1px solid #c3d5dc;
+}
 .cat-header {
   padding: 70px 20px 10px 20px;
   background-position: center;
@@ -44,8 +54,6 @@
     }
     ol{
       padding: 0;
-      margin-bottom: 10px;
-      
       li{
         color:#fff;
         a{

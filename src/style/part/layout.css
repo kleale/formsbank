@@ -404,12 +404,15 @@
     left: 0;
     top: 0;
     height: 100%;
-    z-index: 1000;
+    z-index: 10;
+    background: rgba(211, 238, 243, 0.5);
+    opacity: 0;
+    transition: all .3s;
     &.active{
       top: 50px;
-      left: 210px;
       right: 0;
       width: auto;
+      opacity: 1;
     }
   }
 }
@@ -949,13 +952,10 @@
   
   ol{
     display: inline-block;
-    overflow: hidden;
     color: #fff;
-    display: block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     padding: 15px 30px;
     margin: 0;
+    line-height: 18px;
     
     li {
       display: inline-block;
@@ -963,12 +963,12 @@
       
       a {
         color: $link-color;
-        text-decoration: underline;
+        /*text-decoration: underline;*/
         
         &:active,
         &:focus,
         &:hover{
-          text-decoration: none;
+          text-decoration: underline;
           color: $link-color-active;
         }
       }
