@@ -8,7 +8,7 @@ body{
   position: relative;
 }
 a{
-  transition: $transition;
+  /*transition: $transition;*/
   color: $link-color;
   
   &:active,

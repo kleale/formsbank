@@ -1,0 +1,94 @@
+<script src="../assets/js/jquery-scrolltofixed-min.js"></script>
+<script src="../assets/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="../assets/js/jquery.appear.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+  $(document).ready(function () {
+    
+    //
+    window.sr = ScrollReveal();
+    var block = {
+        //reset: true,
+        viewOffset: { top: 50 }
+        //container: '.blogcategory',
+        //duration: 2000
+    }
+    sr.reveal(".item-sm", block);
+    sr.reveal(".citem", block);
+    sr.reveal(".item", block);
+    sr.reveal(".toppost", block);
+    
+    // events for windows
+    $('.bars').click(function () {
+      $('body').addClass('menuopened');
+    });
+    $('.bmclose').click(function () {
+      $('body').removeClass('menuopened');
+    });
+    $('.menuopened').click(function () {
+      $('body').removeClass('menuopened');
+    });
+    $('.searchopen').click(function () {
+      $('body').addClass('searchopened');
+    });
+    $('.sclose').click(function () {
+      $('body').removeClass('searchopened');
+    });
+
+    // show page after js cal
+    setTimeout(function(){
+      if ($('.ta').length) {
+         $('.blog-topper-wr').addClass('da');
+      }
+      $('.blogcenter').animate({ opacity: 1 });
+    }, 500);
+    
+    
+    if ($(window).width() > 991){
+      
+      // scroll in category block
+      $('.ps').perfectScrollbar();
+      
+      // set right column height
+      setTimeout(function(){
+        var bcheight = $('.blogpost').height() + 100;
+        $('.blog-col').css('height', bcheight);
+      }, 500);
+
+      // appeared at scroll to bottom category block
+      if ($(window).width() > 991 && $('.blogpost').height() > 1500) {
+        $('.cbscrolled').appear();
+        $('#botappear').appear();
+        $(document.body).on('disappear', '.cbscrolled', function(e, $affected) {
+          $('.cbscrolled').removeClass('bottomless');
+        });
+        $(document.body).on('appear', '.cbscrolled', function(e, $affected) {
+          $('.cbscrolled').removeClass('bottomless');
+        });
+
+        $(document.body).on('appear', '#botappear', function(e, $affected) {
+          setTimeout(function(){
+            $('.cbscrolled').addClass('bottomless');
+            $('.cbscrolled').stop().animate({opacity: 1}, 100);
+          }, 100);
+        });
+      }
+    } // if width 991
+    
+    // blog bar fixed on scroll
+    /*
+    $('.blognav').scrollToFixed({
+      marginTop: $('.header').outerHeight(true),
+      //limit: function() {
+      //  var limit = 0;
+      //    limit = $('.boottoomm').offset().top - $(this).outerHeight(true) - 10;
+      //  return limit;
+      //},
+      zIndex: 20,
+      preFixed: function() { $(this).removeClass('scroll-to-fixed-fixed-end'); },
+      preAbsolute: function() { $(this).addClass('scroll-to-fixed-fixed-end'); }
+    });
+    */
+
+  }); //end ready
+</script>

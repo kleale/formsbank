@@ -1,0 +1,247 @@
+{% set title = "Blog Page" %}
+{% set ititle = ['Compare Your Wealth to the Average American Net Worth','Gold is Making a Comeback','How to Profit From Bitcoin','5 Student Loan Steps College Graduates Need to Take Now','8 Lessons From a Millennial Couple Who Retired in Their 30s','10 Small Money Moves That Can Have a Big Impact','How Much Drinking Will Cost You in a Lifetime','5 Things You Should Know Before You Start Day Trading','Is Your Patriotic Bias Putting Your Portfolio at Risk?'] %}
+{% set cat = ['Home','Money','Mutual funds','Small Business','Money hacks','Job','Security','Budgeting'] %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  {% include "template/head.html" %}
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+</head>
+<body class="blog" ontouchstart="">
+  <div class="wrapper">
+    <div class="blogcenter">
+      {% include "template/blog/blog-header.html" %}
+      <section class="blog-topper-wr">
+        <div class="ta">
+          <a href="#"><img src="/img/blog/ad_300.jpg" alt="AD"></a>
+        </div>
+        <div class="blog-topper">
+          <a href="" class="toppost lg" style="background-image:url(/img/blog/1.jpg);">
+            <span>
+              <em>job</em>
+              How to Use Psychology to Help You Get Hired
+            </span>
+          </a>
+          <div class="sms">
+            <a href="" class="toppost sm sm1" style="background-image:url(/img/blog/2.jpg);">
+              <span>
+                <em>security</em>
+                How to Use Psychology to Help You Get Hired
+              </span>
+            </a>
+            <a href="" class="toppost sm sm2" style="background-image:url(/img/blog/3.jpg);">
+              <span>
+                <em>business</em>
+                How to Use Psychology to Help You Get Hired
+              </span>
+            </a>
+          </div>
+          <div class="getmailed">
+            <div class="rowtd">
+              <div class="get">
+                <p>Get Daily Money Tips to Your Inbox</p>
+              </div>
+              <div class="subs">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="My Mail">
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="" class="btn btn-block btn-border">Subscribe Me</a>
+                  </div>
+                </div>
+              </div>
+              <div class="soc">
+                <span>Get social</span>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% include "template/blog/nav.html" %}
+      <div class="centered">
+        <section class="blogcategory">
+          <a href="" class="all">ALL</a>
+          <a href="" class="cat">Personal Finance</a>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              <div class="item">
+                <span class="trending">trending</span>
+                <figure>
+                  <a href="" class="pic" style="background-image: url(../img/blog/4.jpg);">
+                    <em>job</em>
+                  </a>
+                </figure>
+                <div class="desc">
+                  <a href="">10 Small Money Moves That Can Have a Big Impact</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5">
+              {% for i in 5..7 %}
+              <div class="item-sm nobg">
+                <span>
+                  <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);"></a>
+                </span>
+                <p>
+                  <a href="" class="linktocat">{{random(cat)}}</a>
+                  <a href="" class="linktopost">{{random(ititle)}}</a>
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="catblock">
+                <a href="" class="catb">Personal Finance</a>
+                <ul>
+                  <li><a href="">Money Hacks</a></li>
+                  <li><a href="">Your Career</a></li>
+                  <li><a href="">Small Business</a></li>
+                  <li><a href="">Investing</a></li>
+                </ul>
+                <a href="" class="btn btn-border">View all</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="colors">
+            <div class="row">
+              {% for i in 5..7 %}
+                <div class="col-sm-12 col-md-4">
+                  <a class="citem" href="">
+                    <figure style="background-image: url(../img/blog/{{i}}.jpg);"></figure>
+                    <span>
+                      <em>{{random(cat)}}</em>
+                      {{random(ititle)}}
+                    </span>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+
+        <div class="ddd">
+          <a href=""><img src="/img/blog/ad_960.jpg" alt=""></a>
+        </div>
+
+        <hr class="catdel">
+
+        <section class="blogcategory">
+          <a href="" class="all">ALL</a>
+          <a href="" class="cat">Investing</a>
+          <div class="row">
+            <div class="col-sm-6 col-md-3">
+              <div class="catblock">
+                <a href="" class="catb">Investing</a>
+                <ul>
+                  <li><a href="">Stocks</a></li>
+                  <li><a href="">Investing for Beginners</a></li>
+                  <li><a href="">Mutual Funds</a></li>
+                  <li><a href="">Bonds</a></li>
+                  <li><a href="">Exchange Traded Funds</a></li>
+                  <li><a href="">US Economy</a></li>
+                </ul>
+                <a href="" class="btn btn-border">View all</a>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              {% for i in 7..8 %}
+                <div class="item-sm item-md">
+                  <span>
+                    <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);">
+                    </a>
+                    <b>{{random(cat)}}</b>
+                  </span>
+                  <p>
+                    <a href="" class="linktopost">{{random(ititle)}}</a>
+                  </p>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="col-sm-6 col-md-5">
+              {% for i in 5..7 %}
+              <div class="item-sm">
+                <span>
+                  <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);"></a>
+                </span>
+                <p>
+                  <a href="" class="linktocat">{{random(cat)}}</a>
+                  <a href="" class="linktopost">{{random(ititle)}}</a>
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+
+        <hr class="catdel">
+
+        <section class="blogcategory">
+          <a href="" class="all">ALL</a>
+          <a href="" class="cat">Your Career</a>
+          <div class="row">
+            <div class="col-sm-12 col-md-4">
+              {% for i in 7..8 %}
+                <div class="item-sm item-md">
+                  <span>
+                    <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);">
+                    </a>
+                    <b>{{random(cat)}}</b>
+                  </span>
+                  <p>
+                    <a href="" class="linktopost">{{random(ititle)}}</a>
+                  </p>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="col-sm-6 col-md-5">
+              {% for i in 5..7 %}
+              <div class="item-sm">
+                <span>
+                  <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);"></a>
+                </span>
+                <p>
+                  <a href="" class="linktocat">{{random(cat)}}</a>
+                  <a href="" class="linktopost">{{random(ititle)}}</a>
+                </p>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="catblock">
+                <a href="" class="catb">Investing</a>
+                <ul>
+                  <li><a href="">Stocks</a></li>
+                  <li><a href="">Investing for Beginners</a></li>
+                  <li><a href="">Mutual Funds</a></li>
+                  <li><a href="">Bonds</a></li>
+                  <li><a href="">Exchange Traded Funds</a></li>
+                  <li><a href="">US Economy</a></li>
+                </ul>
+                <a href="" class="btn btn-border">View all</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        </div>
+      
+      {% include "template/blog/blog-footer.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+  {% include "template/blog/openers.html" %}
+  {% include "template/scripts.html" %}
+  {% include "template/blog/scripts.html" %}
+  
+</body>
+</html>

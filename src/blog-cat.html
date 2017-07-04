@@ -1,0 +1,151 @@
+{% set title = "Blog Category" %}
+{% set ititle = ['Compare Your Wealth to the Average American Net Worth','Gold is Making a Comeback','How to Profit From Bitcoin','5 Student Loan Steps College Graduates Need to Take Now','8 Lessons From a Millennial Couple Who Retired in Their 30s','10 Small Money Moves That Can Have a Big Impact','How Much Drinking Will Cost You in a Lifetime','5 Things You Should Know Before You Start Day Trading','Is Your Patriotic Bias Putting Your Portfolio at Risk?'] %}
+{% set cat = ['Home','Money','Mutual funds','Small Business','Money hacks','Job','Security','Budgeting'] %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  {% include "template/head.html" %}
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+</head>
+<body class="blog" ontouchstart="">
+  <div class="wrapper">
+    <div class="blogcenter">
+      {% include "template/blog/blog-header.html" %}
+      <div class="ddd">
+        <a href=""><img src="/img/blog/ad_728.jpg" alt=""></a>
+      </div>
+      {% include "template/blog/nav.html" %}
+      <div class="centered">
+        <section class="blogcategory">
+          <a href="" class="cat">Your Career</a>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="catblock">
+                <a href="" class="catb">Investing</a>
+                <ul class="ps">
+                  <li><a href="">Retirement Planning</a></li>
+                  <li><a href="">Retirement Decisions</a></li>
+                  <li><a href="">Annuities</a></li>
+                  <li><a href="">Wills & Estate Planning</a></li>
+                  <li><a href="">Money 101</a></li>
+                  <li><a href="">Banking & Loans</a></li>
+                  <li><a href="">Budgeting</a></li>
+                  <li><a href="">Credit</a></li>
+                  <li><a href="">Taxes</a></li>
+                  <li><a href="">Getting Started with Money</a></li>
+                  <li><a href="">Car Insurance & Loans</a></li>
+                  <li><a href="">Financial Software</a></li>
+                  <li><a href="">Identity Theft</a></li>
+                  <li><a href="">Kids & Money</a></li>
+                  <li><a href="">Insurance</a></li>
+                  <li><a href="">Big Money Decisions</a></li>
+                  <li><a href="">Financial Planning</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-sm-12 col-md-5">
+                  <div class="item">
+                    <span class="trending">trending</span>
+                    <figure>
+                      <a href="" class="pic" style="background-image: url(../img/blog/4.jpg);">
+                      </a>
+                      <em>job</em>
+                    </figure>
+                    <div class="desc">
+                      <a href="">10 Small Money Moves That Can Have a Big Impact</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-7">
+                {% for i in 5..7 %}
+                <div class="item-sm">
+                  <span>
+                    <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);"></a>
+                  </span>
+                  <p>
+                    <a href="" class="linktocat">{{random(cat)}}</a>
+                    <a href="" class="linktopost">{{random(ititle)}}</a>
+                  </p>
+                </div>
+                {% endfor %}
+              </div>
+              </div>
+              <div class="colors">
+                <div class="row">
+                  {% for i in 5..6 %}
+                    <div class="col-sm-12 col-md-6">
+                      <a class="citem" href="">
+                        <figure style="background-image: url(../img/blog/{{i}}.jpg);"></figure>
+                        <span>
+                          <em>{{random(cat)}}</em>
+                          {{random(ititle)}}
+                        </span>
+                      </a>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <hr class="catdel">
+        <div class="ddd">
+          <a href=""><img src="/img/blog/ad_960.jpg" alt=""></a>
+        </div>
+        <hr class="catdel">
+        <section class="blogcategory allposts">
+          <a href="" class="cat">More posts from category</a>
+          <a class="citem ap" href="">
+            <figure style="background-image: url(../img/blog/4.jpg);"></figure>
+            <span>
+              <em>{{random(cat)}}</em>
+              {{random(ititle)}}
+            </span>
+          </a>
+          {% for i in 1..7 %}
+          <div class="item-sm item-md ap">
+            <span>
+              <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);">
+              </a>
+              <b>{{random(cat)}}</b>
+            </span>
+            <p>
+              <a href="" class="linktopost">{{random(ititle)}}</a>
+            </p>
+          </div>
+          {% endfor %}
+          {% for i in 1..7 %}
+          <div class="item-sm item-md ap">
+            <span>
+              <a href="" class="pic" style="background-image: url(../img/blog/{{i}}.jpg);">
+              </a>
+              <b>{{random(cat)}}</b>
+            </span>
+            <p>
+              <a href="" class="linktopost">{{random(ititle)}}</a>
+            </p>
+          </div>
+          {% endfor %}
+          <div class="loader">
+            <a href="" class="btn btn-load btn-lg">Load more</a>
+          </div>
+        </section>
+      </div>
+      {% include "template/blog/blog-footer.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+  {% include "template/blog/openers.html" %}
+  {% include "template/scripts.html" %}
+  {% include "template/blog/scripts.html" %}
+  
+</body>
+</html>

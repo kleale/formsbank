@@ -1,0 +1,168 @@
+{% set title = "Blog Post" %}
+{% set ititle = ['Compare Your Wealth to the Average American Net Worth','Gold is Making a Comeback','How to Profit From Bitcoin','5 Student Loan Steps College Graduates Need to Take Now','8 Lessons From a Millennial Couple Who Retired in Their 30s','10 Small Money Moves That Can Have a Big Impact','How Much Drinking Will Cost You in a Lifetime','5 Things You Should Know Before You Start Day Trading','Is Your Patriotic Bias Putting Your Portfolio at Risk?'] %}
+{% set cat = ['Home','Money','Mutual funds','Small Business','Money hacks','Job','Security','Budgeting'] %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  {% include "template/head.html" %}
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+</head>
+<body class="blog" ontouchstart="">
+  <div class="wrapper">
+    <div class="blogcenter">
+      {% include "template/blog/blog-header.html" %}
+      <div class="ddd">
+        <a href=""><img src="/img/blog/ad_728.jpg" alt=""></a>
+      </div>
+      {% include "template/blog/nav.html" %}
+      <div class="centered">
+        <div class="row">
+          <div class="col-md-8">
+            <section class="blogpost">
+              <a href="" class="all">ALL</a>
+              <a href="" class="cat">Your Career</a>
+              <div class="paragraph">
+                <h1>6 Must-Do Practices to Be a Millionaire at a Young(er) Age</h1>
+                <p>
+                  You don’t have to be the next Mark Zuckerberg or CEO of Apple to reach millionaire status. In fact, we’re seeing the “millionaire next door” mindset pushing more people into this status at retirement, but it’s still taking a lifetime to reach this goal. What if we told you that you could do it sooner? Maybe even as soon as your 30’s? Combine some ambition and perseverance with smart financial decisions and you could have what it takes to be a millionaire… before retirement.
+                </p>
+                <img src="/img/blog/2.jpg" alt="">
+              </div>
+              <div class="paragraph">
+                <p>
+                  The road to prosperity is paved with good business strategies and responsible financial choices. Check out these simple but powerful practices you can apply to your day-to-day life that may help increase your wealth enough to reach that seven-figure mark.
+                </p>
+                <div class="pad">
+                  <img src="/img/blog/ad_300.jpg" alt="">
+                </div>
+              </div>
+              <div class="paragraph">
+                <h2>
+                  1. Develop Multiple Streams of Income
+                </h2>
+                <p>
+                  Find an opportunity where you have the ability to increase your income. Making more money is easier said than done, but if you can find several ways to rake in some extra cash it can help you grow your net worth more quickly. In a five-year study of self-made millionaires, author Thomas Corley found that most of them had three or more streams of income.
+                </p>
+                <p>
+                  After doing some research and consulting with a financial advisor, you may want to start investing in the stock market. The stock market has many ups and downs so think long-term when you ride out the waves.
+                </p>
+                <p>
+                  Or if you’re the entrepreneurial type, start your own business on the side and work on projects you’re excited about.
+                </p>
+                <p>
+                  If you develop a product you love which you’d use yourself, create an online store or sell your products through other vendors.
+                </p>
+              </div>
+              <div class="paragraph">
+                <h2>
+                  2. Develop Multiple Streams of Income
+                </h2>
+                <p>
+                  Find an opportunity where you have the ability to increase your income. Making more money is easier said than done, but if you can find several ways to rake in some extra cash it can help you grow your net worth more quickly. In a five-year study of self-made millionaires, author Thomas Corley found that most of them had three or more streams of income.
+                </p>
+                <p>
+                  After doing some research and consulting with a financial advisor, you may want to start investing in the stock market. The stock market has many ups and downs so think long-term when you ride out the waves.
+                </p>
+                <p>
+                  Or if you’re the entrepreneurial type, start your own business on the side and work on projects you’re excited about.
+                </p>
+                <p>
+                  If you develop a product you love which you’d use yourself, create an online store or sell your products through other vendors.
+                </p>
+                <div class="pad">
+                  <img src="/img/blog/ad300.jpg" alt="">
+                </div>
+              </div>
+              
+            </section>
+          </div>
+          <div class="col-md-4">
+            <div class="blog-col">
+              <div class="autor">
+                <a class="ava"  href="" style="background-image: url(/img/blog/ava.jpg);"></a>
+                <span>
+                  <a href="" class="name">By Matt Reiner</a>
+                  <b>Updated June 22, 2017</b>
+                </span>
+              </div>
+              <div class="catblock cbscrolled">
+                <a href="" class="catb">Investing</a>
+                <ul class="ps">
+                  <li><a href="">Retirement Planning</a></li>
+                  <li><a href="">Retirement Decisions</a></li>
+                  <li><a href="">Annuities</a></li>
+                  <li><a href="">Wills & Estate Planning</a></li>
+                  <li><a href="">Money 101</a></li>
+                  <li><a href="">Banking & Loans</a></li>
+                  <li><a href="">Budgeting</a></li>
+                  <li><a href="">Credit</a></li>
+                  <li><a href="">Taxes</a></li>
+                  <li><a href="">Getting Started with Money</a></li>
+                  <li><a href="">Car Insurance & Loans</a></li>
+                  <li><a href="">Financial Software</a></li>
+                  <li><a href="">Identity Theft</a></li>
+                  <li><a href="">Kids & Money</a></li>
+                  <li><a href="">Insurance</a></li>
+                  <li><a href="">Big Money Decisions</a></li>
+                  <li><a href="">Financial Planning</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="btmad" id="botappear">
+        <a href=""><img src="/img/blog/ad_960.jpg" alt=""></a>
+      </div>
+      
+      <section class="blog-topper-wr">
+        <div class="blog-topper blog-botter">
+          {% for i in 1..8 %}
+             <a href="" class="toppost sm" style="background-image:url(/img/blog/{{i}}.jpg);">
+              <span>
+                <em>security</em>
+                How to Use Psychology to Help You Get Hired
+              </span>
+            </a>
+          {% endfor %}
+          <div class="getmailed">
+            <div class="rowtd">
+              <div class="get">
+                <p>Get Daily Money Tips to Your Inbox</p>
+              </div>
+              <div class="subs">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control" placeholder="My Mail">
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="" class="btn btn-block btn-border">Subscribe Me</a>
+                  </div>
+                </div>
+              </div>
+              <div class="soc">
+                <span>Get social</span>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {% include "template/blog/blog-footer.html" %}
+      {% include "template/footer.html" %}
+    </div>
+  </div>
+  {% include "template/blog/openers.html" %}
+  {% include "template/scripts.html" %}
+  {% include "template/blog/scripts.html" %}
+</body>
+</html>

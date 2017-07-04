@@ -46,7 +46,7 @@ module.exports = {
     "$blue": "#31a4ba",
   
     //transitions
-    "$transition": "all .2s ease",
+    "$transition": "all .35s ease",
   
     //border-radius
     "$br": "3px",

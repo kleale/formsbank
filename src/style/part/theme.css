@@ -226,7 +226,6 @@ body .open>.dropdown-toggle.btn-default:focus{
   border-radius: $br;
   background: #edf4f7;
   border: 1px solid #c3d5dc;
-  border: 0;
   color: $text-main;
   
   &:active,
