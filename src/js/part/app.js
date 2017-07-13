@@ -124,6 +124,10 @@
       $(this).toggleClass('active').html($(this).text() === 'Hide' ? 'Expand' : 'Hide');
       $('#list-opener').toggleClass('active');
     });
+    $('.show').click(function () {
+      $(this).parent().toggleClass("active");
+      $(this).toggleClass('active').html($(this).text() === 'hide' ? 'expand' : 'hide');
+    });
 
     //textcutter
     (function ($) {

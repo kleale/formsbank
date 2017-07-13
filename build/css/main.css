@@ -907,7 +907,7 @@ body{
   position: relative;
 }
 a{
-  /*transition: all .2s ease;*/
+  /*transition: all .35s ease;*/
   color: #16a5bf; 
 }
 a:active,
@@ -943,7 +943,7 @@ h6{}
   text-align: center;
   padding: 5px 10px;
   z-index: 15;
-  transition: all .2s ease;
+  transition: all .35s ease;
 }
 @media (max-width: 991px){
   .header {
@@ -1044,7 +1044,7 @@ h6{}
     position: absolute;
     margin-left: -100px;/*display: none;*/
     opacity: 0;
-    transition: all .2s ease;
+    transition: all .35s ease;
     transform: scale(2);
   }
   .header ul.nav li .sub:before{
@@ -1264,7 +1264,7 @@ h6{}
 }
 .header .searchbar{/*    overflow: hidden;*/
   opacity: 0;
-  transition: all .2s ease;
+  transition: all .35s ease;
   width: 0;
   background: #3cbcd4;
   color: #fff;
@@ -1319,7 +1319,7 @@ h6{}
   float: left;
   position: relative;
   top:1px;
-  transition: all .2s ease;
+  transition: all .35s ease;
   transform: rotate(90deg);
 }
 .header .navbar-toggle i.fa-bars:before {
@@ -1373,7 +1373,7 @@ h6{}
     text-align: left;
     display: block!important;
     padding: 8px 20px;
-    transition: all .2s ease;
+    transition: all .35s ease;
     transform: translateZ(0);
     opacity: 0;
     z-index: 199;
@@ -2073,7 +2073,7 @@ Sign Up modal
   color: #31a4ba;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.23);
   border-radius: 50%;
-  transition: all .2s ease;
+  transition: all .35s ease;
   opacity: 0;
   z-index: 100;
 }
@@ -2209,7 +2209,7 @@ Sign Up modal
   color:#16a5bf;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
-  transition: all .2s ease;
+  transition: all .35s ease;
 }
 .mainsearch input[placeholder]{
   color:#16a5bf;
@@ -2939,7 +2939,7 @@ body .owl-theme .owl-controls .owl-page.active span{
 .block ul li{
   padding: 5px 0;
   position: relative;
-  transition: all .2s ease;
+  transition: all .35s ease;
 }
 @media (max-width: 1200px){
   .block ul li {
@@ -6057,7 +6057,7 @@ Modal end
   display: inline-block;
   position: relative;
   top: 0px;
-  transition: all .2s ease;
+  transition: all .35s ease;
 }
 .doc-pages .owl-carousel .da img{
   width: 100%;
@@ -7160,7 +7160,7 @@ Modal end
   overflow: hidden;
   max-height: 310px;
   position: relative;
-  transition: all .2s ease;
+  transition: all .35s ease;
 }
 .list-opener.active{
   padding-bottom: 70px;
@@ -7504,7 +7504,7 @@ Modal end
   margin: 0 auto;
   background: #f4f7f6;
   opacity: 0;
-  transition: all .2s ease;
+  transition: all .35s ease;
 }
 .blog .centered{
   max-width: 1230px;
@@ -7546,12 +7546,18 @@ Modal end
   right: 0;
   bottom: 0;
   position: absolute;
+  width: 300px;
+  height: 600px;
 }
 @media (max-width: 991px){
   .blog .blog-topper-wr .ta {
     position: relative;
     text-align: center;
     margin: 15px 0;
+    max-height: 130px;
+    height: auto;
+    width: auto;
+    overflow: hidden;
   }
 }
 .blog .blog-topper{
@@ -7599,7 +7605,7 @@ Modal end
   bottom: 0;
   left: 0;
   position: absolute;
-  transition: all .2s ease;
+  transition: all .35s ease;
   opacity: 1;
 }
 .blog .blog-topper .toppost:after{
@@ -7871,7 +7877,7 @@ Modal end
   text-align: center;
 }
 .blog .bmenu{
-  transition: all .2s ease;
+  transition: all .35s ease;
   opacity: 0;
   overflow: hidden;
   max-height: 0;
@@ -7928,7 +7934,7 @@ Modal end
   text-decoration: none;
 }
 .blog .sblock{
-  transition: all .2s ease;
+  transition: all .35s ease;
   opacity: 0;
   overflow: hidden;
   max-height: 0;
@@ -8049,22 +8055,37 @@ Modal end
 @media (max-width: 991px){
   .blog .catblock {
     min-height: inherit;
+    max-height: 100px;
+    transition: all .35s ease;
+  }
+  .blog .catblock.active{
+    height: auto;
+    max-height: 1000px;
+  }
+  .blog .catblock:after{
+    content: '';
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(66,180,211,0) 0%,rgba(66,180,211,1) 100%);
+    display: block;
+    z-index: 2;
   }
 }
 @media (max-width: 1200px){
   .blog .catblock {
-    padding: 25px 25px 45px 25px;
+    padding: 15px 25px 45px 25px;
     margin-bottom: 35px;
   }
 }
-.blog .catblock:after{
-  content: '\f00a';
-  font-family: 'FontAwesome';
-  top: 5px;
-  right: 12px;
-  position: absolute;
-  font-size: 24px;
-}
+/*&:after{
+      content: '\f00a';
+      font-family: 'FontAwesome';
+      position: absolute 5px 12px * *;
+      font-size: 24px;
+    }*/
 .blog .catblock:before{
   content: '';
   display: block;
@@ -8120,14 +8141,33 @@ Modal end
   font-family: 'Roboto Slab', serif;
   font-size: 21px;
   font-weight: 700;
+  z-index: 3;
+}
+@media (max-width: 991px){
+  .blog .catblock .catb {
+    text-align: right;
+  }
 }
 @media (max-width: 1200px){
   .blog .catblock .catb {
     font-size: 18px;
-    right: 10px;
+    right: 25px;
     bottom: 10px;
     left: 25px;
     position: absolute;
+  }
+}
+.blog .catblock .showbtn{
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 991px){
+  .blog .catblock .showbtn {
+    display: block;
+    top: 20px;
+    right: 25px;
+    position: absolute;
+    z-index: 3;
   }
 }
 .blog .catblock:hover,
@@ -8544,6 +8584,13 @@ Modal end
 .blog .ddd{
   text-align: center;
   padding: 20px 0;
+  max-height: 290px;
+}
+@media (max-width: 991px){
+  .blog .ddd {
+    max-height: 130px;
+    height: auto;
+  }
 }
 .blog .ddd img{
   max-width: 100%;
@@ -8608,6 +8655,12 @@ Modal end
   vertical-align: middle;
 }
 @media (max-width: 991px){
+  .blog .allposts .ap {
+    width: calc( 50% - 20px - 2px);
+    margin: 10px;
+  }
+}
+@media (max-width: 550px){
   .blog .allposts .ap {
     width: 100%;
     margin: 10px 0;
@@ -8735,6 +8788,10 @@ Modal end
   position: absolute;
   margin-left: 90px;
   width: 300px;
+  overflow: hidden;
+}
+.blog .blogpost .paragraph .pad.pad300{
+  height: 300px;
 }
 @media (max-width: 991px){
   .blog .blogpost .paragraph .pad {
@@ -8785,7 +8842,7 @@ Modal end
   position: absolute;
   right: 30px;
   left: 30px;
-  transition: all .2s ease;
+  transition: all .35s ease;
   opacity: 1;
 }
 .blog .btmad{
