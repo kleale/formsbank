@@ -7497,7 +7497,6 @@ Modal end
 .blog{
   padding-top: 53px;
   background: #e8e9eb;
-  
 }
 .blog .blogcenter{
   max-width: 1600px;
@@ -8183,6 +8182,7 @@ Modal end
   position: relative;
   margin: 30px 15px;
   min-height: 300px;
+  padding-top: 1px;
 }
 @media (max-width: 991px){
   .blog .blogcategory {
@@ -8227,6 +8227,9 @@ Modal end
   display: block;
   white-space: nowrap;
   text-align: right;
+}
+.blog .blogcategory .cat a{
+  color: #6c6c6c;
 }
 @media (max-width: 991px){
   .blog .blogcategory .cat {
@@ -8682,7 +8685,7 @@ Modal end
 .blog .blogpost{
   padding-left: 50px;
   position: relative;
-  margin: 50px 15px;
+  margin: 40px 15px;
   min-height: 300px;
 }
 @media (max-width: 991px){
@@ -8717,7 +8720,7 @@ Modal end
   font-size: 30px;
   color: #6c6c6c;
   transform: rotate(-90deg) translate(-100%, 0);
-  top: 20px;
+  top: 35px;
   left: 12px;
   position: absolute;
   transform-origin: left;
@@ -8852,6 +8855,32 @@ Modal end
 }
 .blog .btmad img{
   max-width: 100%;
+}
+.blog .h1{
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  color: #000;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+.blog .breadcrumb{
+  padding: 5px 23px 5px;
+  margin: -1px 0 20px -21px;
+  font-family: 'Roboto Slab', serif;
+  background: #fff;
+  border-radius: 3px;
+  font-size: 11px;
+  height: 30px;
+}
+.blog .breadcrumb >li+li:before {
+  padding: 0px 5px;
+  font-size: 11px;
+}
+.blog .blogpost .breadcrumb{
+  background: none;
+  border-bottom: 1px solid #d3d3d3;
+  border-top: 1px solid #d3d3d3;
+  border-right: 1px solid #d3d3d3;
 }
 /*blog*/
 /*some-page*/
